@@ -1,0 +1,38 @@
+{
+  "observedAt": "2026-10-03T18:16:45.992696+00:00",
+  "release": "https://github.com/mumu-bird/hacku-ProcureMate/releases/tag/v0.2.0",
+  "published": true,
+  "metadataAccess": "authenticated GitHub API; anonymous full-file proof is separately stored in public-access-validation.json",
+  "assets": [
+    {
+      "name": "demo-evidence.json",
+      "bytes": 178795,
+      "sha256": "1ebb6fad197fde1fc6099e2b47cd208e36a09e9cf0cfe31c9f504cb4ec9cbc73",
+      "remoteDigestMatched": true
+    },
+    {
+      "name": "demo-study-state.json",
+      "bytes": 550,
+      "sha256": "523d1f17dbec21ac6b4e94adf51176aa84c953c6a15237a7b8a8eae2f2e48a2d",
+      "remoteDigestMatched": true
+    },
+    {
+      "name": "media-validation.json",
+      "bytes": 1544,
+      "sha256": "1ab719ce6efb31fca492a6504eb46d95424050d91801e972b5d122fc05c26eaf",
+      "remoteDigestMatched": true
+    },
+    {
+      "name": "ProcureMate-demo.webm",
+      "bytes": 10465638,
+      "sha256": "079d0c45b4eeae08c78cfb613db3ce24c3dd93cd5e753874f84ac11da8c8a64b",
+      "remoteDigestMatched": true
+    },
+    {
+      "name": "ProcureMate-pitch.pdf",
+      "bytes": 1187929,
+      "sha256": "9d1223bfa9c9d1c5462b723e22e4b8661ba470b28729c2711d2aff30113ca221",
+      "remoteDigestMatched": true
+    }
+  ]
+}

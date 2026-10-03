@@ -1,47 +1,51 @@
 {
-  "observedAt": "2026-10-03T10:51:11.180057+00:00",
+  "observedAt": "2026-10-03T18:12:26.962070+00:00",
+  "release": "v0.2.0",
   "repositoryVisibility": "public",
+  "artifactBaseUrl": "https://raw.githubusercontent.com/mumu-bird/hacku-ProcureMate/043d2c72f88768ddcafc00cf1f77fda366d7c4fe/artifacts",
   "resources": [
     {
-      "resource": "repository",
-      "url": "https://github.com/mumu-bird/hacku-ProcureMate",
+      "resource": "public-main",
       "status": 200,
-      "bytes": 317149,
-      "sha256": "03aed1e3a6079aef27a08bad1baac258efd0de52f136deda7e8847a65916b6a0",
+      "commit": "043d2c72f88768ddcafc00cf1f77fda366d7c4fe",
       "authentication": "none"
     },
     {
-      "resource": "readme",
-      "url": "https://raw.githubusercontent.com/mumu-bird/hacku-ProcureMate/main/README.md",
-      "status": 200,
-      "bytes": 10829,
-      "sha256": "4d1bc6afaa548434789d2ae545ec9ac6d87e4dcb05b0ae9616326875f31fbe4d",
-      "authentication": "none"
+      "resource": "ProcureMate-demo.webm",
+      "url": "https://raw.githubusercontent.com/mumu-bird/hacku-ProcureMate/043d2c72f88768ddcafc00cf1f77fda366d7c4fe/artifacts/ProcureMate-demo.webm",
+      "authentication": "none",
+      "fullFileVerified": true,
+      "bytes": 10465638,
+      "sha256": "079d0c45b4eeae08c78cfb613db3ce24c3dd93cd5e753874f84ac11da8c8a64b",
+      "method": "all validated HTTP byte ranges assembled and hashed"
     },
     {
-      "resource": "video",
-      "url": "https://github.com/mumu-bird/hacku-ProcureMate/releases/download/v0.1.2/ProcureMate-demo.webm",
+      "resource": "ProcureMate-pitch.pdf",
+      "url": "https://raw.githubusercontent.com/mumu-bird/hacku-ProcureMate/043d2c72f88768ddcafc00cf1f77fda366d7c4fe/artifacts/ProcureMate-pitch.pdf",
       "authentication": "none",
-      "status": 206,
-      "verification": "first_4096_bytes_only",
-      "bytesRead": 4096,
-      "contentLength": "65536",
-      "contentRange": "bytes 0-65535/31800480",
-      "matchesLocalPrefix": true,
-      "fullDownloadVerified": false,
-      "previousFullDownloadAttempt": "connection_interrupted_or_timed_out"
+      "fullFileVerified": true,
+      "bytes": 1187929,
+      "sha256": "9d1223bfa9c9d1c5462b723e22e4b8661ba470b28729c2711d2aff30113ca221",
+      "method": "all validated HTTP byte ranges assembled and hashed"
     },
     {
-      "resource": "pitch",
-      "url": "https://github.com/mumu-bird/hacku-ProcureMate/releases/download/v0.1.2/ProcureMate-pitch.pdf",
-      "status": 200,
-      "bytes": 1168904,
-      "sha256": "7c8b814129d1bf762196fef86e4d1aeb7a32a075d4a9509a070c4eb0b60e8335",
+      "resource": "demo-evidence.json",
+      "url": "https://raw.githubusercontent.com/mumu-bird/hacku-ProcureMate/043d2c72f88768ddcafc00cf1f77fda366d7c4fe/artifacts/demo-evidence.json",
       "authentication": "none",
-      "matchesLocalArtifact": true
+      "fullFileVerified": true,
+      "bytes": 178795,
+      "sha256": "1ebb6fad197fde1fc6099e2b47cd208e36a09e9cf0cfe31c9f504cb4ec9cbc73",
+      "method": "all validated HTTP byte ranges assembled and hashed"
+    },
+    {
+      "resource": "demo-study-state.json",
+      "url": "https://raw.githubusercontent.com/mumu-bird/hacku-ProcureMate/043d2c72f88768ddcafc00cf1f77fda366d7c4fe/artifacts/demo-study-state.json",
+      "authentication": "none",
+      "fullFileVerified": true,
+      "bytes": 550,
+      "sha256": "523d1f17dbec21ac6b4e94adf51176aa84c953c6a15237a7b8a8eae2f2e48a2d",
+      "method": "all validated HTTP byte ranges assembled and hashed"
     }
   ],
-  "allPassed": false,
-  "allFullDownloadsPassed": false,
-  "publicAccessAvailable": true
+  "allFullFilesVerified": true
 }

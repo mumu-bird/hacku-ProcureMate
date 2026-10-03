@@ -9,3 +9,11 @@ Validation: 45 core tests, 5 browser workflows, TypeScript and production build 
 This remains rule-based planning and simulated payments. No actual HKT merchant order, company wallet, verified model/Stripe network integration or measured human efficiency improvement is claimed. Human task data is still missing. Payment-rail feasibility is described as a proposed integration path; Stripe is not a mandatory competition integration.
 
 Use these current attachments rather than v0.1.2 for judging. The team must still collect real manual/agent comparison evidence, complete its official submission and attend the exhibition.
+
+## Public judging materials
+
+- [180-second demonstration video](https://raw.githubusercontent.com/mumu-bird/hacku-ProcureMate/043d2c72f88768ddcafc00cf1f77fda366d7c4fe/artifacts/ProcureMate-demo.webm)
+- [Seven-page pitch PDF](https://raw.githubusercontent.com/mumu-bird/hacku-ProcureMate/043d2c72f88768ddcafc00cf1f77fda366d7c4fe/artifacts/ProcureMate-pitch.pdf)
+- [Recorded transaction evidence](https://raw.githubusercontent.com/mumu-bird/hacku-ProcureMate/043d2c72f88768ddcafc00cf1f77fda366d7c4fe/artifacts/demo-evidence.json)
+
+These immutable-commit files were downloaded anonymously in full using validated byte ranges, then SHA-256 checked against the local media manifest. The immutable video link is retained as a verified alternative to the attached release video. All five release attachments have matching remote SHA-256 digests.

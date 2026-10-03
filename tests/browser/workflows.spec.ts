@@ -240,3 +240,80 @@ test("budget and verified gift specifications change the options with an inspect
     fullPage: true,
   });
 });
+
+test("facilitated study freezes one task, records errors and abandons without fabricating valid outcomes", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "进入工作区" }).click();
+  await page.goto("/study");
+  await expect(
+    page.getByRole("heading", { name: "人工与代理采购对照" }),
+  ).toBeVisible();
+  await page.screenshot({ path: "artifacts/study-empty.png", fullPage: true });
+  await page.getByLabel("匿名编号").fill("P98");
+  await page
+    .getByLabel("主持人确认：实际同学参与，已同意记录匿名任务数据")
+    .check();
+  await page.getByRole("button", { name: "创建对照任务" }).click();
+  await page.getByRole("button", { name: "开始代理路线计时" }).click();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.getByText("固定商品目录与来源", { exact: true }).click();
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= window.innerWidth,
+    ),
+  ).toBe(true);
+  await page.getByText("固定商品目录与来源", { exact: true }).click();
+  await page.setViewportSize({ width: 1440, height: 1100 });
+  await page.getByRole("button", { name: "生成对照方案" }).click();
+  await expect(page.getByRole("button", { name: "采用此方案" })).toHaveCount(3);
+  await page.getByRole("button", { name: "采用此方案" }).first().click();
+  await page.getByLabel("授权品类").selectOption("gift");
+  await page.getByLabel("授权商户").fill("The Club");
+  await page.getByLabel("奖励归属").selectOption("company");
+  await page.getByLabel("完整步骤数").fill("8");
+  await page.getByLabel("备注／中断原因").fill("自动化夹具，不是真人测试");
+  await page.getByRole("button", { name: "封存任务结果" }).click();
+  await expect(page.getByText(/第二条路线结束后再展示答案校验/)).toBeVisible();
+  await expect(page.getByText(/校验错误 0 项/)).toHaveCount(0);
+  await page.getByRole("button", { name: "开始人工路线计时" }).click();
+  await page.getByLabel("备注／中断原因").fill("夹具模拟放弃，不代表真人结果");
+  await page.getByRole("button", { name: "记录放弃或中断" }).click();
+  await expect(
+    page.getByRole("heading", { name: "人工 · abandoned" }),
+  ).toBeVisible();
+  const report = await (await page.request.get("/api/study/report")).json();
+  const session = report.sessions.find((s: any) => s.participant === "P98");
+  expect(
+    session.trials.find((t: any) => t.method === "agent").validation.errors,
+  ).toHaveLength(0);
+  expect(session.trials.find((t: any) => t.method === "manual").status).toBe(
+    "abandoned",
+  );
+  expect(report.groups[0].pairedSubmissions).toBe(0);
+  const replay = await page.request.post("/api/study/finish", {
+    data: {
+      sessionId: session.id,
+      method: "agent",
+      observedSteps: 1,
+      helpCount: 0,
+      note: "replay",
+      abandoned: true,
+    },
+  });
+  expect(
+    (await replay.json()).session.trials.find((t: any) => t.method === "agent")
+      .note,
+  ).toContain("自动化夹具");
+  await page.request.post("/api/auth/login", {
+    data: { username: "buyer", password: "staff2026!" },
+  });
+  const forbidden = await page.request.get("/api/study/report");
+  expect(forbidden.ok()).toBe(false);
+  expect((await forbidden.json()).sessions).toBeUndefined();
+  const createDenied = await page.request.post("/api/study/create", {
+    data: { participant: "P99", first: "manual", humanConfirmed: true },
+  });
+  expect(createDenied.ok()).toBe(false);
+});

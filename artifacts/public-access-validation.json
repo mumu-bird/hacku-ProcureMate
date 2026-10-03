@@ -1,0 +1,47 @@
+{
+  "observedAt": "2026-10-03T10:51:11.180057+00:00",
+  "repositoryVisibility": "public",
+  "resources": [
+    {
+      "resource": "repository",
+      "url": "https://github.com/mumu-bird/hacku-ProcureMate",
+      "status": 200,
+      "bytes": 317149,
+      "sha256": "03aed1e3a6079aef27a08bad1baac258efd0de52f136deda7e8847a65916b6a0",
+      "authentication": "none"
+    },
+    {
+      "resource": "readme",
+      "url": "https://raw.githubusercontent.com/mumu-bird/hacku-ProcureMate/main/README.md",
+      "status": 200,
+      "bytes": 10829,
+      "sha256": "4d1bc6afaa548434789d2ae545ec9ac6d87e4dcb05b0ae9616326875f31fbe4d",
+      "authentication": "none"
+    },
+    {
+      "resource": "video",
+      "url": "https://github.com/mumu-bird/hacku-ProcureMate/releases/download/v0.1.2/ProcureMate-demo.webm",
+      "authentication": "none",
+      "status": 206,
+      "verification": "first_4096_bytes_only",
+      "bytesRead": 4096,
+      "contentLength": "65536",
+      "contentRange": "bytes 0-65535/31800480",
+      "matchesLocalPrefix": true,
+      "fullDownloadVerified": false,
+      "previousFullDownloadAttempt": "connection_interrupted_or_timed_out"
+    },
+    {
+      "resource": "pitch",
+      "url": "https://github.com/mumu-bird/hacku-ProcureMate/releases/download/v0.1.2/ProcureMate-pitch.pdf",
+      "status": 200,
+      "bytes": 1168904,
+      "sha256": "7c8b814129d1bf762196fef86e4d1aeb7a32a075d4a9509a070c4eb0b60e8335",
+      "authentication": "none",
+      "matchesLocalArtifact": true
+    }
+  ],
+  "allPassed": false,
+  "allFullDownloadsPassed": false,
+  "publicAccessAvailable": true
+}

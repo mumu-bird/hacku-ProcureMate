@@ -11,6 +11,6 @@ Validation: 34 core tests and 3 browser workflows passed; TypeScript and product
 
 The official manual-route evidence is still missing. The team should complete its five-participant task comparison, verify real model/Stripe network integrations when credentials are available, and submit its official form. The payment score assesses proposed-rail feasibility, not mandatory Stripe integration. See `docs/award-evidence.md` and `docs/submission-checklist.md`.
 
-Release attachments (the selected repository is currently private): `ProcureMate-demo.webm` (180 seconds, captions, no narration) and `ProcureMate-pitch.pdf`.
+Release attachments (the selected repository is now public; anonymous code and PDF access verified; full video download needs a stable-network recheck): `ProcureMate-demo.webm` (180 seconds, captions, no narration) and `ProcureMate-pitch.pdf`.
 
-The team must make its competition repository and submission materials publicly accessible before submission.
+The competition repository and v0.1.2 attachments are now publicly accessible. Current main adds verified requirement filtering and facilitated paired-study tooling (45 core tests / 5 browser flows). This release’s recording and deck still describe the earlier 34 / 3 baseline; no human results or real external integrations have been added.

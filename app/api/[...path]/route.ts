@@ -28,6 +28,16 @@ import {
 } from "@/lib/engine";
 import { mandateSchema, needSchema } from "@/lib/schemas";
 import type { Mandate, Order, Quote } from "@/lib/types";
+import {
+  createStudy,
+  startStudy,
+  studyAction,
+  studyPlan,
+  finishStudy,
+  studyReport,
+  studyCreateSchema,
+  studyFinishSchema,
+} from "@/lib/study";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
@@ -77,6 +87,54 @@ async function handle(
       r.cookies.delete("pm_session");
       return r;
     }
+    if (path === "study/report" && req.method === "GET")
+      return NextResponse.json(studyReport(actor));
+    if (path === "study/create" && req.method === "POST")
+      return NextResponse.json({
+        session: createStudy(studyCreateSchema.parse(await req.json()), actor),
+      });
+    if (path === "study/start" && req.method === "POST") {
+      const data = z
+        .object({ sessionId: z.string(), method: z.enum(["manual", "agent"]) })
+        .parse(await req.json());
+      return NextResponse.json({
+        session: startStudy(data.sessionId, data.method, actor),
+      });
+    }
+    if (path === "study/action" && req.method === "POST") {
+      const data = z
+        .object({
+          sessionId: z.string(),
+          method: z.enum(["manual", "agent"]),
+          actionId: z.string().min(1).max(80),
+          purpose: z.enum([
+            "view_source",
+            "read_policy",
+            "edit_selection",
+            "edit_answer",
+            "choose_quote",
+            "use_helper",
+          ]),
+        })
+        .parse(await req.json());
+      return NextResponse.json({
+        session: studyAction(
+          data.sessionId,
+          data.method,
+          data.actionId,
+          data.purpose,
+          actor,
+        ),
+      });
+    }
+    if (path === "study/plan" && req.method === "POST") {
+      const data = z.object({ sessionId: z.string() }).parse(await req.json());
+      return NextResponse.json(await studyPlan(data.sessionId, actor));
+    }
+    if (path === "study/finish" && req.method === "POST")
+      return NextResponse.json({
+        session: finishStudy(studyFinishSchema.parse(await req.json()), actor),
+      });
     if (path === "state" && req.method === "GET")
       return NextResponse.json({ ...snapshot(), actor });
     if (path === "evidence" && req.method === "GET")

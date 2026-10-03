@@ -3,25 +3,26 @@
 > next build
 
 ▲ Next.js 16.3.8 (Turbopack)
-✓ Running next.config.ts took 14ms
+✓ Running next.config.ts took 54ms
 
   Creating an optimized production build ...
-✓ Compiled successfully in 195ms
+✓ Compiled successfully in 332ms
   Running TypeScript ...
-  Finished TypeScript in 1966ms ...
-  Collecting page data using 6 workers ...
-  Generating static pages using 6 workers (0/4) ...
-  Generating static pages using 6 workers (1/4) 
-  Generating static pages using 6 workers (2/4) 
-  Generating static pages using 6 workers (3/4) 
-✓ Generating static pages using 6 workers (4/4) in 327ms
+  Finished TypeScript in 1484ms ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/5) ...
+  Generating static pages using 7 workers (1/5)
+  Generating static pages using 7 workers (2/5)
+  Generating static pages using 7 workers (3/5)
+✓ Generating static pages using 7 workers (5/5) in 342ms
   Finalizing page optimization ...
 
 Route (app)
 ┌ ○ /
 ├ ○ /_not-found
 ├ ƒ /api/[...path]
-└ ƒ /api/stripe/webhook
+├ ƒ /api/stripe/webhook
+└ ○ /study
 
 
 ○  (Static)   prerendered as static content

@@ -1652,6 +1652,9 @@ export default function Home() {
                 </div>
               </section>
               <section className="panel measurement-panel">
+                <a className="button secondary" href="/study">
+                  开展计时配对测试
+                </a>
                 <div className="panel-heading">
                   <div>
                     <h2>人工与代理任务对照</h2>

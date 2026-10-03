@@ -1,0 +1,86 @@
+.study-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+.study-shell header {
+  max-width: 850px;
+  margin-bottom: 28px;
+}
+.study-shell h1 {
+  margin: 12px 0;
+  font-size: 32px;
+}
+.study-shell p {
+  line-height: 1.7;
+}
+.study-shell .panel {
+  margin-bottom: 24px;
+  padding: 24px;
+}
+.study-shell label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 14px 0;
+}
+.study-shell label.checkbox-label {
+  flex-direction: row;
+}
+.study-shell small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 8px;
+}
+.study-shell details {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px;
+  margin: 14px 0;
+}
+.study-shell summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.study-shell table {
+  width: 100%;
+  min-width: 0;
+  table-layout: fixed;
+}
+.study-shell td,
+.study-shell th {
+  overflow-wrap: anywhere;
+}
+.study-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.study-option,
+.study-result {
+  border-top: 1px solid var(--line);
+  margin-top: 16px;
+  padding-top: 12px;
+}
+.study-clock {
+  color: var(--green-dark);
+  font-weight: 600;
+}
+.study-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+@media (max-width: 780px) {
+  .study-grid {
+    grid-template-columns: 1fr;
+  }
+  .study-shell {
+    padding: 24px 12px;
+  }
+  .study-shell .form-row {
+    grid-template-columns: 1fr;
+  }
+}

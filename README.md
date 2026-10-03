@@ -6,7 +6,7 @@
 
 [三分钟演示视频](https://github.com/mumu-bird/hacku-ProcureMate/releases/download/v0.1.2/ProcureMate-demo.webm) · [七页路演 PDF](https://github.com/mumu-bird/hacku-ProcureMate/releases/download/v0.1.2/ProcureMate-pitch.pdf) · [按评分准备的证据](docs/award-evidence.md)
 
-指定仓库当前为私有，仓库和发布附件需要访问权限。比赛提交要求公开可访问；上传不等于完成公开性检查。
+指定仓库及 v0.1.2 发布附件现已公开。匿名访问核验结果见 `artifacts/public-access-validation.json`；真人对照与新增能力的录像更新仍待完成。
 
 ## 运行
 
@@ -139,6 +139,10 @@ npm run build
 
 选择偏好支持需求匹配或最低完整现金支出。活动礼品可指定最低容量与明确保温要求；信息只取已观察商品标题。所有组合先核算数量、规格及运费，再筛预算内方案。不足三套时不填充超预算商品；完全无可行方案时显示最低支出并禁止付款。展开“查看筛选依据”可核对候选、排除原因和模型调用状态。
 
-当前代码验证为 40 项核心测试、4 条浏览器流程。v0.1.2 录像和 PDF 对应之前 34/3 的版本，仍可用于说明原型主闭环；新增能力以代码、测试和 `artifacts/specification-decision.png` 为证据。
+当前代码验证为 45 项核心测试、5 条浏览器流程。v0.1.2 录像和 PDF 对应之前 34/3 的版本，仍可用于说明原型主闭环；新增能力以代码、测试和 `artifacts/specification-decision.png` 为证据。
 
 配置模型与 Stripe 测试凭证后运行 `npm run verify:integrations`。核验执行两次实际模型规划，以及 Stripe 沙箱授权、扣款、查询、退款、取消；结果写入 `artifacts/integration-verification.json`。缺少配置或任何失败返回退出码 2，不将模拟支付和规则回退视为真实接口成功。当前两项均未配置。
+
+## 现场真人对照
+
+负责人登录后打开 `/study`，按 P01–P05 安排人工/代理两条路线。系统保存固定任务与来源快照、记录服务端时间，主持人观察完整步骤和帮助次数；结果封存且保留错误与放弃。两条路线都以采购方案与授权边界准备完成为终点，不实际付款。第二条路线结束后展示答案校验，可导出匿名原始记录与分组统计。详见 [操作协议](docs/user-study-protocol.md)。当前真实参与者仍为零，自动化夹具不计作真人结果。

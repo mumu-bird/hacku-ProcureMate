@@ -134,3 +134,11 @@ npm run build
 应用代码在本次赛事期间从零编写，使用 Next.js、React、TypeScript、Lucide、Stripe SDK、Zod、tsx 与 Playwright。SQLite 由 Node.js 提供。上述库保留其各自许可证；没有复制既有应用模板。视觉由本项目 CSS 与图标组合绘制。路演稿使用本地 slide-design-skill 的排版引擎，内容与产品截图来自本项目。
 
 没有集成 Raccoon Work，因此不宣称符合商汤专项奖资格。
+
+## 当前选品增强与外部接口核验
+
+选择偏好支持需求匹配或最低完整现金支出。活动礼品可指定最低容量与明确保温要求；信息只取已观察商品标题。所有组合先核算数量、规格及运费，再筛预算内方案。不足三套时不填充超预算商品；完全无可行方案时显示最低支出并禁止付款。展开“查看筛选依据”可核对候选、排除原因和模型调用状态。
+
+当前代码验证为 40 项核心测试、4 条浏览器流程。v0.1.2 录像和 PDF 对应之前 34/3 的版本，仍可用于说明原型主闭环；新增能力以代码、测试和 `artifacts/specification-decision.png` 为证据。
+
+配置模型与 Stripe 测试凭证后运行 `npm run verify:integrations`。核验执行两次实际模型规划，以及 Stripe 沙箱授权、扣款、查询、退款、取消；结果写入 `artifacts/integration-verification.json`。缺少配置或任何失败返回退出码 2，不将模拟支付和规则回退视为真实接口成功。当前两项均未配置。

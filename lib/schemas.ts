@@ -14,6 +14,9 @@ export const needSchema = z.object({
   address: z.string().min(3).max(200),
   sku: z.string().max(100).optional(),
   quantity: z.number().int().min(1).max(100).optional(),
+  strategy: z.enum(["balanced", "lowest_cost"]).default("balanced"),
+  minCapacityMl: z.number().int().min(0).max(2000).optional(),
+  requiresInsulated: z.boolean().optional(),
 });
 export const mandateSchema = z.object({
   name: z.string().min(1).max(120),

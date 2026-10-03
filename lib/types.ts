@@ -29,6 +29,9 @@ export type Need = {
   address: string;
   sku?: string;
   quantity?: number;
+  strategy?: "balanced" | "lowest_cost";
+  minCapacityMl?: number;
+  requiresInsulated?: boolean;
 };
 export type Line = {
   productId: string;
@@ -65,6 +68,27 @@ export type Quote = {
   planner: string;
   warnings: string[];
   need: Need;
+  decision?: {
+    strategy: string;
+    eligibleCount: number;
+    affordableCount: number;
+    lowestTotalCents: number;
+    model: {
+      status: "not_configured" | "validated" | "fallback";
+      model: string | null;
+      latencyMs: number | null;
+      warning?: string;
+    };
+    candidates: {
+      productIds: string[];
+      names: string[];
+      totalCents: number;
+      withinBudget: boolean;
+      selected: boolean;
+      reasons: string[];
+    }[];
+    rejected: { productId: string; name: string; reasons: string[] }[];
+  };
 };
 export type Mandate = {
   id: string;

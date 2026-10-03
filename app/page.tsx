@@ -955,22 +955,79 @@ export default function Home() {
                           </div>
                         </label>
                       </div>
+                      <label>
+                        选择偏好
+                        <select
+                          value={need.strategy || "balanced"}
+                          onChange={(e) =>
+                            setNeed({
+                              ...need,
+                              strategy: e.target.value as Need["strategy"],
+                            })
+                          }
+                        >
+                          <option value="balanced">
+                            满足预算后，优先匹配需求
+                          </option>
+                          <option value="lowest_cost">
+                            满足规格后，优先最低现金支出
+                          </option>
+                        </select>
+                      </label>
                       {scenario === "event" ? (
-                        <label>
-                          礼品风格
-                          <div className="style-options">
-                            {["简约", "实用", "活力", "温暖"].map((s) => (
-                              <button
-                                key={s}
-                                className={need.style === s ? "chosen" : ""}
-                                onClick={() => setNeed({ ...need, style: s })}
+                        <>
+                          <div className="form-row">
+                            <label>
+                              最低容量（ml，可不填）
+                              <input
+                                type="number"
+                                min="0"
+                                max="2000"
+                                value={need.minCapacityMl || ""}
+                                onChange={(e) =>
+                                  setNeed({
+                                    ...need,
+                                    minCapacityMl: e.target.value
+                                      ? Number(e.target.value)
+                                      : undefined,
+                                  })
+                                }
+                              />
+                            </label>
+                            <label>
+                              保温要求
+                              <select
+                                value={need.requiresInsulated ? "yes" : "any"}
+                                onChange={(e) =>
+                                  setNeed({
+                                    ...need,
+                                    requiresInsulated: e.target.value === "yes",
+                                  })
+                                }
                               >
-                                {s}
-                                {need.style === s && <Check size={13} />}
-                              </button>
-                            ))}
+                                <option value="any">不限定</option>
+                                <option value="yes">
+                                  来源明确标注保温或真空
+                                </option>
+                              </select>
+                            </label>
                           </div>
-                        </label>
+                          <label>
+                            礼品风格
+                            <div className="style-options">
+                              {["简约", "实用", "活力", "温暖"].map((s) => (
+                                <button
+                                  key={s}
+                                  className={need.style === s ? "chosen" : ""}
+                                  onClick={() => setNeed({ ...need, style: s })}
+                                >
+                                  {s}
+                                  {need.style === s && <Check size={13} />}
+                                </button>
+                              ))}
+                            </div>
+                          </label>
+                        </>
                       ) : (
                         <>
                           <label>
@@ -1127,6 +1184,38 @@ export default function Home() {
                         <ProductArt type={q.lines[0].category} />
                         <h3>{q.lines.map((l) => l.name).join(" + ")}</h3>
                         <p>{q.reason}</p>
+                        {q.decision && (
+                          <details onClick={(e) => e.stopPropagation()}>
+                            <summary>查看筛选依据</summary>
+                            <p>
+                              比较 {q.decision.eligibleCount} 套符合规格的组合，
+                              {q.decision.affordableCount}{" "}
+                              套满足预算。最低完整支出{" "}
+                              {money(q.decision.lowestTotalCents)}。
+                            </p>
+                            <p>
+                              {q.decision.model.status === "validated"
+                                ? `模型 ${q.decision.model.model} 排序已通过目录校验；预算与规格由服务端检查。`
+                                : q.decision.model.warning ||
+                                  "透明规则排序；没有真实模型调用。"}
+                            </p>
+                            {q.decision.rejected.map((p) => (
+                              <p key={p.productId}>
+                                {p.name}：{p.reasons.join("；")}
+                              </p>
+                            ))}
+                            {q.decision.candidates.map((p) => (
+                              <p key={p.productIds.join("+")}>
+                                {p.names.join(" + ")} · {money(p.totalCents)} ·{" "}
+                                {p.withinBudget
+                                  ? p.selected
+                                    ? "已展示"
+                                    : "预算内备选"
+                                  : "预算超限，排除"}
+                              </p>
+                            ))}
+                          </details>
+                        )}
                         <div className="quote-breakdown">
                           <span>
                             商品金额<strong>{money(q.subtotalCents)}</strong>

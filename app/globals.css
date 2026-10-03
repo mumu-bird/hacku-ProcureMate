@@ -2092,3 +2092,18 @@ dd {
     overflow-wrap: anywhere;
   }
 }
+.quote-card details {
+  margin: 12px 0;
+  padding: 12px;
+  background: #f5f8f2;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.quote-card details summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.quote-card details p {
+  margin: 8px 0 0;
+}

@@ -1,17 +1,26 @@
 import { id, now, products, put, audit } from "./db";
 import type { Need, Product, Quote, Line } from "./types";
 import { shippingCents as deliveryCost, shippingPolicy } from "./shipping";
+import { unmetRequirements } from "./requirements";
 
 export async function modelSelection(
   need: Need,
   candidates: Product[],
-): Promise<{ ids: string[]; planner: string; warning?: string }> {
+): Promise<{
+  ids: string[];
+  planner: string;
+  warning?: string;
+  trace: NonNullable<Quote["decision"]>["model"];
+}> {
   if (!process.env.MODEL_API_KEY)
     return {
       ids: [],
       planner: "rules",
+      trace: { status: "not_configured", model: null, latencyMs: null },
       warning: "当前使用透明规则规划器；未连接语言模型。",
     };
+  const started = Date.now();
+  const modelName = process.env.MODEL_NAME || "gpt-4.1-mini";
   try {
     const response = await fetch(
       `${(process.env.MODEL_BASE_URL || "https://api.openai.com/v1").replace(/\/$/, "")}/chat/completions`,
@@ -62,15 +71,23 @@ export async function modelSelection(
     )
       throw new Error("invalid model output");
     return {
-      ids: value.productIds.filter((v: string) =>
-        candidates.some((p) => p.id === v),
-      ),
+      ids: [...new Set<string>(value.productIds)],
       planner: "model",
+      trace: {
+        status: "validated",
+        model: modelName,
+        latencyMs: Date.now() - started,
+      },
     };
   } catch {
     return {
       ids: [],
       planner: "rules",
+      trace: {
+        status: "fallback",
+        model: modelName,
+        latencyMs: Date.now() - started,
+      },
       warning: "语言模型不可用或输出未通过校验，已回退到透明规则。",
     };
   }
@@ -106,48 +123,97 @@ export async function plan(need: Need, actor: string): Promise<Quote[]> {
         need.connectors.includes(p.connector),
     );
   }
-  if (!candidates.length)
-    throw new Error("当前目录没有满足规格的商品，请补充需求或更换条件。");
-  const model = await modelSelection(need, candidates);
-  candidates.sort((a, b) => {
-    const rank = (p: Product) =>
-      model.ids.includes(p.id)
-        ? model.ids.indexOf(p.id)
-        : 100 - (p.tags.includes(need.style) ? 10 : 0);
-    return rank(a) - rank(b) || a.priceCents - b.priceCents;
+  const rejected = candidates.flatMap((p) => {
+    const reasons = unmetRequirements(p, need);
+    return reasons.length ? [{ productId: p.id, name: p.name, reasons }] : [];
   });
+  candidates = candidates.filter(
+    (p) => unmetRequirements(p, need).length === 0,
+  );
+  if (!candidates.length)
+    throw new Error(
+      "当前目录没有满足必要规格的商品；未知规格不能当作符合要求，请修改条件或补充可核实来源。",
+    );
+  const model = await modelSelection(need, candidates);
+  const rank = (p: Product) =>
+    model.ids.includes(p.id)
+      ? model.ids.indexOf(p.id)
+      : 100 - (p.tags.includes(need.style) ? 10 : 0);
   let bundles: Line[][];
   if (need.scenario === "onboarding") {
     const keyboards = candidates.filter((p) => p.category === "keyboard");
     const others = candidates.filter((p) => p.category !== "keyboard");
     bundles =
       keyboards.length && others.length
-        ? others
-            .slice(0, 3)
-            .map((p) => [line(keyboards[0], need.people), line(p, need.people)])
-        : candidates.slice(0, 3).map((p) => [line(p, need.people)]);
-  } else
-    bundles = candidates
-      .slice(0, 3)
-      .map((p) => [
-        line(
-          p,
-          need.scenario === "replenishment" ? need.quantity || 1 : need.people,
-        ),
-      ]);
-  bundles.sort(
-    (a, b) =>
-      Number(
-        b.reduce((n, l) => n + l.unitCents * l.quantity, 0) +
-          deliveryCost(b.reduce((n, l) => n + l.unitCents * l.quantity, 0)) <=
-          need.budgetCents,
-      ) -
-      Number(
-        a.reduce((n, l) => n + l.unitCents * l.quantity, 0) +
-          deliveryCost(a.reduce((n, l) => n + l.unitCents * l.quantity, 0)) <=
-          need.budgetCents,
+        ? keyboards.flatMap((k) =>
+            others.map((p) => [line(k, need.people), line(p, need.people)]),
+          )
+        : candidates.map((p) => [line(p, need.people)]);
+  } else {
+    bundles = candidates.map((p) => [
+      line(
+        p,
+        need.scenario === "replenishment" ? need.quantity || 1 : need.people,
       ),
+    ]);
+  }
+  const total = (ls: Line[]) => {
+    const subtotal = ls.reduce((n, l) => n + l.unitCents * l.quantity, 0);
+    return subtotal + deliveryCost(subtotal);
+  };
+  const preference = (ls: Line[]) =>
+    ls.reduce(
+      (n, l) => n + rank(candidates.find((p) => p.id === l.productId)!),
+      0,
+    );
+  const evaluated = bundles.map((lines) => ({
+    lines,
+    totalCents: total(lines),
+    preference: preference(lines),
+  }));
+  evaluated.sort(
+    (a, b) =>
+      Number(b.totalCents <= need.budgetCents) -
+        Number(a.totalCents <= need.budgetCents) ||
+      (need.strategy === "lowest_cost"
+        ? a.totalCents - b.totalCents
+        : a.preference - b.preference) ||
+      a.totalCents - b.totalCents,
   );
+  const affordable = evaluated.filter((b) => b.totalCents <= need.budgetCents);
+  // Never pad feasible options with unaffordable ones. A no-fit quote remains visibly
+  // blocked so the user can see the minimum cash required without increasing authority.
+  const selected = affordable.length
+    ? affordable.slice(0, 3)
+    : [...evaluated].sort((a, b) => a.totalCents - b.totalCents).slice(0, 1);
+  bundles = selected.map((b) => b.lines);
+  const lowestTotalCents = Math.min(...evaluated.map((b) => b.totalCents));
+  const decision: NonNullable<Quote["decision"]> = {
+    strategy: need.strategy || "balanced",
+    eligibleCount: evaluated.length,
+    affordableCount: affordable.length,
+    lowestTotalCents,
+    model: {
+      ...model.trace,
+      ...(model.warning ? { warning: model.warning } : {}),
+    },
+    rejected,
+    candidates: evaluated.map((b) => ({
+      productIds: b.lines.map((l) => l.productId),
+      names: b.lines.map((l) => l.name),
+      totalCents: b.totalCents,
+      withinBudget: b.totalCents <= need.budgetCents,
+      selected: selected.includes(b),
+      reasons: [
+        b.totalCents <= need.budgetCents
+          ? "含标准派送费后满足需求预算"
+          : "含标准派送费后超出需求预算，不能付款",
+        need.strategy === "lowest_cost"
+          ? "按公司完整现金支出排序"
+          : "先满足预算，再按已验证的模型排序或风格规则排序",
+      ],
+    })),
+  };
   const quotes = bundles.map((lines, i): Quote => {
     const subtotalCents = lines.reduce(
       (n, l) => n + l.unitCents * l.quantity,
@@ -184,9 +250,10 @@ export async function plan(need: Need, actor: string): Promise<Quote[]> {
       merchant: "The Club · 测试商户",
       address: need.address,
       currency: "HKD",
+      decision,
       reason:
         need.scenario === "event"
-          ? `${need.people} 位参与者每人 1 件，优先匹配「${need.style}」风格；按有效授权执行。`
+          ? `${need.people} 位参与者每人 1 件；${need.strategy === "lowest_cost" ? "按含运费现金支出排序" : lines.some((l) => candidates.find((p) => p.id === l.productId)?.tags.includes(need.style)) ? `匹配「${need.style}」风格` : "作为预算内其他风格备选"}。${subtotalCents + shippingCents <= need.budgetCents ? "满足需求预算与已填写规格。" : "没有预算内方案，付款将被阻止。"}`
           : need.scenario === "replenishment"
             ? `补至目标库存，本次 ${need.quantity} 盒；已有在途量已扣除。`
             : `按 ${need.job} 岗位与 ${need.connectors.join(" / ")} 接口筛选。`,
@@ -204,6 +271,7 @@ export async function plan(need: Need, actor: string): Promise<Quote[]> {
     planner: model.planner,
     quoteIds: quotes.map((q) => q.id),
     budgetCents: need.budgetCents,
+    decision,
   });
   return quotes;
 }

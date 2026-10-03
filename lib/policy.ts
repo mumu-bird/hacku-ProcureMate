@@ -1,6 +1,7 @@
 import { get, list, usage } from "./db";
 import type { Check, Mandate, Order, Product, Quote } from "./types";
 import { shippingCents, shippingPolicy } from "./shipping";
+import { unmetRequirements } from "./requirements";
 export function checks(
   quote: Quote,
   mandate: Mandate,
@@ -39,6 +40,24 @@ export function checks(
     quote.shippingCents === shippingCents(quote.subtotalCents) &&
     quote.shippingEvidence?.sourceDigest === shippingPolicy.sourceDigest;
   return [
+    {
+      code: "REQUIREMENTS",
+      pass:
+        quote.lines.length > 0 &&
+        quote.totalCents <= quote.need.budgetCents &&
+        quote.lines.every((l) => {
+          const product = get<Product>("product", l.productId);
+          return (
+            !!product &&
+            unmetRequirements(product, quote.need).length === 0 &&
+            l.quantity ===
+              (quote.scenario === "replenishment"
+                ? quote.need.quantity
+                : quote.need.people)
+          );
+        }),
+      message: "数量、需求预算与必要规格必须满足；修改需求须重新生成方案",
+    },
     {
       code: "ACTIVE",
       pass: !mandate.revokedAt,

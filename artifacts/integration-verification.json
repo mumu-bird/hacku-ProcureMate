@@ -1,0 +1,11 @@
+{
+  "runId": "integration_8054a050-1546-428a-92f4-3e76e75592f2",
+  "observedAt": "2026-10-03T10:12:13.391Z",
+  "scope": "真实网络验证；Stripe 仅沙箱测试收款，不是 The Club 商户订单；不证明 webhook 或支付委托可行性。",
+  "model": {
+    "status": "not_configured"
+  },
+  "stripe": {
+    "status": "not_configured"
+  }
+}

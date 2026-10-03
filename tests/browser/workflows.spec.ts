@@ -217,3 +217,26 @@ test("onboarding variants, session access control, invalid payload and responsiv
     ),
   ).toBe(true);
 });
+
+test("budget and verified gift specifications change the options with an inspectable decision", async ({
+  page,
+}) => {
+  await page.goto("/");
+  await page.getByRole("button", { name: "进入工作区" }).click();
+  await page.getByLabel("最低容量（ml，可不填）").fill("500");
+  await page.getByLabel("保温要求").selectOption("yes");
+  await page.getByLabel("选择偏好").selectOption("lowest_cost");
+  await page.getByRole("button", { name: "生成采购方案" }).click();
+  await expect(page.locator(".quote-card")).toHaveCount(1);
+  const card = page.locator(".quote-card").first();
+  await card.getByText("查看筛选依据", { exact: true }).click();
+  await expect(card.getByText(/比较 1 套符合规格的组合/)).toBeVisible();
+  const state = await (await page.request.get("/api/state")).json();
+  const q = state.quotes.find((q: any) => q.need.minCapacityMl === 500);
+  expect(q.lines[0].productId).toBe("gift-bottle");
+  expect(q.decision.rejected).toHaveLength(3);
+  await page.screenshot({
+    path: "artifacts/specification-decision.png",
+    fullPage: true,
+  });
+});

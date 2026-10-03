@@ -8,7 +8,12 @@ export type PaymentState =
   | "refunded"
   | "unknown"
   | "requires_action";
-export type PaymentResult = { id: string; state: PaymentState; amount: number };
+export type PaymentResult = {
+  id: string;
+  state: PaymentState;
+  amount: number;
+  currency?: string;
+};
 export interface Payments {
   name: string;
   authorize(
@@ -50,6 +55,7 @@ export function simulatedPayments(): Payments {
       const p = mockPut({
         id: paymentId,
         amount,
+        currency: "hkd",
         state: behavior === "decline" ? "declined" : "authorized",
       });
       return behavior === "timeout" ? { ...p, state: "unknown" } : p;
@@ -83,6 +89,7 @@ function stripeResult(p: Stripe.PaymentIntent): PaymentResult {
   return {
     id: p.id,
     amount: p.amount,
+    currency: p.currency,
     state:
       p.status === "succeeded"
         ? "succeeded"
@@ -158,6 +165,7 @@ export function paymentProvider(): Payments {
       return {
         id: r.id,
         amount: p.amount,
+        currency: p.currency,
         state: r.status === "succeeded" ? "refunded" : "unknown",
       };
     },

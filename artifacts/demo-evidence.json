@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-10-02T17:32:49.620Z",
+  "exportedAt": "2026-10-03T02:43:07.692Z",
   "disclosure": "测试公司、库存与商户订单；商品为真实来源快照。哈希链仅检查导出内部一致性，不证明运营者无法重写。",
   "products": [
     {
@@ -18,9 +18,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。"
+      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。",
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "coffee-black",
@@ -38,9 +39,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。"
+      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。",
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "coffee-mocha",
@@ -58,9 +60,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。"
+      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。",
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "headset-jbl",
@@ -77,9 +80,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。"
+      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。",
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "charger-belkin",
@@ -97,9 +101,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。"
+      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。",
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "dock-belkin",
@@ -117,9 +122,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。"
+      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。",
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "headset-zone",
@@ -137,9 +143,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。"
+      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。",
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "webcam-brio",
@@ -157,9 +164,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。"
+      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。",
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "mouse-lift",
@@ -176,9 +184,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。"
+      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。",
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "mouse-m650",
@@ -196,9 +205,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。"
+      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。",
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "combo-mk470",
@@ -215,9 +225,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。"
+      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。",
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "keyboard-k580",
@@ -235,9 +246,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。"
+      "compatibilityNote": "采购模板要求，仍需按具体型号确认兼容性。",
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "gift-bottle",
@@ -255,9 +267,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": null
+      "compatibilityNote": null,
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "gift-purple",
@@ -275,9 +288,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": null
+      "compatibilityNote": null,
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "gift-tritan",
@@ -295,9 +309,10 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": null
+      "compatibilityNote": null,
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     },
     {
       "id": "gift-flask",
@@ -315,15 +330,16 @@
       "priceBasis": "merchant_listing_snapshot",
       "shippingCents": 8000,
       "shippingSource": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-      "shippingNote": "标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。",
+      "shippingNote": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 运费按订单净额计算；此字段是基础派送费。商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。",
       "stockVerified": false,
-      "compatibilityNote": null
+      "compatibilityNote": null,
+      "shippingObservedAt": "2026-10-02T18:18:40.140139+00:00"
     }
   ],
   "quotes": [
     {
-      "id": "quote_b7e2b48b-d68",
-      "requestId": "request_435e1112-8b7",
+      "id": "quote_1526889b-9cf",
+      "requestId": "request_38ab350a-d2d",
       "scenario": "onboarding",
       "optionIndex": 2,
       "title": "另一种选择",
@@ -348,19 +364,25 @@
         }
       ],
       "subtotalCents": 94800,
-      "shippingCents": 8000,
-      "totalCents": 102800,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 94800,
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
       "reason": "按 developer 岗位与 USB-A / USB-C / Bluetooth 接口筛选。",
-      "createdAt": "2026-10-02T17:32:34.569Z",
-      "expiresAt": "2026-10-03T17:32:34.569Z",
+      "createdAt": "2026-10-03T02:42:52.327Z",
+      "expiresAt": "2026-10-04T02:42:52.327Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
         "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-        "派送按已采集的标准 HK$80 规则计算；特殊派送和交期未验证。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
         "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
         "当前使用透明规则规划器；未连接语言模型。",
         "接口已按采购模板筛选，具体型号兼容性需负责人复核。"
@@ -384,8 +406,8 @@
       }
     },
     {
-      "id": "quote_f7008fe5-e69",
-      "requestId": "request_435e1112-8b7",
+      "id": "quote_2ae712d9-2bd",
+      "requestId": "request_38ab350a-d2d",
       "scenario": "onboarding",
       "optionIndex": 1,
       "title": "备选方案",
@@ -410,19 +432,25 @@
         }
       ],
       "subtotalCents": 69800,
-      "shippingCents": 8000,
-      "totalCents": 77800,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 69800,
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
       "reason": "按 developer 岗位与 USB-A / USB-C / Bluetooth 接口筛选。",
-      "createdAt": "2026-10-02T17:32:34.569Z",
-      "expiresAt": "2026-10-03T17:32:34.569Z",
+      "createdAt": "2026-10-03T02:42:52.327Z",
+      "expiresAt": "2026-10-04T02:42:52.327Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
         "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-        "派送按已采集的标准 HK$80 规则计算；特殊派送和交期未验证。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
         "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
         "当前使用透明规则规划器；未连接语言模型。",
         "接口已按采购模板筛选，具体型号兼容性需负责人复核。"
@@ -446,8 +474,8 @@
       }
     },
     {
-      "id": "quote_31cb0666-49d",
-      "requestId": "request_435e1112-8b7",
+      "id": "quote_9a024393-c8b",
+      "requestId": "request_38ab350a-d2d",
       "scenario": "onboarding",
       "optionIndex": 0,
       "title": "推荐方案",
@@ -472,19 +500,25 @@
         }
       ],
       "subtotalCents": 64800,
-      "shippingCents": 8000,
-      "totalCents": 72800,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 64800,
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
       "reason": "按 developer 岗位与 USB-A / USB-C / Bluetooth 接口筛选。",
-      "createdAt": "2026-10-02T17:32:34.569Z",
-      "expiresAt": "2026-10-03T17:32:34.569Z",
+      "createdAt": "2026-10-03T02:42:52.327Z",
+      "expiresAt": "2026-10-04T02:42:52.327Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
         "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-        "派送按已采集的标准 HK$80 规则计算；特殊派送和交期未验证。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
         "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
         "当前使用透明规则规划器；未连接语言模型。",
         "接口已按采购模板筛选，具体型号兼容性需负责人复核。"
@@ -508,8 +542,8 @@
       }
     },
     {
-      "id": "quote_446b098e-d5c",
-      "requestId": "request_e113be9f-609",
+      "id": "quote_2fa7c942-f00",
+      "requestId": "request_bb7d6324-271",
       "scenario": "replenishment",
       "optionIndex": 0,
       "title": "推荐方案",
@@ -525,19 +559,79 @@
         }
       ],
       "subtotalCents": 118400,
-      "shippingCents": 8000,
-      "totalCents": 126400,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 118400,
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
       "reason": "补至目标库存，本次 16 盒；已有在途量已扣除。",
-      "createdAt": "2026-10-02T17:32:06.647Z",
-      "expiresAt": "2026-10-03T17:32:06.647Z",
+      "createdAt": "2026-10-03T02:42:40.137Z",
+      "expiresAt": "2026-10-04T02:42:40.137Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
         "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-        "派送按已采集的标准 HK$80 规则计算；特殊派送和交期未验证。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "replenishment",
+        "title": "补货 · NESCAFÉ - 意式莫加咖啡",
+        "brief": "由库存阈值触发",
+        "people": 1,
+        "budgetCents": 200000,
+        "style": "实用",
+        "job": "administration",
+        "connectors": [],
+        "address": "香港薄扶林道 · 公司办公室",
+        "sku": "coffee-mocha",
+        "quantity": 16
+      }
+    },
+    {
+      "id": "quote_910d7d4e-d12",
+      "requestId": "request_f1bf2595-cb9",
+      "scenario": "replenishment",
+      "optionIndex": 0,
+      "title": "推荐方案",
+      "lines": [
+        {
+          "productId": "coffee-mocha",
+          "name": "NESCAFÉ - 意式莫加咖啡",
+          "category": "consumable",
+          "quantity": 16,
+          "unitCents": 7400,
+          "sourceUrl": "https://shop.theclub.com.hk/promotions/coffee-corner/coffee-beans-capsule-ground/nescafe-di-moka-eurobrand01",
+          "observedAt": "2026-10-02T17:01:14.710155+00:00"
+        }
+      ],
+      "subtotalCents": 118400,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 118400,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "reason": "补至目标库存，本次 16 盒；已有在途量已扣除。",
+      "createdAt": "2026-10-03T02:42:23.309Z",
+      "expiresAt": "2026-10-04T02:42:23.309Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
         "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
         "当前使用透明规则规划器；未连接语言模型。"
       ],
@@ -560,8 +654,177 @@
       }
     },
     {
-      "id": "quote_8a551341-338",
-      "requestId": "request_d672f0f0-33e",
+      "id": "quote_0b6fd5c4-736",
+      "requestId": "request_9361eb1f-d1c",
+      "scenario": "event",
+      "optionIndex": 2,
+      "title": "另一种选择",
+      "lines": [
+        {
+          "productId": "gift-flask",
+          "name": "Thermos-350毫升真空保溫杯",
+          "category": "gift",
+          "quantity": 1,
+          "unitCents": 26000,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-350ml-vacuum-insulated-mug",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 26000,
+      "shippingCents": 8000,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 34000,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "reason": "1 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
+      "createdAt": "2026-10-03T02:41:56.795Z",
+      "expiresAt": "2026-10-04T02:41:56.795Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "独立小额运费拦截测试",
+        "brief": "单件现金商品，授权只覆盖商品金额。原采购需求保持不变。",
+        "people": 1,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室"
+      }
+    },
+    {
+      "id": "quote_f6e3d40e-047",
+      "requestId": "request_9361eb1f-d1c",
+      "scenario": "event",
+      "optionIndex": 1,
+      "title": "备选方案",
+      "lines": [
+        {
+          "productId": "gift-purple",
+          "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+          "category": "gift",
+          "quantity": 1,
+          "unitCents": 16800,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-480ml-vacuum-insulated-bottle-jmz-481-pl",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 16800,
+      "shippingCents": 8000,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 24800,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "reason": "1 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
+      "createdAt": "2026-10-03T02:41:56.795Z",
+      "expiresAt": "2026-10-04T02:41:56.795Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "独立小额运费拦截测试",
+        "brief": "单件现金商品，授权只覆盖商品金额。原采购需求保持不变。",
+        "people": 1,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室"
+      }
+    },
+    {
+      "id": "quote_70b87d3d-aab",
+      "requestId": "request_9361eb1f-d1c",
+      "scenario": "event",
+      "optionIndex": 0,
+      "title": "推荐方案",
+      "lines": [
+        {
+          "productId": "gift-bottle",
+          "name": "Thermos - 500毫升真空控溫瓶 (2色可選)",
+          "category": "gift",
+          "quantity": 1,
+          "unitCents": 16800,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-500ml-vacuum-insulated-bottle-2-colors-option-fei-501-mo",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 16800,
+      "shippingCents": 8000,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 24800,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "reason": "1 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
+      "createdAt": "2026-10-03T02:41:56.795Z",
+      "expiresAt": "2026-10-04T02:41:56.795Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。",
+        "独立小额边界测试；不改变原采购人数和方案。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "独立小额运费拦截测试",
+        "brief": "单件现金商品，授权只覆盖商品金额。原采购需求保持不变。",
+        "people": 1,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室"
+      }
+    },
+    {
+      "id": "quote_4aeb3f11-cf5",
+      "requestId": "request_c97537a7-0e2",
       "scenario": "event",
       "optionIndex": 2,
       "title": "超出需求预算",
@@ -577,19 +840,25 @@
         }
       ],
       "subtotalCents": 260000,
-      "shippingCents": 8000,
-      "totalCents": 268000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 260000,
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
       "reason": "10 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-      "createdAt": "2026-10-02T17:30:42.468Z",
-      "expiresAt": "2026-10-03T17:30:42.468Z",
+      "createdAt": "2026-10-03T02:40:58.031Z",
+      "expiresAt": "2026-10-04T02:40:58.032Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
         "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-        "派送按已采集的标准 HK$80 规则计算；特殊派送和交期未验证。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
         "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
         "当前使用透明规则规划器；未连接语言模型。"
       ],
@@ -610,8 +879,8 @@
       }
     },
     {
-      "id": "quote_63737929-9b2",
-      "requestId": "request_d672f0f0-33e",
+      "id": "quote_330904ea-ac5",
+      "requestId": "request_c97537a7-0e2",
       "scenario": "event",
       "optionIndex": 1,
       "title": "备选方案",
@@ -627,19 +896,25 @@
         }
       ],
       "subtotalCents": 168000,
-      "shippingCents": 8000,
-      "totalCents": 176000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 168000,
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
       "reason": "10 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-      "createdAt": "2026-10-02T17:30:42.468Z",
-      "expiresAt": "2026-10-03T17:30:42.468Z",
+      "createdAt": "2026-10-03T02:40:58.031Z",
+      "expiresAt": "2026-10-04T02:40:58.031Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
         "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-        "派送按已采集的标准 HK$80 规则计算；特殊派送和交期未验证。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
         "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
         "当前使用透明规则规划器；未连接语言模型。"
       ],
@@ -660,8 +935,8 @@
       }
     },
     {
-      "id": "quote_d7714fa4-f87",
-      "requestId": "request_d672f0f0-33e",
+      "id": "quote_65a025a3-24a",
+      "requestId": "request_c97537a7-0e2",
       "scenario": "event",
       "optionIndex": 0,
       "title": "推荐方案",
@@ -677,19 +952,25 @@
         }
       ],
       "subtotalCents": 168000,
-      "shippingCents": 8000,
-      "totalCents": 176000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 168000,
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
       "reason": "10 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-      "createdAt": "2026-10-02T17:30:42.468Z",
-      "expiresAt": "2026-10-03T17:30:42.468Z",
+      "createdAt": "2026-10-03T02:40:58.031Z",
+      "expiresAt": "2026-10-04T02:40:58.031Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
         "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-        "派送按已采集的标准 HK$80 规则计算；特殊派送和交期未验证。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
         "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
         "当前使用透明规则规划器；未连接语言模型。"
       ],
@@ -713,10 +994,10 @@
   "mandates": [
     {
       "name": "日常补货 · 办公室补货 · NESCAFÉ - 意式莫加咖啡",
-      "quoteId": "quote_446b098e-d5c",
+      "quoteId": "quote_910d7d4e-d12",
       "scenario": "replenishment",
       "capCents": 200000,
-      "totalCapCents": 200000,
+      "totalCapCents": 500000,
       "categories": [
         "consumable"
       ],
@@ -731,24 +1012,24 @@
       "productIds": [
         "coffee-mocha"
       ],
-      "expiresAt": "2026-10-03T17:32:06.853Z",
-      "minIntervalSeconds": 60,
-      "id": "mandate_5d133878-5b4",
+      "expiresAt": "2026-10-04T02:42:23.623Z",
+      "minIntervalSeconds": 0,
+      "id": "mandate_a8f456e6-fa6",
       "requestId": null,
-      "createdAt": "2026-10-02T17:32:06.858Z",
+      "createdAt": "2026-10-03T02:42:23.630Z",
       "revokedAt": null,
       "version": 1,
       "rewardOwner": "company",
       "actor": "manager",
-      "spent": 126400,
+      "spent": 236800,
       "reserved": 0
     },
     {
-      "name": "活动与礼品 · 秋日团队日 · 欢迎礼品",
-      "quoteId": "quote_63737929-9b2",
+      "name": "活动与礼品 · 独立小额运费拦截测试",
+      "quoteId": "quote_70b87d3d-aab",
       "scenario": "event",
-      "capCents": 168000,
-      "totalCapCents": 168000,
+      "capCents": 16800,
+      "totalCapCents": 16800,
       "categories": [
         "gift"
       ],
@@ -759,17 +1040,15 @@
         "card"
       ],
       "address": "香港薄扶林道 · 公司办公室",
-      "allowSubstitution": true,
+      "allowSubstitution": false,
       "productIds": [
-        "gift-bottle",
-        "gift-purple",
-        "gift-flask"
+        "gift-bottle"
       ],
-      "expiresAt": "2026-10-03T17:31:52.454Z",
+      "expiresAt": "2026-10-04T02:42:08.927Z",
       "minIntervalSeconds": 0,
-      "id": "mandate_33c7982a-c6a",
-      "requestId": "request_d672f0f0-33e",
-      "createdAt": "2026-10-02T17:31:52.472Z",
+      "id": "mandate_3c40884f-2bc",
+      "requestId": "request_9361eb1f-d1c",
+      "createdAt": "2026-10-03T02:42:08.943Z",
       "revokedAt": null,
       "version": 1,
       "rewardOwner": "company",
@@ -779,7 +1058,7 @@
     },
     {
       "name": "活动与礼品 · 秋日团队日 · 欢迎礼品",
-      "quoteId": "quote_d7714fa4-f87",
+      "quoteId": "quote_65a025a3-24a",
       "scenario": "event",
       "capCents": 250000,
       "totalCapCents": 250000,
@@ -799,28 +1078,28 @@
         "gift-purple",
         "gift-flask"
       ],
-      "expiresAt": "2026-10-03T17:31:12.459Z",
+      "expiresAt": "2026-10-04T02:41:28.315Z",
       "minIntervalSeconds": 0,
-      "id": "mandate_1f274f30-390",
-      "requestId": "request_d672f0f0-33e",
-      "createdAt": "2026-10-02T17:31:12.482Z",
+      "id": "mandate_10fe758b-109",
+      "requestId": "request_c97537a7-0e2",
+      "createdAt": "2026-10-03T02:41:28.357Z",
       "revokedAt": null,
       "version": 1,
       "rewardOwner": "company",
       "actor": "manager",
-      "spent": 176000,
+      "spent": 168000,
       "reserved": 0
     }
   ],
   "orders": [
     {
-      "id": "order_1635ac61-a46",
-      "quoteId": "quote_446b098e-d5c",
+      "id": "order_5a3dec1e-450",
+      "quoteId": "quote_2fa7c942-f00",
       "quoteRevision": 1,
-      "mandateId": "mandate_5d133878-5b4",
+      "mandateId": "mandate_a8f456e6-fa6",
       "quote": {
-        "id": "quote_446b098e-d5c",
-        "requestId": "request_e113be9f-609",
+        "id": "quote_2fa7c942-f00",
+        "requestId": "request_bb7d6324-271",
         "scenario": "replenishment",
         "optionIndex": 0,
         "title": "推荐方案",
@@ -836,19 +1115,94 @@
           }
         ],
         "subtotalCents": 118400,
-        "shippingCents": 8000,
-        "totalCents": 126400,
+        "shippingCents": 0,
+        "shippingEvidence": {
+          "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+          "observedAt": "2026-10-02T18:18:40.140139+00:00",
+          "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+          "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+        },
+        "totalCents": 118400,
         "merchant": "The Club · 测试商户",
         "address": "香港薄扶林道 · 公司办公室",
         "currency": "HKD",
         "reason": "补至目标库存，本次 16 盒；已有在途量已扣除。",
-        "createdAt": "2026-10-02T17:32:06.647Z",
-        "expiresAt": "2026-10-03T17:32:06.647Z",
+        "createdAt": "2026-10-03T02:42:40.137Z",
+        "expiresAt": "2026-10-04T02:42:40.137Z",
         "revision": 1,
         "planner": "rules",
         "warnings": [
           "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-          "派送按已采集的标准 HK$80 规则计算；特殊派送和交期未验证。",
+          "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+          "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+          "当前使用透明规则规划器；未连接语言模型。"
+        ],
+        "need": {
+          "scenario": "replenishment",
+          "title": "补货 · NESCAFÉ - 意式莫加咖啡",
+          "brief": "由库存阈值触发",
+          "people": 1,
+          "budgetCents": 200000,
+          "style": "实用",
+          "job": "administration",
+          "connectors": [],
+          "address": "香港薄扶林道 · 公司办公室",
+          "sku": "coffee-mocha",
+          "quantity": 16
+        }
+      },
+      "status": "paid",
+      "paymentId": "sim_order_5a3dec1e-450",
+      "provider": "simulated",
+      "behavior": "success",
+      "createdAt": "2026-10-03T02:42:40.138Z",
+      "updatedAt": "2026-10-03T02:42:40.139Z",
+      "receivedAt": null,
+      "error": null,
+      "paymentStage": "capture"
+    },
+    {
+      "id": "order_7a2d9c65-f25",
+      "quoteId": "quote_910d7d4e-d12",
+      "quoteRevision": 1,
+      "mandateId": "mandate_a8f456e6-fa6",
+      "quote": {
+        "id": "quote_910d7d4e-d12",
+        "requestId": "request_f1bf2595-cb9",
+        "scenario": "replenishment",
+        "optionIndex": 0,
+        "title": "推荐方案",
+        "lines": [
+          {
+            "productId": "coffee-mocha",
+            "name": "NESCAFÉ - 意式莫加咖啡",
+            "category": "consumable",
+            "quantity": 16,
+            "unitCents": 7400,
+            "sourceUrl": "https://shop.theclub.com.hk/promotions/coffee-corner/coffee-beans-capsule-ground/nescafe-di-moka-eurobrand01",
+            "observedAt": "2026-10-02T17:01:14.710155+00:00"
+          }
+        ],
+        "subtotalCents": 118400,
+        "shippingCents": 0,
+        "shippingEvidence": {
+          "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+          "observedAt": "2026-10-02T18:18:40.140139+00:00",
+          "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+          "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+        },
+        "totalCents": 118400,
+        "merchant": "The Club · 测试商户",
+        "address": "香港薄扶林道 · 公司办公室",
+        "currency": "HKD",
+        "reason": "补至目标库存，本次 16 盒；已有在途量已扣除。",
+        "createdAt": "2026-10-03T02:42:23.309Z",
+        "expiresAt": "2026-10-04T02:42:23.309Z",
+        "revision": 1,
+        "planner": "rules",
+        "warnings": [
+          "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+          "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
           "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
           "当前使用透明规则规划器；未连接语言模型。"
         ],
@@ -871,59 +1225,66 @@
         }
       },
       "status": "received",
-      "paymentId": "sim_order_1635ac61-a46",
+      "paymentId": "sim_order_7a2d9c65-f25",
       "provider": "simulated",
       "behavior": "success",
-      "createdAt": "2026-10-02T17:32:06.890Z",
-      "updatedAt": "2026-10-02T17:32:22.468Z",
-      "receivedAt": "2026-10-02T17:32:22.468Z",
+      "createdAt": "2026-10-03T02:42:23.669Z",
+      "updatedAt": "2026-10-03T02:42:39.777Z",
+      "receivedAt": "2026-10-03T02:42:39.777Z",
       "error": null,
       "paymentStage": "capture"
     },
     {
-      "id": "order_46a78119-eca",
-      "quoteId": "quote_63737929-9b2",
+      "id": "order_92174c88-e8a",
+      "quoteId": "quote_70b87d3d-aab",
       "quoteRevision": 1,
-      "mandateId": "mandate_33c7982a-c6a",
+      "mandateId": "mandate_3c40884f-2bc",
       "quote": {
-        "id": "quote_63737929-9b2",
-        "requestId": "request_d672f0f0-33e",
+        "id": "quote_70b87d3d-aab",
+        "requestId": "request_9361eb1f-d1c",
         "scenario": "event",
-        "optionIndex": 1,
-        "title": "备选方案",
+        "optionIndex": 0,
+        "title": "推荐方案",
         "lines": [
           {
-            "productId": "gift-purple",
-            "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+            "productId": "gift-bottle",
+            "name": "Thermos - 500毫升真空控溫瓶 (2色可選)",
             "category": "gift",
-            "quantity": 10,
+            "quantity": 1,
             "unitCents": 16800,
-            "sourceUrl": "https://shop.theclub.com.hk/thermos-480ml-vacuum-insulated-bottle-jmz-481-pl",
+            "sourceUrl": "https://shop.theclub.com.hk/thermos-500ml-vacuum-insulated-bottle-2-colors-option-fei-501-mo",
             "observedAt": "2026-10-02T17:01:04.523146+00:00"
           }
         ],
-        "subtotalCents": 168000,
+        "subtotalCents": 16800,
         "shippingCents": 8000,
-        "totalCents": 176000,
+        "shippingEvidence": {
+          "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+          "observedAt": "2026-10-02T18:18:40.140139+00:00",
+          "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+          "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+        },
+        "totalCents": 24800,
         "merchant": "The Club · 测试商户",
         "address": "香港薄扶林道 · 公司办公室",
         "currency": "HKD",
-        "reason": "10 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-        "createdAt": "2026-10-02T17:30:42.468Z",
-        "expiresAt": "2026-10-03T17:30:42.468Z",
+        "reason": "1 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
+        "createdAt": "2026-10-03T02:41:56.795Z",
+        "expiresAt": "2026-10-04T02:41:56.795Z",
         "revision": 1,
         "planner": "rules",
         "warnings": [
           "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-          "派送按已采集的标准 HK$80 规则计算；特殊派送和交期未验证。",
+          "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
           "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
-          "当前使用透明规则规划器；未连接语言模型。"
+          "当前使用透明规则规划器；未连接语言模型。",
+          "独立小额边界测试；不改变原采购人数和方案。"
         ],
         "need": {
           "scenario": "event",
-          "title": "秋日团队日 · 欢迎礼品",
-          "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
-          "people": 10,
+          "title": "独立小额运费拦截测试",
+          "brief": "单件现金商品，授权只覆盖商品金额。原采购需求保持不变。",
+          "people": 1,
           "budgetCents": 250000,
           "style": "简约",
           "job": "developer",
@@ -939,20 +1300,20 @@
       "paymentId": null,
       "provider": "simulated",
       "behavior": "success",
-      "createdAt": "2026-10-02T17:31:52.533Z",
-      "updatedAt": "2026-10-02T17:31:52.533Z",
+      "createdAt": "2026-10-03T02:42:09.008Z",
+      "updatedAt": "2026-10-03T02:42:09.008Z",
       "receivedAt": null,
-      "error": "含运费总额必须不超过 HK$1680.00；已花费、预留与本次采购之和必须在累计预算内",
+      "error": "含运费总额必须不超过 HK$168.00；已花费、预留与本次采购之和必须在累计预算内",
       "paymentStage": "authorize"
     },
     {
-      "id": "order_935a5e04-43f",
-      "quoteId": "quote_d7714fa4-f87",
+      "id": "order_672bc8f3-a65",
+      "quoteId": "quote_65a025a3-24a",
       "quoteRevision": 1,
-      "mandateId": "mandate_1f274f30-390",
+      "mandateId": "mandate_10fe758b-109",
       "quote": {
-        "id": "quote_d7714fa4-f87",
-        "requestId": "request_d672f0f0-33e",
+        "id": "quote_65a025a3-24a",
+        "requestId": "request_c97537a7-0e2",
         "scenario": "event",
         "optionIndex": 0,
         "title": "推荐方案",
@@ -968,19 +1329,25 @@
           }
         ],
         "subtotalCents": 168000,
-        "shippingCents": 8000,
-        "totalCents": 176000,
+        "shippingCents": 0,
+        "shippingEvidence": {
+          "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+          "observedAt": "2026-10-02T18:18:40.140139+00:00",
+          "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+          "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+        },
+        "totalCents": 168000,
         "merchant": "The Club · 测试商户",
         "address": "香港薄扶林道 · 公司办公室",
         "currency": "HKD",
         "reason": "10 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-        "createdAt": "2026-10-02T17:30:42.468Z",
-        "expiresAt": "2026-10-03T17:30:42.468Z",
+        "createdAt": "2026-10-03T02:40:58.031Z",
+        "expiresAt": "2026-10-04T02:40:58.031Z",
         "revision": 1,
         "planner": "rules",
         "warnings": [
           "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-          "派送按已采集的标准 HK$80 规则计算；特殊派送和交期未验证。",
+          "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
           "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
           "当前使用透明规则规划器；未连接语言模型。"
         ],
@@ -1001,12 +1368,12 @@
         }
       },
       "status": "received",
-      "paymentId": "sim_order_935a5e04-43f",
+      "paymentId": "sim_order_672bc8f3-a65",
       "provider": "simulated",
       "behavior": "success",
-      "createdAt": "2026-10-02T17:31:12.513Z",
-      "updatedAt": "2026-10-02T17:31:28.471Z",
-      "receivedAt": "2026-10-02T17:31:28.471Z",
+      "createdAt": "2026-10-03T02:41:28.405Z",
+      "updatedAt": "2026-10-03T02:41:44.576Z",
+      "receivedAt": "2026-10-03T02:41:44.576Z",
       "error": null,
       "paymentStage": "capture"
     }
@@ -1015,12 +1382,12 @@
     {
       "productId": "coffee-mocha",
       "name": "NESCAFÉ - 意式莫加咖啡",
-      "quantity": 20,
+      "quantity": 4,
       "safety": 4,
       "target": 20,
       "unit": "盒",
       "sample": true,
-      "inTransit": 0,
+      "inTransit": 16,
       "suggestion": 0
     },
     {
@@ -1050,7 +1417,7 @@
       "name": "Thermos - 500毫升真空控溫瓶 (2色可選)",
       "quantity": 10,
       "safety": 0,
-      "target": 10,
+      "target": 0,
       "unit": "件",
       "sample": true,
       "inTransit": 0,
@@ -1059,82 +1426,78 @@
   ],
   "audit": [
     {
-      "seq": 21,
-      "id": "log_5a5e537d-d84",
-      "at": "2026-10-02T17:32:34.569Z",
+      "seq": 31,
+      "id": "log_e3438497-1c4",
+      "at": "2026-10-03T02:42:52.328Z",
       "actor": "manager",
       "action": "PLAN_CREATED",
-      "target": "request_435e1112-8b7",
+      "target": "request_38ab350a-d2d",
       "detail": {
         "scenario": "onboarding",
         "planner": "rules",
         "quoteIds": [
-          "quote_31cb0666-49d",
-          "quote_f7008fe5-e69",
-          "quote_b7e2b48b-d68"
+          "quote_9a024393-c8b",
+          "quote_2ae712d9-2bd",
+          "quote_1526889b-9cf"
         ],
         "budgetCents": 200000
       },
-      "previous_hash": "93581f19accdc090ec2e18cce1a9fdab1d04db85987d235e433468d5ea22fb03",
-      "hash": "fc7f0508db6a8c3680abac109406020aacd3db8f410f377610f96206f1a2b470"
+      "previous_hash": "c326ff9e98948bdf6f2a89eb4a7fa54c623fd074eb9c88904b4607488d359939",
+      "hash": "1484052af52dc0f2b4686af4632ff116d4bdfd499be11463342aa1d6153b684b"
     },
     {
-      "seq": 20,
-      "id": "log_142b1558-34a",
-      "at": "2026-10-02T17:32:22.468Z",
-      "actor": "manager",
-      "action": "GOODS_RECEIVED",
-      "target": "order_1635ac61-a46",
+      "seq": 30,
+      "id": "log_f64e5eec-6c6",
+      "at": "2026-10-03T02:42:40.139Z",
+      "actor": "monitor",
+      "action": "MONITOR_RUN",
+      "target": "inventory",
       "detail": {
-        "lines": [
+        "results": [
           {
-            "productId": "coffee-mocha",
-            "name": "NESCAFÉ - 意式莫加咖啡",
-            "category": "consumable",
-            "quantity": 16,
-            "unitCents": 7400,
-            "sourceUrl": "https://shop.theclub.com.hk/promotions/coffee-corner/coffee-beans-capsule-ground/nescafe-di-moka-eurobrand01",
-            "observedAt": "2026-10-02T17:01:14.710155+00:00"
+            "sku": "coffee-mocha",
+            "state": "paid",
+            "orderId": "order_5a3dec1e-450"
           }
         ]
       },
-      "previous_hash": "fb7cebce3fa7ca85c092ab9a0887ed1efe64304b1511b38fbf1e2b6558671151",
-      "hash": "93581f19accdc090ec2e18cce1a9fdab1d04db85987d235e433468d5ea22fb03"
+      "previous_hash": "484fe38de23a047259adadf60556ef6d83b5b30710afd5d725dbe65555aa1a12",
+      "hash": "c326ff9e98948bdf6f2a89eb4a7fa54c623fd074eb9c88904b4607488d359939"
     },
     {
-      "seq": 19,
-      "id": "log_5cd8849f-8dd",
-      "at": "2026-10-02T17:32:06.891Z",
+      "seq": 29,
+      "id": "log_d41a50a5-f76",
+      "at": "2026-10-03T02:42:40.139Z",
       "actor": "payment",
       "action": "PAYMENT_CONFIRMED",
-      "target": "order_1635ac61-a46",
+      "target": "order_5a3dec1e-450",
       "detail": {
         "state": "succeeded",
-        "paymentId": "sim_order_1635ac61-a46"
+        "paymentId": "sim_order_5a3dec1e-450"
       },
-      "previous_hash": "47a9e65a1008a90345221c688d7663e4567bd7b80ba8a0df0d1c57c24c90e234",
-      "hash": "fb7cebce3fa7ca85c092ab9a0887ed1efe64304b1511b38fbf1e2b6558671151"
+      "previous_hash": "e75f812ef2c26f4f3f32e87033de9de0215acada8082f873104418d18e53c670",
+      "hash": "484fe38de23a047259adadf60556ef6d83b5b30710afd5d725dbe65555aa1a12"
     },
     {
-      "seq": 18,
-      "id": "log_ee733aba-217",
-      "at": "2026-10-02T17:32:06.891Z",
+      "seq": 28,
+      "id": "log_755727c7-ca9",
+      "at": "2026-10-03T02:42:40.139Z",
       "actor": "payment",
       "action": "PAYMENT_CAPTURE",
-      "target": "order_1635ac61-a46",
+      "target": "order_5a3dec1e-450",
       "detail": {
-        "paymentId": "sim_order_1635ac61-a46"
+        "paymentId": "sim_order_5a3dec1e-450"
       },
-      "previous_hash": "a1ea4495b02a97461013996ed03cdbfdd2f5f535fffb13b3ec5b30baead46bb6",
-      "hash": "47a9e65a1008a90345221c688d7663e4567bd7b80ba8a0df0d1c57c24c90e234"
+      "previous_hash": "694c83f87d8098e34386c90687003e32114b4502de8b9b91eb140e47efad111d",
+      "hash": "e75f812ef2c26f4f3f32e87033de9de0215acada8082f873104418d18e53c670"
     },
     {
-      "seq": 17,
-      "id": "log_6f62b146-3ea",
-      "at": "2026-10-02T17:32:06.891Z",
+      "seq": 27,
+      "id": "log_6b5391d1-c19",
+      "at": "2026-10-03T02:42:40.139Z",
       "actor": "policy",
       "action": "CAPTURE_ALLOWED",
-      "target": "order_1635ac61-a46",
+      "target": "order_5a3dec1e-450",
       "detail": {
         "checks": [
           {
@@ -1210,30 +1573,30 @@
         ],
         "mandateVersion": 1
       },
-      "previous_hash": "6d7b8dcb23f61ef8b401e7b116e8fa69cae932ceb25707e8e54b939d08636d96",
-      "hash": "a1ea4495b02a97461013996ed03cdbfdd2f5f535fffb13b3ec5b30baead46bb6"
+      "previous_hash": "e40159f8f97fcbbdf3c4b1d2a2d482c713d70e5a2be2a02b517dcd2b364fda6b",
+      "hash": "694c83f87d8098e34386c90687003e32114b4502de8b9b91eb140e47efad111d"
     },
     {
-      "seq": 16,
-      "id": "log_92aee5f6-3fe",
-      "at": "2026-10-02T17:32:06.890Z",
+      "seq": 26,
+      "id": "log_33bf1eec-164",
+      "at": "2026-10-03T02:42:40.138Z",
       "actor": "payment",
       "action": "PAYMENT_AUTHORIZE",
-      "target": "order_1635ac61-a46",
+      "target": "order_5a3dec1e-450",
       "detail": {
         "provider": "simulated",
-        "amount": 126400
+        "amount": 118400
       },
-      "previous_hash": "0489a4a9cfc76c8a6ba99dd1223ff8d7d5935f61cd30ccdff9c535491ffec440",
-      "hash": "6d7b8dcb23f61ef8b401e7b116e8fa69cae932ceb25707e8e54b939d08636d96"
+      "previous_hash": "d05d68287612f2a42294de1fb56e8cb8d2ad6efd58b4057ae1499b33d1b32fb3",
+      "hash": "e40159f8f97fcbbdf3c4b1d2a2d482c713d70e5a2be2a02b517dcd2b364fda6b"
     },
     {
-      "seq": 15,
-      "id": "log_b8f69298-b06",
-      "at": "2026-10-02T17:32:06.890Z",
-      "actor": "manager",
+      "seq": 25,
+      "id": "log_b2907938-600",
+      "at": "2026-10-03T02:42:40.138Z",
+      "actor": "monitor",
       "action": "BUDGET_RESERVED",
-      "target": "order_1635ac61-a46",
+      "target": "order_5a3dec1e-450",
       "detail": {
         "checks": [
           {
@@ -1312,27 +1675,301 @@
             "message": "补货数量不得超过当前需求；在途订单已计入。"
           }
         ],
-        "totalCents": 126400,
+        "totalCents": 118400,
         "quoteRevision": 1,
         "mandateVersion": 1,
         "paymentCalled": false
       },
-      "previous_hash": "6bb68a9a5a30ab53dec1b5d0699bf0914cfbc705f09deba872ccf7cec9e313c7",
-      "hash": "0489a4a9cfc76c8a6ba99dd1223ff8d7d5935f61cd30ccdff9c535491ffec440"
+      "previous_hash": "2a9332b1897366ad338ccd95a2e76b01f1c1df8eeb4e94445cbf5a7a77077ffb",
+      "hash": "d05d68287612f2a42294de1fb56e8cb8d2ad6efd58b4057ae1499b33d1b32fb3"
     },
     {
-      "seq": 14,
-      "id": "log_2097030e-6d6",
-      "at": "2026-10-02T17:32:06.858Z",
+      "seq": 24,
+      "id": "log_09195411-eb2",
+      "at": "2026-10-03T02:42:40.137Z",
+      "actor": "monitor",
+      "action": "PLAN_CREATED",
+      "target": "request_bb7d6324-271",
+      "detail": {
+        "scenario": "replenishment",
+        "planner": "rules",
+        "quoteIds": [
+          "quote_2fa7c942-f00"
+        ],
+        "budgetCents": 200000
+      },
+      "previous_hash": "9a24f9a0b599a36b9ab11321733cd410ce8ad527198f59ffb371bd1503faa8c6",
+      "hash": "2a9332b1897366ad338ccd95a2e76b01f1c1df8eeb4e94445cbf5a7a77077ffb"
+    },
+    {
+      "seq": 23,
+      "id": "log_f89d5c92-6bf",
+      "at": "2026-10-03T02:42:40.137Z",
+      "actor": "manager",
+      "action": "INVENTORY_CONSUMED",
+      "target": "coffee-mocha",
+      "detail": {
+        "quantity": 16,
+        "reason": "团队日常领用"
+      },
+      "previous_hash": "744f1ef6bc71effcf5f6ec30f08c2f3b9659be7583118e0fba1786f1e0b0c207",
+      "hash": "9a24f9a0b599a36b9ab11321733cd410ce8ad527198f59ffb371bd1503faa8c6"
+    },
+    {
+      "seq": 22,
+      "id": "log_77687a49-d7e",
+      "at": "2026-10-03T02:42:39.778Z",
+      "actor": "manager",
+      "action": "GOODS_RECEIVED",
+      "target": "order_7a2d9c65-f25",
+      "detail": {
+        "lines": [
+          {
+            "productId": "coffee-mocha",
+            "name": "NESCAFÉ - 意式莫加咖啡",
+            "category": "consumable",
+            "quantity": 16,
+            "unitCents": 7400,
+            "sourceUrl": "https://shop.theclub.com.hk/promotions/coffee-corner/coffee-beans-capsule-ground/nescafe-di-moka-eurobrand01",
+            "observedAt": "2026-10-02T17:01:14.710155+00:00"
+          }
+        ]
+      },
+      "previous_hash": "34675319bb80ee5e652b08d117e5a107d834dff27757e53dcfbeb77d59b99c7c",
+      "hash": "744f1ef6bc71effcf5f6ec30f08c2f3b9659be7583118e0fba1786f1e0b0c207"
+    },
+    {
+      "seq": 21,
+      "id": "log_1e06161a-569",
+      "at": "2026-10-03T02:42:23.671Z",
+      "actor": "payment",
+      "action": "PAYMENT_CONFIRMED",
+      "target": "order_7a2d9c65-f25",
+      "detail": {
+        "state": "succeeded",
+        "paymentId": "sim_order_7a2d9c65-f25"
+      },
+      "previous_hash": "4fe3987d8728978926db4b1cc7aef2e6a18ed211c1f845a7b34dc9aa908f9843",
+      "hash": "34675319bb80ee5e652b08d117e5a107d834dff27757e53dcfbeb77d59b99c7c"
+    },
+    {
+      "seq": 20,
+      "id": "log_f6ae6e54-bad",
+      "at": "2026-10-03T02:42:23.670Z",
+      "actor": "payment",
+      "action": "PAYMENT_CAPTURE",
+      "target": "order_7a2d9c65-f25",
+      "detail": {
+        "paymentId": "sim_order_7a2d9c65-f25"
+      },
+      "previous_hash": "dc6c976d7607082f8a6a536041663e8b96bde888cc7994abdfd070c26bfbd2b0",
+      "hash": "4fe3987d8728978926db4b1cc7aef2e6a18ed211c1f845a7b34dc9aa908f9843"
+    },
+    {
+      "seq": 19,
+      "id": "log_04fc5193-462",
+      "at": "2026-10-03T02:42:23.670Z",
+      "actor": "policy",
+      "action": "CAPTURE_ALLOWED",
+      "target": "order_7a2d9c65-f25",
+      "detail": {
+        "checks": [
+          {
+            "code": "ACTIVE",
+            "pass": true,
+            "message": "授权仍然有效"
+          },
+          {
+            "code": "EXPIRY",
+            "pass": true,
+            "message": "授权必须在有效期内"
+          },
+          {
+            "code": "SCENARIO",
+            "pass": true,
+            "message": "用途必须符合授权场景"
+          },
+          {
+            "code": "REQUEST",
+            "pass": true,
+            "message": "一次性授权只能用于指定采购需求"
+          },
+          {
+            "code": "CATEGORY",
+            "pass": true,
+            "message": "所有商品品类必须在授权内"
+          },
+          {
+            "code": "MERCHANT",
+            "pass": true,
+            "message": "商户必须在批准名单内"
+          },
+          {
+            "code": "METHOD",
+            "pass": true,
+            "message": "测试卡付款必须获准"
+          },
+          {
+            "code": "ADDRESS",
+            "pass": true,
+            "message": "收货地址必须与授权一致"
+          },
+          {
+            "code": "SUBSTITUTION",
+            "pass": true,
+            "message": "商品替换必须得到授权"
+          },
+          {
+            "code": "CAP",
+            "pass": true,
+            "message": "含运费总额必须不超过 HK$2000.00"
+          },
+          {
+            "code": "TOTAL_CAP",
+            "pass": true,
+            "message": "已花费、预留与本次采购之和必须在累计预算内"
+          },
+          {
+            "code": "FREQUENCY",
+            "pass": true,
+            "message": "采购频率必须符合授权"
+          },
+          {
+            "code": "QUOTE",
+            "pass": true,
+            "message": "报价版本、有效期与商品金额必须可核对"
+          },
+          {
+            "code": "REWARD_OWNER",
+            "pass": true,
+            "message": "个人奖励不能计入公司节省"
+          }
+        ],
+        "mandateVersion": 1
+      },
+      "previous_hash": "5ccd1b377c6177624247bf13fb30f459bf39ce8f0b04ab34026283725e4217ca",
+      "hash": "dc6c976d7607082f8a6a536041663e8b96bde888cc7994abdfd070c26bfbd2b0"
+    },
+    {
+      "seq": 18,
+      "id": "log_aba11351-f31",
+      "at": "2026-10-03T02:42:23.670Z",
+      "actor": "payment",
+      "action": "PAYMENT_AUTHORIZE",
+      "target": "order_7a2d9c65-f25",
+      "detail": {
+        "provider": "simulated",
+        "amount": 118400
+      },
+      "previous_hash": "091020d562925b6e0e59e214612559d5ebd55c11d2377fc4cf78616d2f3db6c6",
+      "hash": "5ccd1b377c6177624247bf13fb30f459bf39ce8f0b04ab34026283725e4217ca"
+    },
+    {
+      "seq": 17,
+      "id": "log_6d2a5209-0fc",
+      "at": "2026-10-03T02:42:23.669Z",
+      "actor": "manager",
+      "action": "BUDGET_RESERVED",
+      "target": "order_7a2d9c65-f25",
+      "detail": {
+        "checks": [
+          {
+            "code": "ACTIVE",
+            "pass": true,
+            "message": "授权仍然有效"
+          },
+          {
+            "code": "EXPIRY",
+            "pass": true,
+            "message": "授权必须在有效期内"
+          },
+          {
+            "code": "SCENARIO",
+            "pass": true,
+            "message": "用途必须符合授权场景"
+          },
+          {
+            "code": "REQUEST",
+            "pass": true,
+            "message": "一次性授权只能用于指定采购需求"
+          },
+          {
+            "code": "CATEGORY",
+            "pass": true,
+            "message": "所有商品品类必须在授权内"
+          },
+          {
+            "code": "MERCHANT",
+            "pass": true,
+            "message": "商户必须在批准名单内"
+          },
+          {
+            "code": "METHOD",
+            "pass": true,
+            "message": "测试卡付款必须获准"
+          },
+          {
+            "code": "ADDRESS",
+            "pass": true,
+            "message": "收货地址必须与授权一致"
+          },
+          {
+            "code": "SUBSTITUTION",
+            "pass": true,
+            "message": "商品替换必须得到授权"
+          },
+          {
+            "code": "CAP",
+            "pass": true,
+            "message": "含运费总额必须不超过 HK$2000.00"
+          },
+          {
+            "code": "TOTAL_CAP",
+            "pass": true,
+            "message": "已花费、预留与本次采购之和必须在累计预算内"
+          },
+          {
+            "code": "FREQUENCY",
+            "pass": true,
+            "message": "采购频率必须符合授权"
+          },
+          {
+            "code": "QUOTE",
+            "pass": true,
+            "message": "报价版本、有效期与商品金额必须可核对"
+          },
+          {
+            "code": "REWARD_OWNER",
+            "pass": true,
+            "message": "个人奖励不能计入公司节省"
+          },
+          {
+            "code": "REPLENISHMENT",
+            "pass": true,
+            "message": "补货数量不得超过当前需求；在途订单已计入。"
+          }
+        ],
+        "totalCents": 118400,
+        "quoteRevision": 1,
+        "mandateVersion": 1,
+        "paymentCalled": false
+      },
+      "previous_hash": "e8f3f5b38f2229ef8782598975259be33434e47f5f75a537f4673e03ee18c936",
+      "hash": "091020d562925b6e0e59e214612559d5ebd55c11d2377fc4cf78616d2f3db6c6"
+    },
+    {
+      "seq": 16,
+      "id": "log_d24b6119-e3b",
+      "at": "2026-10-03T02:42:23.630Z",
       "actor": "manager",
       "action": "MANDATE_GRANTED",
-      "target": "mandate_5d133878-5b4",
+      "target": "mandate_a8f456e6-fa6",
       "detail": {
         "name": "日常补货 · 办公室补货 · NESCAFÉ - 意式莫加咖啡",
-        "quoteId": "quote_446b098e-d5c",
+        "quoteId": "quote_910d7d4e-d12",
         "scenario": "replenishment",
         "capCents": 200000,
-        "totalCapCents": 200000,
+        "totalCapCents": 500000,
         "categories": [
           "consumable"
         ],
@@ -1347,44 +1984,44 @@
         "productIds": [
           "coffee-mocha"
         ],
-        "expiresAt": "2026-10-03T17:32:06.853Z",
-        "minIntervalSeconds": 60,
-        "id": "mandate_5d133878-5b4",
+        "expiresAt": "2026-10-04T02:42:23.623Z",
+        "minIntervalSeconds": 0,
+        "id": "mandate_a8f456e6-fa6",
         "requestId": null,
-        "createdAt": "2026-10-02T17:32:06.858Z",
+        "createdAt": "2026-10-03T02:42:23.630Z",
         "revokedAt": null,
         "version": 1,
         "rewardOwner": "company",
         "actor": "manager"
       },
-      "previous_hash": "37eb118eb358453769e3f367aa9ba10442b0e4e11d43144bbe3d448f8833cc85",
-      "hash": "6bb68a9a5a30ab53dec1b5d0699bf0914cfbc705f09deba872ccf7cec9e313c7"
+      "previous_hash": "c1bbbcc30dcf31bd940725f4ff9e32dab4109e1a87d6434802c1e230fecd2dd2",
+      "hash": "e8f3f5b38f2229ef8782598975259be33434e47f5f75a537f4673e03ee18c936"
     },
     {
-      "seq": 13,
-      "id": "log_dbdde757-1f7",
-      "at": "2026-10-02T17:32:06.648Z",
+      "seq": 15,
+      "id": "log_323f2f76-b93",
+      "at": "2026-10-03T02:42:23.310Z",
       "actor": "manager",
       "action": "PLAN_CREATED",
-      "target": "request_e113be9f-609",
+      "target": "request_f1bf2595-cb9",
       "detail": {
         "scenario": "replenishment",
         "planner": "rules",
         "quoteIds": [
-          "quote_446b098e-d5c"
+          "quote_910d7d4e-d12"
         ],
         "budgetCents": 200000
       },
-      "previous_hash": "2c97d8407b10280f6415ce0d18fe58f48ecd29c57590c0549a5d0af280a575c0",
-      "hash": "37eb118eb358453769e3f367aa9ba10442b0e4e11d43144bbe3d448f8833cc85"
+      "previous_hash": "25f2c394371559fc5b2de2c60b54027b14dcf0afd5474c6cfbb78b0256d013c4",
+      "hash": "c1bbbcc30dcf31bd940725f4ff9e32dab4109e1a87d6434802c1e230fecd2dd2"
     },
     {
-      "seq": 12,
-      "id": "log_1cdecc86-49d",
-      "at": "2026-10-02T17:31:52.533Z",
+      "seq": 14,
+      "id": "log_d666fb5f-cb9",
+      "at": "2026-10-03T02:42:09.008Z",
       "actor": "manager",
       "action": "PURCHASE_BLOCKED",
-      "target": "order_46a78119-eca",
+      "target": "order_92174c88-e8a",
       "detail": {
         "checks": [
           {
@@ -1435,7 +2072,7 @@
           {
             "code": "CAP",
             "pass": false,
-            "message": "含运费总额必须不超过 HK$1680.00"
+            "message": "含运费总额必须不超过 HK$168.00"
           },
           {
             "code": "TOTAL_CAP",
@@ -1458,27 +2095,27 @@
             "message": "个人奖励不能计入公司节省"
           }
         ],
-        "totalCents": 176000,
+        "totalCents": 24800,
         "quoteRevision": 1,
         "mandateVersion": 1,
         "paymentCalled": false
       },
-      "previous_hash": "05b6a5d58468adc017406e2e25d3be1b94a6023f1ad6c86b551bd9015e96980f",
-      "hash": "2c97d8407b10280f6415ce0d18fe58f48ecd29c57590c0549a5d0af280a575c0"
+      "previous_hash": "71d995305813c5c9ad9089a4ad2c3c8a32001e9f664da61895f5ece809b10534",
+      "hash": "25f2c394371559fc5b2de2c60b54027b14dcf0afd5474c6cfbb78b0256d013c4"
     },
     {
-      "seq": 11,
-      "id": "log_61d1f88b-e95",
-      "at": "2026-10-02T17:31:52.472Z",
+      "seq": 13,
+      "id": "log_fd519398-d10",
+      "at": "2026-10-03T02:42:08.943Z",
       "actor": "manager",
       "action": "MANDATE_GRANTED",
-      "target": "mandate_33c7982a-c6a",
+      "target": "mandate_3c40884f-2bc",
       "detail": {
-        "name": "活动与礼品 · 秋日团队日 · 欢迎礼品",
-        "quoteId": "quote_63737929-9b2",
+        "name": "活动与礼品 · 独立小额运费拦截测试",
+        "quoteId": "quote_70b87d3d-aab",
         "scenario": "event",
-        "capCents": 168000,
-        "totalCapCents": 168000,
+        "capCents": 16800,
+        "totalCapCents": 16800,
         "categories": [
           "gift"
         ],
@@ -1489,32 +2126,70 @@
           "card"
         ],
         "address": "香港薄扶林道 · 公司办公室",
-        "allowSubstitution": true,
+        "allowSubstitution": false,
         "productIds": [
-          "gift-bottle",
-          "gift-purple",
-          "gift-flask"
+          "gift-bottle"
         ],
-        "expiresAt": "2026-10-03T17:31:52.454Z",
+        "expiresAt": "2026-10-04T02:42:08.927Z",
         "minIntervalSeconds": 0,
-        "id": "mandate_33c7982a-c6a",
-        "requestId": "request_d672f0f0-33e",
-        "createdAt": "2026-10-02T17:31:52.472Z",
+        "id": "mandate_3c40884f-2bc",
+        "requestId": "request_9361eb1f-d1c",
+        "createdAt": "2026-10-03T02:42:08.943Z",
         "revokedAt": null,
         "version": 1,
         "rewardOwner": "company",
         "actor": "manager"
       },
-      "previous_hash": "db94ca4c548dbe0845429534b05c7675b129fd83f03954acf8fd7c9a977886aa",
-      "hash": "05b6a5d58468adc017406e2e25d3be1b94a6023f1ad6c86b551bd9015e96980f"
+      "previous_hash": "6ee045b515919c8770bf821fe17748566d966371381076fa4ae7ada50e20d002",
+      "hash": "71d995305813c5c9ad9089a4ad2c3c8a32001e9f664da61895f5ece809b10534"
+    },
+    {
+      "seq": 12,
+      "id": "log_b9a9f1fe-597",
+      "at": "2026-10-03T02:41:56.796Z",
+      "actor": "manager",
+      "action": "DEMO_QUOTE_CHECK",
+      "target": "quote_70b87d3d-aab",
+      "detail": {
+        "originalQuoteId": "quote_330904ea-ac5",
+        "independentTest": true,
+        "shippingEvidence": {
+          "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+          "observedAt": "2026-10-02T18:18:40.140139+00:00",
+          "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+          "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+        }
+      },
+      "previous_hash": "6848bad9c4e0afb1b636f9c78a612d1d343c8eb858e159c7b54b01830b255bf1",
+      "hash": "6ee045b515919c8770bf821fe17748566d966371381076fa4ae7ada50e20d002"
+    },
+    {
+      "seq": 11,
+      "id": "log_4cab6d64-53c",
+      "at": "2026-10-03T02:41:56.796Z",
+      "actor": "manager",
+      "action": "PLAN_CREATED",
+      "target": "request_9361eb1f-d1c",
+      "detail": {
+        "scenario": "event",
+        "planner": "rules",
+        "quoteIds": [
+          "quote_70b87d3d-aab",
+          "quote_f6e3d40e-047",
+          "quote_0b6fd5c4-736"
+        ],
+        "budgetCents": 250000
+      },
+      "previous_hash": "3a8c159ca06ea500db08164e4d6faaec8fff99cbef4150b156e9127963399588",
+      "hash": "6848bad9c4e0afb1b636f9c78a612d1d343c8eb858e159c7b54b01830b255bf1"
     },
     {
       "seq": 10,
-      "id": "log_f4abab7d-01b",
-      "at": "2026-10-02T17:31:28.471Z",
+      "id": "log_ea1b5c8e-24c",
+      "at": "2026-10-03T02:41:44.576Z",
       "actor": "manager",
       "action": "GOODS_RECEIVED",
-      "target": "order_935a5e04-43f",
+      "target": "order_672bc8f3-a65",
       "detail": {
         "lines": [
           {
@@ -1528,43 +2203,43 @@
           }
         ]
       },
-      "previous_hash": "1dbf3f8d2463aa8f15d5c529d984374af6c70d612daf4caf2445224d4ef9f0e0",
-      "hash": "db94ca4c548dbe0845429534b05c7675b129fd83f03954acf8fd7c9a977886aa"
+      "previous_hash": "ba08e0886adf75cdf042931dd493471960fe52f822019acad0269bc963745136",
+      "hash": "3a8c159ca06ea500db08164e4d6faaec8fff99cbef4150b156e9127963399588"
     },
     {
       "seq": 9,
-      "id": "log_b5105f05-b4e",
-      "at": "2026-10-02T17:31:12.516Z",
+      "id": "log_e1902b36-bf1",
+      "at": "2026-10-03T02:41:28.411Z",
       "actor": "payment",
       "action": "PAYMENT_CONFIRMED",
-      "target": "order_935a5e04-43f",
+      "target": "order_672bc8f3-a65",
       "detail": {
         "state": "succeeded",
-        "paymentId": "sim_order_935a5e04-43f"
+        "paymentId": "sim_order_672bc8f3-a65"
       },
-      "previous_hash": "a98fb4a098ecb10e8b01cc0ce6ca0bc4413f181cc65afd1cd357d3f56f8f7ae0",
-      "hash": "1dbf3f8d2463aa8f15d5c529d984374af6c70d612daf4caf2445224d4ef9f0e0"
+      "previous_hash": "f5dc73ac9db7cae5d640baeee8a1babd534d3d23ede2cb139530c75b1f19f2b4",
+      "hash": "ba08e0886adf75cdf042931dd493471960fe52f822019acad0269bc963745136"
     },
     {
       "seq": 8,
-      "id": "log_47240e36-5ef",
-      "at": "2026-10-02T17:31:12.516Z",
+      "id": "log_92b926a4-560",
+      "at": "2026-10-03T02:41:28.410Z",
       "actor": "payment",
       "action": "PAYMENT_CAPTURE",
-      "target": "order_935a5e04-43f",
+      "target": "order_672bc8f3-a65",
       "detail": {
-        "paymentId": "sim_order_935a5e04-43f"
+        "paymentId": "sim_order_672bc8f3-a65"
       },
-      "previous_hash": "783591ca6337b0ead902b4b3a3d9b754a410aae9bdba544d357ab333a32ecabd",
-      "hash": "a98fb4a098ecb10e8b01cc0ce6ca0bc4413f181cc65afd1cd357d3f56f8f7ae0"
+      "previous_hash": "98448a330d0a2dff4a615b3d4e6e9b4241086a09e13079d10d06ddb9048decd3",
+      "hash": "f5dc73ac9db7cae5d640baeee8a1babd534d3d23ede2cb139530c75b1f19f2b4"
     },
     {
       "seq": 7,
-      "id": "log_3d2be40a-c29",
-      "at": "2026-10-02T17:31:12.515Z",
+      "id": "log_0b652cef-780",
+      "at": "2026-10-03T02:41:28.410Z",
       "actor": "policy",
       "action": "CAPTURE_ALLOWED",
-      "target": "order_935a5e04-43f",
+      "target": "order_672bc8f3-a65",
       "detail": {
         "checks": [
           {
@@ -1640,30 +2315,30 @@
         ],
         "mandateVersion": 1
       },
-      "previous_hash": "865cadc5c1f557368d13ac3e76b8de270d0e991665810e8773ad17240bbf755c",
-      "hash": "783591ca6337b0ead902b4b3a3d9b754a410aae9bdba544d357ab333a32ecabd"
+      "previous_hash": "3a573828d4d71c1d18018c47cf9837501daacd5adff44630f6eabc42e93293ab",
+      "hash": "98448a330d0a2dff4a615b3d4e6e9b4241086a09e13079d10d06ddb9048decd3"
     },
     {
       "seq": 6,
-      "id": "log_4a4164d6-488",
-      "at": "2026-10-02T17:31:12.514Z",
+      "id": "log_7b5601a8-149",
+      "at": "2026-10-03T02:41:28.407Z",
       "actor": "payment",
       "action": "PAYMENT_AUTHORIZE",
-      "target": "order_935a5e04-43f",
+      "target": "order_672bc8f3-a65",
       "detail": {
         "provider": "simulated",
-        "amount": 176000
+        "amount": 168000
       },
-      "previous_hash": "9a527ae2bd4254465b3c4d4ccd0cc660619a9707657df144e599bf4daa61c6ce",
-      "hash": "865cadc5c1f557368d13ac3e76b8de270d0e991665810e8773ad17240bbf755c"
+      "previous_hash": "c97b2e34e95a544aa9e97caffc69f819603af695af57e72ee8db2ecf423074d8",
+      "hash": "3a573828d4d71c1d18018c47cf9837501daacd5adff44630f6eabc42e93293ab"
     },
     {
       "seq": 5,
-      "id": "log_901057d2-950",
-      "at": "2026-10-02T17:31:12.513Z",
+      "id": "log_6531bea9-d8a",
+      "at": "2026-10-03T02:41:28.405Z",
       "actor": "manager",
       "action": "BUDGET_RESERVED",
-      "target": "order_935a5e04-43f",
+      "target": "order_672bc8f3-a65",
       "detail": {
         "checks": [
           {
@@ -1737,24 +2412,24 @@
             "message": "个人奖励不能计入公司节省"
           }
         ],
-        "totalCents": 176000,
+        "totalCents": 168000,
         "quoteRevision": 1,
         "mandateVersion": 1,
         "paymentCalled": false
       },
-      "previous_hash": "f023e84a914b57d08a15d7dae026bf4b4f3f3b86398b610b3502fa4df0c91c6e",
-      "hash": "9a527ae2bd4254465b3c4d4ccd0cc660619a9707657df144e599bf4daa61c6ce"
+      "previous_hash": "6927c81b2d073959231d88f9b23c6533450c7359beba18b9e41e8f1790645d18",
+      "hash": "c97b2e34e95a544aa9e97caffc69f819603af695af57e72ee8db2ecf423074d8"
     },
     {
       "seq": 4,
-      "id": "log_027cfc55-7f8",
-      "at": "2026-10-02T17:31:12.482Z",
+      "id": "log_ab45ae8a-e4a",
+      "at": "2026-10-03T02:41:28.357Z",
       "actor": "manager",
       "action": "MANDATE_GRANTED",
-      "target": "mandate_1f274f30-390",
+      "target": "mandate_10fe758b-109",
       "detail": {
         "name": "活动与礼品 · 秋日团队日 · 欢迎礼品",
-        "quoteId": "quote_d7714fa4-f87",
+        "quoteId": "quote_65a025a3-24a",
         "scenario": "event",
         "capCents": 250000,
         "totalCapCents": 250000,
@@ -1774,56 +2449,56 @@
           "gift-purple",
           "gift-flask"
         ],
-        "expiresAt": "2026-10-03T17:31:12.459Z",
+        "expiresAt": "2026-10-04T02:41:28.315Z",
         "minIntervalSeconds": 0,
-        "id": "mandate_1f274f30-390",
-        "requestId": "request_d672f0f0-33e",
-        "createdAt": "2026-10-02T17:31:12.482Z",
+        "id": "mandate_10fe758b-109",
+        "requestId": "request_c97537a7-0e2",
+        "createdAt": "2026-10-03T02:41:28.357Z",
         "revokedAt": null,
         "version": 1,
         "rewardOwner": "company",
         "actor": "manager"
       },
-      "previous_hash": "7fddf0b73c4d60e119bc2f710385c6ce1ea8778a38c494efabcddd0168241531",
-      "hash": "f023e84a914b57d08a15d7dae026bf4b4f3f3b86398b610b3502fa4df0c91c6e"
+      "previous_hash": "07d5eec6d45a1b23bb3e148d7c64d6bb742221f734a5b8f538aaee926e10c7da",
+      "hash": "6927c81b2d073959231d88f9b23c6533450c7359beba18b9e41e8f1790645d18"
     },
     {
       "seq": 3,
-      "id": "log_75315a86-057",
-      "at": "2026-10-02T17:30:42.469Z",
+      "id": "log_98f3d400-2bc",
+      "at": "2026-10-03T02:40:58.033Z",
       "actor": "manager",
       "action": "PLAN_CREATED",
-      "target": "request_d672f0f0-33e",
+      "target": "request_c97537a7-0e2",
       "detail": {
         "scenario": "event",
         "planner": "rules",
         "quoteIds": [
-          "quote_d7714fa4-f87",
-          "quote_63737929-9b2",
-          "quote_8a551341-338"
+          "quote_65a025a3-24a",
+          "quote_330904ea-ac5",
+          "quote_4aeb3f11-cf5"
         ],
         "budgetCents": 250000
       },
-      "previous_hash": "42b238dc20425b5c40414937da4a7e1d517404275aadd7e70bf4b89b5c184162",
-      "hash": "7fddf0b73c4d60e119bc2f710385c6ce1ea8778a38c494efabcddd0168241531"
+      "previous_hash": "d8a9c0c6e284ab1cb705e43d3b4d4aeffd5f8d7d573ac4e72f555db0aaf49392",
+      "hash": "07d5eec6d45a1b23bb3e148d7c64d6bb742221f734a5b8f538aaee926e10c7da"
     },
     {
       "seq": 2,
-      "id": "log_59a87fe0-0fe",
-      "at": "2026-10-02T17:30:23.592Z",
+      "id": "log_db4a4540-aea",
+      "at": "2026-10-03T02:40:38.975Z",
       "actor": "manager",
       "action": "LOGIN",
       "target": "manager",
       "detail": {
-        "at": "2026-10-02T17:30:23.591Z"
+        "at": "2026-10-03T02:40:38.974Z"
       },
-      "previous_hash": "cb0aed799a10f4e09b7723a3c0742b4f92bd59140d0eaf2079580ef466fba861",
-      "hash": "42b238dc20425b5c40414937da4a7e1d517404275aadd7e70bf4b89b5c184162"
+      "previous_hash": "9790d302085c204570a39d78a2a5096a3508afa3da55d83d0ca3b1d30dcdc8c5",
+      "hash": "d8a9c0c6e284ab1cb705e43d3b4d4aeffd5f8d7d573ac4e72f555db0aaf49392"
     },
     {
       "seq": 1,
-      "id": "log_94b780c8-54d",
-      "at": "2026-10-02T17:30:15.787Z",
+      "id": "log_c9055df7-7e3",
+      "at": "2026-10-03T02:40:33.489Z",
       "actor": "system",
       "action": "DEMO_INITIALIZED",
       "target": "workspace",
@@ -1832,7 +2507,7 @@
         "products": 16
       },
       "previous_hash": "GENESIS",
-      "hash": "cb0aed799a10f4e09b7723a3c0742b4f92bd59140d0eaf2079580ef466fba861"
+      "hash": "9790d302085c204570a39d78a2a5096a3508afa3da55d83d0ca3b1d30dcdc8c5"
     }
   ],
   "auditValid": true,

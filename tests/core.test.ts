@@ -81,10 +81,10 @@ test("planner ignores prompt injection, preserves fixed quantities, and creates 
   assert.equal(qs.length, 3);
   for (const q of qs) {
     assert.equal(q.lines[0].quantity, 2);
-    assert.equal(q.shippingCents, 8000);
+    assert.equal(q.shippingCents, q.subtotalCents >= 40000 ? 0 : 8000);
     assert.equal(q.planner, "rules");
     assert.ok(q.warnings.some((v) => v.includes("积分")));
-    assert.equal(q.totalCents, q.subtotalCents + 8000);
+    assert.equal(q.totalCents, q.subtotalCents + q.shippingCents);
   }
 });
 test("single purchase reserves and spends budget; duplicate request does not capture twice", async () => {

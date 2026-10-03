@@ -4,7 +4,7 @@
 
 **比赛版已经可以本地运行。当前默认使用透明规则规划器和模拟支付，未接入真实商户下单。** 商品价格是带采集时间的 The Club 页面快照；公司、库存、订单与用户角色为演示数据。没有编造用户验证结果、企业客户或节省比例。
 
-[三分钟演示视频](https://github.com/mumu-bird/ProcureMate-HacKU2026/releases/download/v0.1.1/ProcureMate-demo.webm) · [七页路演 PDF](https://github.com/mumu-bird/ProcureMate-HacKU2026/releases/download/v0.1.1/ProcureMate-pitch.pdf) · [按评分准备的证据](docs/award-evidence.md)
+[三分钟演示视频](https://github.com/mumu-bird/ProcureMate-HacKU2026/releases/download/v0.1.2/ProcureMate-demo.webm) · [七页路演 PDF](https://github.com/mumu-bird/ProcureMate-HacKU2026/releases/download/v0.1.2/ProcureMate-pitch.pdf) · [按评分准备的证据](docs/award-evidence.md)
 
 ## 运行
 
@@ -45,10 +45,10 @@ npm run monitor
 
 1. 以负责人登录，保持默认团队活动需求，生成三套礼品方案。
 2. 选择推荐方案，检查授权卡并执行。交易成功后确认收货。
-3. 另一方案点击“演示运费使预算超限”。授权只覆盖商品金额，含标准运费的总额被服务端拦截；订单没有付款编号。
-4. 日常补货生成咖啡补货方案并授予持续授权。确认收货，再记录领用，查看检查与预算记录。
+3. 点击“演示运费使预算超限”，另建单件小额边界测试。加入标准运费后被服务端拦截；原十人需求保持不变，订单没有付款编号。
+4. 日常补货生成咖啡方案。演示时负责人明确批准累计预算 HK$5,000、最短间隔 0 秒；收货后领用 16 盒，自动产生第二笔授权内补货。在途量阻止重复下单。默认最短间隔为 60 秒。
 5. 切换新员工配件，根据岗位和设备接口生成方案。清空设备接口时系统要求补充信息。
-6. 执行记录导出 JSON。记录哈希链只能检查内部一致性，不能证明运营者无法重写整个数据库。
+6. 执行记录导出完整 JSON（界面仅显示最近 200 条）。运行 `node scripts/verify-evidence.mjs 导出文件.json` 独立核对链。哈希链只检查内部一致性，不能证明运营者无法重写整个数据库。
 
 演示视频与七页路演稿放在 `artifacts/`。完整演示使用隔离数据库，不会替你的工作区添加示范订单。
 
@@ -80,7 +80,7 @@ npm run monitor
 
 `data/catalog.json` 保存 16 个商品的独立商品链接、列表链接、现金价格和观察时间。`scripts/collect_catalog.py` 可重新采集；需要 Python 与 lxml。采集失败会停止，不会自动补造商品。
 
-- 运费引用 [The Club 派送规则](https://shop.theclub.com.hk/shipping-policy?___store=en_US) 的标准 HK$80 办公/住宅派送价。测试商户按此规则计价；真实商品可能存在其他派送条件、免运费或库存限制，未验证。
+- 运费引用 [The Club 派送规则](https://shop.theclub.com.hk/shipping-policy?___store=en_US)：标准派送 HK$80；符合条件的订单净额满 HK$400 免标准运费。独立采集时间、规则和页面摘要哈希保存在 `data/merchant-policy.json`，可运行 `scripts/collect_policy.py` 重新观察。当前普通现金商品不使用折扣或积分；特殊派送、实时库存和真实结账仍未验证。
 - 商品金额与派送金额分别展示，不承诺实时可售或实际交期。
 - [购物条款](https://shop.theclub.com.hk/terms-and-conditions?___store=en_US) 与 [积分说明](https://shop.theclub.com.hk/reward-points) 存在不同兑换表述，未验证账户资格，所以不自动使用积分或估算奖励。
 - 公司现金支出、积分消耗和预计奖励分列。个人积分不能算公司的节省。
@@ -111,6 +111,8 @@ npm run monitor
 接口统一在 `app/api/[...path]/route.ts`，所有业务接口检查服务端会话。授权、撤销、退款与库存规则更新需要负责人权限。支付工具与模型密钥只在服务端。
 
 ## 验证与提交
+
+完整比赛要求核对及按权重改进建议见 [闭环核对报告](docs/competition-readiness.md)。当前缺少人工路线实测对照，不能宣称参赛证据已全部满足。真人测试材料见 [任务协议](docs/user-study-protocol.md) 与空白 [记录表](docs/user-study.csv)。
 
 ```bash
 npm test

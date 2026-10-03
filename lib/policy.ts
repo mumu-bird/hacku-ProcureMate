@@ -1,5 +1,6 @@
 import { get, list, usage } from "./db";
 import type { Check, Mandate, Order, Product, Quote } from "./types";
+import { shippingCents, shippingPolicy } from "./shipping";
 export function checks(
   quote: Quote,
   mandate: Mandate,
@@ -34,7 +35,9 @@ export function checks(
     }) &&
     quote.subtotalCents ===
       quote.lines.reduce((v, l) => v + l.unitCents * l.quantity, 0) &&
-    quote.totalCents === quote.subtotalCents + quote.shippingCents;
+    quote.totalCents === quote.subtotalCents + quote.shippingCents &&
+    quote.shippingCents === shippingCents(quote.subtotalCents) &&
+    quote.shippingEvidence?.sourceDigest === shippingPolicy.sourceDigest;
   return [
     {
       code: "ACTIVE",

@@ -13,10 +13,53 @@ function saveOrder(o: Order) {
 function release(o: Order) {
   db.prepare("UPDATE usage SET state='released' WHERE order_id=?").run(o.id);
 }
+const settled = (o: Order) =>
+  [
+    "paid",
+    "received",
+    "refund_pending",
+    "refunded",
+    "cancelled",
+    "declined",
+  ].includes(o.status);
+function sameProvider(o: Order, provider: Payments) {
+  if (o.provider !== provider.name)
+    throw new Error("订单支付渠道与当前 provider 不一致；请恢复原渠道再核对。");
+}
+function paymentMatches(o: Order, p: PaymentResult) {
+  return (
+    Number.isInteger(p.amount) &&
+    p.amount === o.quote.totalCents &&
+    (!p.currency || p.currency === "hkd")
+  );
+}
+function holdUnknown(orderId: string, error: string) {
+  return atomic(() => {
+    const current = get<Order>("order", orderId)!;
+    if (settled(current)) return current;
+    current.status = "pending";
+    current.error = error;
+    saveOrder(current);
+    audit("payment", "PAYMENT_UNKNOWN", current.id, {
+      stage: current.paymentStage,
+      error,
+      budgetReserved: true,
+    });
+    return current;
+  });
+}
 function finish(o: Order, result: PaymentResult) {
+  if (!paymentMatches(o, result))
+    return holdUnknown(
+      o.id,
+      "支付渠道金额或币种不一致；停止执行，预算保持预留。",
+    );
   return atomic(() => {
     const current = get<Order>("order", o.id)!;
-    if (current.status === "received" || current.status === "refunded")
+    if (
+      ["received", "refunded", "refund_pending"].includes(current.status) ||
+      (current.status === "paid" && result.state !== "succeeded")
+    )
       return current;
     current.status =
       result.state === "succeeded"
@@ -39,8 +82,12 @@ function finish(o: Order, result: PaymentResult) {
   });
 }
 async function capture(o: Order, provider: Payments): Promise<Order> {
+  sameProvider(o, provider);
   const ready = atomic(() => {
     const current = get<Order>("order", o.id)!;
+    // A worker owns the capture once this transition commits. Other callers
+    // cannot reset it with an older query response.
+    if (current.status !== "authorized") return "skip";
     const q = current.quote;
     const m = get<Mandate>("mandate", current.mandateId)!;
     const result = checks(q, m, current.id);
@@ -55,7 +102,7 @@ async function capture(o: Order, provider: Payments): Promise<Order> {
         paymentCaptured: false,
       });
       saveOrder(current);
-      return false;
+      return "blocked";
     }
     current.status = "capturing";
     current.paymentStage = "capture";
@@ -64,30 +111,24 @@ async function capture(o: Order, provider: Payments): Promise<Order> {
       checks: result,
       mandateVersion: m.version,
     });
-    return true;
+    return "ready";
   });
-  if (!ready) {
+  if (ready === "skip") return get<Order>("order", o.id)!;
+  if (ready === "blocked") {
     try {
       const p = await provider.cancel(o.paymentId!);
       if (p.state === "cancelled") atomic(() => release(o));
       else if (p.state === "succeeded") return finish(o, p);
+      else holdUnknown(o.id, "付款授权取消结果待核对；预算继续预留。");
     } catch {
-      const current = get<Order>("order", o.id)!;
-      current.status = "pending";
-      current.error = "拦截成功，付款授权取消结果待核对；预算继续预留。";
-      saveOrder(current);
+      holdUnknown(o.id, "拦截成功，付款授权取消结果待核对；预算继续预留。");
     }
     return get<Order>("order", o.id)!;
   }
   try {
     return finish(o, await provider.capture(o.paymentId!, o.id));
   } catch {
-    const current = get<Order>("order", o.id)!;
-    current.status = "pending";
-    current.error = "扣款结果未确认；不自动重试，请查询支付结果。";
-    saveOrder(current);
-    audit("payment", "PAYMENT_UNKNOWN", o.id, { stage: "capture" });
-    return current;
+    return holdUnknown(o.id, "扣款结果未确认；不自动重试，请查询支付结果。");
   }
 }
 export async function purchase(
@@ -99,7 +140,7 @@ export async function purchase(
 ): Promise<Order> {
   const provider = injected || paymentProvider();
   let created = false;
-  const order = atomic(() => {
+  let order = atomic(() => {
     const prior = list<Order>("order").find(
       (o) => o.quoteId === quoteId && o.mandateId === mandateId,
     );
@@ -183,6 +224,8 @@ export async function purchase(
       behavior,
     );
   } catch (e) {
+    order = get<Order>("order", order.id)!;
+    if (settled(order)) return order;
     const error = e as { code?: string; payment_intent?: { id: string } };
     if (error.code === "card_declined") {
       order.status = "declined";
@@ -203,7 +246,16 @@ export async function purchase(
     }
     return order;
   }
+  order = get<Order>("order", order.id)!;
+  if (settled(order)) return order;
   order.paymentId = result.id;
+  if (!paymentMatches(order, result) || !result.id) {
+    saveOrder(order);
+    return holdUnknown(
+      order.id,
+      "支付渠道金额、币种或编号不一致；停止扣款，预算保持预留。",
+    );
+  }
   if (result.state === "declined" || result.state === "cancelled") {
     order.status = result.state === "declined" ? "declined" : "cancelled";
     order.error = "付款未完成，预算已释放。";
@@ -238,6 +290,7 @@ export async function reconcile(
 ): Promise<Order> {
   const o = get<Order>("order", orderId);
   if (!o) throw new Error("订单不存在。");
+  sameProvider(o, provider);
   if (!["pending", "authorized", "refund_pending"].includes(o.status)) return o;
   if (!o.paymentId)
     throw new Error("缺少支付编号，请先在支付渠道核对；系统不会重新发起付款。");
@@ -247,17 +300,28 @@ export async function reconcile(
     return applyRefund(o, r);
   }
   const p = await provider.query(o.paymentId);
+  if (!paymentMatches(o, p))
+    return holdUnknown(
+      o.id,
+      "查询结果金额或币种不一致；停止执行，预算保持预留。",
+    );
   if (p.state === "succeeded") return finish(o, p);
   if (p.state === "authorized") {
-    o.status = "authorized";
-    saveOrder(o);
-    return capture(o, provider);
+    const current = atomic(() => {
+      const fresh = get<Order>("order", o.id)!;
+      if (!["pending", "authorized"].includes(fresh.status)) return fresh;
+      fresh.status = "authorized";
+      return saveOrder(fresh);
+    });
+    return capture(current, provider);
   }
   if (p.state === "cancelled" || p.state === "declined") {
-    o.status = p.state === "declined" ? "declined" : "cancelled";
     atomic(() => {
-      release(o);
-      saveOrder(o);
+      const fresh = get<Order>("order", o.id)!;
+      if (settled(fresh) || fresh.status === "capturing") return;
+      fresh.status = p.state === "declined" ? "declined" : "cancelled";
+      release(fresh);
+      saveOrder(fresh);
       audit("payment", "PAYMENT_RECONCILED", o.id, { state: p.state });
     });
   }
@@ -287,16 +351,19 @@ export async function revoke(
       ["authorized", "pending"].includes(v.status),
   )) {
     try {
+      sameProvider(o, provider);
       const p = await provider.query(o.paymentId!);
       if (p.state === "authorized") {
         const cancelled = await provider.cancel(o.paymentId!);
         if (cancelled.state === "cancelled") {
-          o.status = "cancelled";
           atomic(() => {
-            release(o);
-            saveOrder(o);
+            const fresh = get<Order>("order", o.id)!;
+            if (settled(fresh)) return;
+            fresh.status = "cancelled";
+            release(fresh);
+            saveOrder(fresh);
           });
-        }
+        } else if (cancelled.state === "succeeded") finish(o, cancelled);
       } else if (p.state === "succeeded") finish(o, p);
     } catch {
       audit("payment", "REVOCATION_RECONCILIATION_REQUIRED", o.id, {
@@ -369,6 +436,10 @@ function applyRefund(o: Order, result: PaymentResult) {
   return atomic(() => {
     const current = get<Order>("order", o.id)!;
     if (current.status === "refunded") return current;
+    if (!paymentMatches(current, result)) {
+      current.error = "退款金额或币种不匹配，预算未释放。";
+      return saveOrder(current);
+    }
     if (result.state !== "refunded") {
       current.status = "refund_pending";
       current.error = "退款结果待核对，预算未释放。";
@@ -396,6 +467,7 @@ export async function refund(
   const o = atomic(() => {
     const v = get<Order>("order", orderId);
     if (!v) throw new Error("订单不存在。");
+    sameProvider(v, provider);
     if (v.status === "refunded" || v.status === "refund_pending") return v;
     if (!["paid", "received"].includes(v.status) || !v.paymentId)
       throw new Error("此订单不能退款。");
@@ -409,9 +481,10 @@ export async function refund(
   try {
     return applyRefund(o, await provider.refund(o.paymentId!, o.id));
   } catch {
-    o.error = "退款结果待核对；资金与库存尚未更改。";
-    saveOrder(o);
-    return o;
+    const current = get<Order>("order", o.id)!;
+    if (current.status === "refunded") return current;
+    current.error = "退款结果待核对；资金与库存尚未更改。";
+    return saveOrder(current);
   }
 }
 export async function monitor() {
@@ -511,8 +584,9 @@ export function recordPaymentEvent(event: {
     const o = list<Order>("order").find(
       (v) =>
         v.provider === "stripe-test" &&
-        (v.paymentId === object.id ||
-          v.paymentId === object.payment_intent ||
+        ((!!v.paymentId &&
+          (v.paymentId === object.id ||
+            v.paymentId === object.payment_intent)) ||
           (!v.paymentId &&
             v.id === object.metadata?.procuremate_order &&
             event.type.startsWith("payment_intent."))),
@@ -525,6 +599,14 @@ export function recordPaymentEvent(event: {
         throw new Error("支付事件金额或币种不匹配。");
       if (!o.paymentId && event.type.startsWith("payment_intent."))
         o.paymentId = object.id;
+      if (
+        event.type === "payment_intent.amount_capturable_updated" &&
+        object.status === "requires_capture" &&
+        ["reserved", "authorizing", "pending"].includes(o.status)
+      ) {
+        o.status = "authorized";
+        o.error = "付款授权已确认；执行前仍须查询并复核采购授权。";
+      }
       if (
         event.type === "payment_intent.succeeded" &&
         !["received", "refunded", "refund_pending"].includes(o.status)
@@ -567,6 +649,7 @@ export function recordPaymentEvent(event: {
         eventId: event.id,
         type: event.type,
       });
+      saveOrder(o);
     }
     db.prepare("INSERT INTO payment_events VALUES(?,?)").run(
       event.id,

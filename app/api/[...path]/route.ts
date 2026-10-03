@@ -85,7 +85,7 @@ async function handle(
           exportedAt: now(),
           disclosure:
             "测试公司、库存与商户订单；商品为真实来源快照。哈希链仅检查导出内部一致性，不证明运营者无法重写。",
-          ...snapshot(),
+          ...snapshot(true),
         },
         {
           headers: {
@@ -243,31 +243,29 @@ async function handle(
           { status: 403 },
         );
       const data = z.object({ quoteId: z.string() }).parse(await req.json());
-      atomic(() => {
-        const q = get<Quote>("quote", data.quoteId);
-        if (!q) throw new Error("方案不存在。");
-        if (
-          list<Order>("order").some(
-            (o) =>
-              o.quoteId === q.id &&
-              !["blocked", "declined", "cancelled"].includes(o.status),
-          )
-        )
-          throw new Error("已有进行中的订单，不能修改报价。");
-        q.shippingCents = 8000;
-        q.totalCents = q.subtotalCents + q.shippingCents;
-        q.revision++;
-        q.warnings.push(
-          "演示检查：预算仅覆盖商品金额，标准 HK$80 运费也必须纳入支付检查。",
-        );
-        put("quote", q);
-        audit(actor.id, "DEMO_QUOTE_CHECK", q.id, {
-          shippingSource: products()[0].shippingSource,
-          totalCents: q.totalCents,
-          revision: q.revision,
-        });
+      const original = get<Quote>("quote", data.quoteId);
+      if (!original) throw new Error("方案不存在。");
+      // Independent boundary case: keep the real ten-person requirement intact.
+      const candidates = await plan(
+        {
+          ...original.need,
+          scenario: "event",
+          people: 1,
+          title: "独立小额运费拦截测试",
+          brief: "单件现金商品，授权只覆盖商品金额。原采购需求保持不变。",
+        },
+        actor.id,
+      );
+      const quote = candidates.find((q) => q.shippingCents > 0);
+      if (!quote) throw new Error("当前目录没有适用于运费拦截测试的小额商品。");
+      quote.warnings.push("独立小额边界测试；不改变原采购人数和方案。");
+      put("quote", quote);
+      audit(actor.id, "DEMO_QUOTE_CHECK", quote.id, {
+        originalQuoteId: original.id,
+        independentTest: true,
+        shippingEvidence: quote.shippingEvidence,
       });
-      return NextResponse.json({ ok: true });
+      return NextResponse.json({ quote });
     }
     if (path === "measurements" && req.method === "POST") {
       const data = z

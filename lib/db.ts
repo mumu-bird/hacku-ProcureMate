@@ -65,7 +65,10 @@ export function audit(
   action: string,
   target: string,
   detail: unknown,
-) {
+): void {
+  // SELECT and INSERT must share a write transaction across independent workers.
+  if (!db.isTransaction)
+    return atomic(() => audit(actor, action, target, detail));
   const previous = db
     .prepare("SELECT hash FROM audit ORDER BY seq DESC LIMIT 1")
     .get() as { hash: string } | undefined;
@@ -189,14 +192,14 @@ export function inventory(): Inventory[] {
     };
   });
 }
-export function snapshot() {
+export function snapshot(fullAudit = false) {
   return {
     products: products(),
     quotes: list<Quote>("quote"),
     mandates: list<Mandate>("mandate").map((m) => ({ ...m, ...usage(m.id) })),
     orders: list<Order>("order"),
     inventory: inventory(),
-    audit: auditRows().slice(0, 200),
+    audit: fullAudit ? auditRows() : auditRows().slice(0, 200),
     auditValid: verifyAudit(),
     paymentProvider:
       process.env.PAYMENT_PROVIDER === "stripe" ? "stripe-test" : "simulated",

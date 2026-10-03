@@ -11,6 +11,10 @@ const { renderSlide, renderDeckShell } = await import(
   pathToFileURL(resolve(engine, "engine/renderer.ts")).href
 );
 const root = resolve("artifacts/deck-style");
+const coreResult = readFileSync("artifacts/core-test-results.txt", "utf8");
+const passedCoreTests = coreResult.match(/pass (\d+)/)?.[1];
+if (!passedCoreTests || !/fail 0\b/.test(coreResult))
+  throw Error("Deck requires a passing core-test report.");
 mkdirSync(root, { recursive: true });
 writeFileSync(
   resolve(root, "SKILL.md"),
@@ -103,8 +107,9 @@ const slides = [
     type: "demo",
     slots: {
       title: "先买成一笔，再证明能停下一笔",
-      body: "活动方案生成三套商品组合。确认授权后执行测试付款；授权只覆盖商品金额时，含运费总额被独立规则拦截。",
-      source: "实际产品截图；商品为时间戳快照，订单、库存和付款为测试。",
+      body: "10 人活动订单符合满额免运费规则，完成测试交易。另用独立单件订单验证：商品金额在授权内，加入运费后被拦截。",
+      source:
+        "实际截图；运费：The Club 派送规则，2026-10-03 HKT 采集；订单、库存、付款为测试。",
     },
   },
   {
@@ -133,11 +138,11 @@ const slides = [
     slots: {
       title: "用可复现证据说明原型已经做到什么",
       body: "核心规则测试、浏览器任务流程与生产构建通过。只陈述已经执行的检查，不把模拟交易当成商业验证。",
-      a: "核心测试：预算、撤销、并发、库存、权限与记录",
+      a: "核心测试：预算、撤销、支付竞态、并发与记录",
       b: "浏览器测试：活动采购、补货、配件与移动端",
       c: "真实来源商品：现金价格、独立链接、采集时间",
       source:
-        "来源：tests/core.test.ts、tests/browser/workflows.spec.ts、data/catalog.json；见 artifacts 测试结果。",
+        "来源：tests/core.test.ts、tests/closure.test.ts、tests/browser/workflows.spec.ts；见 artifacts。",
     },
   },
   {
@@ -172,6 +177,7 @@ const htmlSlides = slides.map((node, index) =>
 );
 const shell = renderDeckShell(skill);
 const html = (shell.head + htmlSlides.join("\n") + shell.foot)
+  .replace("<strong>21</strong>", `<strong>${passedCoreTests}</strong>`)
   .replace('<html lang="en">', '<html lang="zh-CN">')
   .replace(
     "<title>procuremate deck</title>",

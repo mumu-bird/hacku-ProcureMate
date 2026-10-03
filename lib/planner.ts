@@ -1,5 +1,6 @@
 import { id, now, products, put, audit } from "./db";
 import type { Need, Product, Quote, Line } from "./types";
+import { shippingCents as deliveryCost, shippingPolicy } from "./shipping";
 
 export async function modelSelection(
   need: Need,
@@ -137,11 +138,13 @@ export async function plan(need: Need, actor: string): Promise<Quote[]> {
   bundles.sort(
     (a, b) =>
       Number(
-        b.reduce((n, l) => n + l.unitCents * l.quantity, 8000) <=
+        b.reduce((n, l) => n + l.unitCents * l.quantity, 0) +
+          deliveryCost(b.reduce((n, l) => n + l.unitCents * l.quantity, 0)) <=
           need.budgetCents,
       ) -
       Number(
-        a.reduce((n, l) => n + l.unitCents * l.quantity, 8000) <=
+        a.reduce((n, l) => n + l.unitCents * l.quantity, 0) +
+          deliveryCost(a.reduce((n, l) => n + l.unitCents * l.quantity, 0)) <=
           need.budgetCents,
       ),
   );
@@ -150,10 +153,10 @@ export async function plan(need: Need, actor: string): Promise<Quote[]> {
       (n, l) => n + l.unitCents * l.quantity,
       0,
     );
-    const shippingCents = 8000;
+    const shippingCents = deliveryCost(subtotalCents);
     const warnings = [
       "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-      "派送按已采集的标准 HK$80 规则计算；特殊派送和交期未验证。",
+      `派送规则：${shippingPolicy.summary} 特殊派送和交期未验证；不是实时商户结账。`,
       "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
     ];
     if (model.warning) warnings.push(model.warning);
@@ -171,6 +174,12 @@ export async function plan(need: Need, actor: string): Promise<Quote[]> {
       lines,
       subtotalCents,
       shippingCents,
+      shippingEvidence: {
+        sourceUrl: shippingPolicy.sourceUrl,
+        observedAt: shippingPolicy.observedAt,
+        sourceDigest: shippingPolicy.sourceDigest,
+        rule: shippingPolicy.summary,
+      },
       totalCents: subtotalCents + shippingCents,
       merchant: "The Club · 测试商户",
       address: need.address,

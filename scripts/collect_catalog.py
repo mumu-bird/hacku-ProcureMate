@@ -28,6 +28,7 @@ sources = [
   ('coffee-white','NESCAFÉ - 白咖啡','consumable',['咖啡','补货'],'Dolce Gusto')])
 ]
 rows=[]
+policy=json.loads((Path(__file__).resolve().parent.parent/'data'/'merchant-policy.json').read_text())
 for group,url,wanted in sources:
  raw=urlopen(Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=30).read().decode('utf-8')
  start=raw.find('<div class="products-wrapper">')
@@ -47,9 +48,9 @@ for group,url,wanted in sources:
    if 'HK$' not in box:raise ValueError(f'Not a cash listing: {name}')
    rows.append(dict(id=pid,name=name,priceCents=round(float(prices[0])*100),category=category,tags=tags,
       connector=connector,sourceUrl=a.get('href'),listingUrl=url,observedAt=observed,
-      priceBasis='merchant_listing_snapshot',shippingCents=8000,
-      shippingSource='https://shop.theclub.com.hk/shipping-policy?___store=en_US',
-      shippingNote='标准住宅/办公派送费规则快照；商品特殊派送与实时库存未验证。测试商户采用该规则，不代表真实下单报价。',
+      priceBasis='merchant_listing_snapshot',shippingCents=policy['baseDeliveryCents'],
+      shippingSource=policy['sourceUrl'],shippingObservedAt=policy['observedAt'],
+      shippingNote=policy['summary']+' 运费按订单净额计算；此字段是基础派送费。'+policy['limitations'],
       stockVerified=False,compatibilityNote='采购模板要求，仍需按具体型号确认兼容性。' if connector else None))
    found=True;break
   if not found:raise ValueError(f'Missing product {match}')

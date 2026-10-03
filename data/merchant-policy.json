@@ -1,0 +1,12 @@
+{
+  "id": "club-standard-cash-home-delivery",
+  "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+  "observedAt": "2026-10-02T18:18:40.140139+00:00",
+  "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+  "baseDeliveryCents": 8000,
+  "freeDeliveryThresholdCents": 40000,
+  "currency": "HKD",
+  "scope": "普通现金商品、标准办公室派送；报价未使用积分、优惠券或其他折扣。",
+  "summary": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。",
+  "limitations": "商品特殊派送、会员资格、实际可售库存与结账优惠未验证。当前测试商户采用此公开规则，不代表真实商户结账。"
+}

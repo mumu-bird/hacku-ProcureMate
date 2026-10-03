@@ -9,7 +9,7 @@ const executablePath =
   (existsSync(cachedBrowser) ? cachedBrowser : undefined);
 const browser = await chromium.launch(executablePath ? { executablePath } : {});
 const context = await browser.newContext({
-  baseURL: "http://127.0.0.1:3200",
+  baseURL: process.env.DEMO_BASE_URL || "http://127.0.0.1:3200",
   viewport: { width: 1440, height: 1080 },
   recordVideo: {
     dir: "artifacts/video-raw",
@@ -17,13 +17,16 @@ const context = await browser.newContext({
   },
 });
 const page = await context.newPage();
-await page.goto("http://127.0.0.1:3200");
+await page.goto(process.env.DEMO_BASE_URL || "http://127.0.0.1:3200");
 const started = performance.now();
+let previousTarget = 0;
 async function waitUntil(seconds) {
-  const remaining = seconds * 1000 - (performance.now() - started);
-  if (remaining > 0) await page.waitForTimeout(remaining);
+  // Preserve each chapter's reading time even if compilation or the host pauses.
+  await page.waitForTimeout((seconds - previousTarget) * 1000);
+  previousTarget = seconds;
 }
 async function caption(title, text) {
+  console.log(`${Math.round((performance.now() - started) / 1000)}s ${title}`);
   await page.evaluate(
     ({ title, text }) => {
       let el = document.getElementById("demo-caption");
@@ -68,7 +71,7 @@ try {
   await page.locator(".quotes-section").scrollIntoViewIfNeeded();
   await caption(
     "02 · 比较完整支出",
-    "商品来自有时间戳的真实页面。金额包含标准运费；积分价值不确定、账户资格未确认，便不计入节省。",
+    "真实页面价格与派送规则分别记录采集时间。本次现金商品净额满 HK$400，按公开规则免标准运费；未确认积分不计入节省。",
   );
   await waitUntil(42);
   await page
@@ -106,8 +109,8 @@ try {
     .getByRole("button", { name: "演示运费使预算超限" })
     .click();
   await caption(
-    "05 · 演示授权只覆盖商品金额",
-    "这次测试故意把上限设为商品金额。已观察到的标准 HK$80 运费仍需计入最终支出。",
+    "05 · 独立小额订单边界测试",
+    "这次单件商品未满 HK$400，须加 HK$80 标准运费；授权只覆盖商品金额。原来的 10 人活动需求保持不变。",
   );
   await waitUntil(96);
   await page
@@ -139,6 +142,8 @@ try {
     .first()
     .getByRole("button", { name: "确认授权并采购" })
     .click();
+  await page.getByLabel("累计预算（HK$）").fill("5000");
+  await page.getByLabel("最短执行间隔（秒）").fill("0");
   await page
     .getByRole("button", { name: "确认授权并执行", exact: true })
     .click();
@@ -150,9 +155,16 @@ try {
   await page.getByRole("button", { name: "确认收货入库" }).click();
   await page.getByRole("button", { name: "关闭", exact: true }).click();
   await page.getByRole("button", { name: "库存与补货", exact: true }).click();
+  await page
+    .locator("tbody tr")
+    .first()
+    .getByRole("button", { name: "记录领用" })
+    .click();
+  await page.getByRole("dialog").getByRole("spinbutton").fill("16");
+  await page.getByRole("button", { name: "确认领用并检查补货" }).click();
   await caption(
-    "在途、实物与预算保持一致",
-    "收货更新实际库存。重复补货检查不会为同一缺口创建第二笔付款。",
+    "领用触发第二笔授权内采购",
+    "负责人批准累计 HK$5,000、最短间隔 0 秒。领用 16 盒后自动补货，库存 4、在途 16；再次检查不会重复付款。",
   );
   await waitUntil(138);
   await page.getByRole("button", { name: "采购工作台", exact: true }).click();

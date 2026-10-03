@@ -256,6 +256,7 @@ export default function Home() {
   const [cap, setCap] = useState(2500);
   const [totalCap, setTotalCap] = useState(2500);
   const [hours, setHours] = useState(24);
+  const [intervalSeconds, setIntervalSeconds] = useState(60);
   const [substitute, setSubstitute] = useState(true);
   const [behavior, setBehavior] = useState("success");
   const [detail, setDetail] = useState<Order | null>(null);
@@ -361,7 +362,15 @@ export default function Home() {
     setCap(overrun ? q.subtotalCents / 100 : need.budgetCents / 100);
     setTotalCap(overrun ? q.subtotalCents / 100 : need.budgetCents / 100);
     setHours(24);
+    setIntervalSeconds(q.scenario === "replenishment" ? 60 : 0);
     setSubstitute(true);
+  }
+  async function openShippingDemo(q: Quote) {
+    await run(async () => {
+      const d = await api("demo/quote-shipping", { quoteId: q.id });
+      openGrant(d.quote, true);
+      setSubstitute(false);
+    });
   }
   async function execute(q: Quote, m: Mandate, b = behavior) {
     const d = await api("purchase", {
@@ -400,7 +409,8 @@ export default function Home() {
                 .flatMap((q) => q.lines.map((l) => l.productId))
                 .filter((v, i, a) => a.indexOf(v) === i),
         expiresAt: new Date(Date.now() + hours * 3600000).toISOString(),
-        minIntervalSeconds: grant.scenario === "replenishment" ? 60 : 0,
+        minIntervalSeconds:
+          grant.scenario === "replenishment" ? intervalSeconds : 0,
       });
       const current = grant;
       setGrant(null);
@@ -1145,6 +1155,23 @@ export default function Home() {
                         <small className="source-time">
                           采集于 {date(q.lines[0].observedAt)} · 页面价格快照
                         </small>
+                        {q.shippingEvidence && (
+                          <>
+                            <a
+                              className="source-link"
+                              href={q.shippingEvidence.sourceUrl}
+                              target="_blank"
+                              rel="noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              查看派送费规则 <ExternalLink size={12} />
+                            </a>
+                            <small className="source-time">
+                              {q.shippingEvidence.rule} 采集于{" "}
+                              {date(q.shippingEvidence.observedAt)}
+                            </small>
+                          </>
+                        )}
                         <button
                           className="button primary full"
                           disabled={busy}
@@ -1170,7 +1197,7 @@ export default function Home() {
                             disabled={busy}
                             onClick={(e) => {
                               e.stopPropagation();
-                              openGrant(q, true);
+                              openShippingDemo(q);
                             }}
                           >
                             演示运费使预算超限
@@ -1606,6 +1633,9 @@ export default function Home() {
               <p>
                 授权人：{state.actor.name} · 用途：{names[grant.scenario]}
               </p>
+              {grant.need.title === "独立小额运费拦截测试" && (
+                <p>独立小额边界测试 · 1 件商品；原采购需求保持不变。</p>
+              )}
             </div>
           </div>
           <div className="grant-summary">
@@ -1660,6 +1690,25 @@ export default function Home() {
             </label>
           </div>
           <dl className="grant-rules">
+            {grant.scenario === "replenishment" && (
+              <div>
+                <dt>执行频率</dt>
+                <dd>
+                  <label>
+                    最短执行间隔（秒）
+                    <input
+                      type="number"
+                      min="0"
+                      max="86400"
+                      value={intervalSeconds}
+                      onChange={(e) =>
+                        setIntervalSeconds(Number(e.target.value))
+                      }
+                    />
+                  </label>
+                </dd>
+              </div>
+            )}
             <div>
               <dt>批准商户</dt>
               <dd>The Club · 测试商户</dd>

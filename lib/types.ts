@@ -13,6 +13,7 @@ export type Product = {
   shippingCents: number;
   shippingSource: string;
   shippingNote: string;
+  shippingObservedAt?: string;
   stockVerified: boolean;
   compatibilityNote: string | null;
 };
@@ -47,6 +48,12 @@ export type Quote = {
   lines: Line[];
   subtotalCents: number;
   shippingCents: number;
+  shippingEvidence?: {
+    sourceUrl: string;
+    observedAt: string;
+    sourceDigest: string;
+    rule: string;
+  };
   totalCents: number;
   merchant: string;
   address: string;

@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { mkdirSync } from "node:fs";
+import { createHash } from "node:crypto";
 mkdirSync("artifacts", { recursive: true });
 test("event purchase, receipt, refund and independently checked shipping stop", async ({
   page,
@@ -14,6 +15,9 @@ test("event purchase, receipt, refund and independently checked shipping stop", 
   await page.screenshot({ path: "artifacts/workspace.png", fullPage: true });
   await page.getByRole("button", { name: "生成采购方案" }).click();
   await expect(page.locator(".quote-card")).toHaveCount(3);
+  const original = (await (await page.request.get("/api/state")).json())
+    .quotes[0];
+  expect(original.shippingCents).toBe(0);
   await page.screenshot({ path: "artifacts/quotes.png", fullPage: true });
   await page
     .locator(".quote-card")
@@ -53,6 +57,38 @@ test("event purchase, receipt, refund and independently checked shipping stop", 
   await expect(
     page.getByRole("dialog").getByText("没有发起付款", { exact: true }),
   ).toBeVisible();
+  const evidence = await (await page.request.get("/api/evidence")).json();
+  const stopped = evidence.orders.find((o: any) => o.status === "blocked");
+  expect(stopped.quote.need.people).toBe(1);
+  expect(stopped.quote.shippingCents).toBe(8000);
+  expect(
+    evidence.quotes.find((q: any) => q.id === original.id).need.people,
+  ).toBe(10);
+  expect(
+    evidence.audit.some(
+      (a: any) => a.target === stopped.id && a.action === "PAYMENT_AUTHORIZE",
+    ),
+  ).toBe(false);
+  let previous = "GENESIS";
+  for (const r of [...evidence.audit].reverse()) {
+    expect(r.previous_hash).toBe(previous);
+    expect(
+      createHash("sha256")
+        .update(
+          JSON.stringify({
+            id: r.id,
+            at: r.at,
+            actor: r.actor,
+            action: r.action,
+            target: r.target,
+            detail: r.detail,
+            previousHash: r.previous_hash,
+          }),
+        )
+        .digest("hex"),
+    ).toBe(r.hash);
+    previous = r.hash;
+  }
   await page.screenshot({ path: "artifacts/blocked.png", fullPage: false });
   await page.getByRole("button", { name: "关闭", exact: true }).click();
   await page.getByRole("button", { name: "授权与预算", exact: true }).click();
@@ -64,7 +100,7 @@ test("event purchase, receipt, refund and independently checked shipping stop", 
   await expect(page.getByText("内部一致性通过", { exact: true })).toBeVisible();
   expect(errors).toEqual([]);
 });
-test("replenishment authorization, receipt, consumption and subsequent checks", async ({
+test("replenishment receipt and consumption trigger a second authorized transaction without duplicate purchase", async ({
   page,
 }) => {
   await page.goto("/");
@@ -77,6 +113,8 @@ test("replenishment authorization, receipt, consumption and subsequent checks", 
     .first()
     .getByRole("button", { name: "确认授权并采购" })
     .click();
+  await page.getByLabel("累计预算（HK$）").fill("5000");
+  await page.getByLabel("最短执行间隔（秒）").fill("0");
   await page
     .getByRole("button", { name: "确认授权并执行", exact: true })
     .click();
@@ -100,7 +138,45 @@ test("replenishment authorization, receipt, consumption and subsequent checks", 
   await expect(
     page.locator("tbody tr").first().getByText("4", { exact: true }),
   ).toBeVisible();
+  const state = await (await page.request.get("/api/state")).json();
+  const replenished = state.orders.filter(
+    (o: any) => o.quote.scenario === "replenishment",
+  );
+  expect(replenished).toHaveLength(2);
+  const auto = replenished.find((o: any) => o.status === "paid");
+  expect(auto).toBeTruthy();
+  expect(
+    state.inventory.find(
+      (i: any) => i.productId === auto.quote.lines[0].productId,
+    ).inTransit,
+  ).toBe(16);
+  await Promise.all([
+    page.request.post("/api/monitor", { data: {} }),
+    page.request.post("/api/monitor", { data: {} }),
+  ]);
+  const noDuplicates = await (await page.request.get("/api/state")).json();
+  expect(
+    noDuplicates.orders.filter(
+      (o: any) => o.quote.scenario === "replenishment",
+    ),
+  ).toHaveLength(2);
   await page.screenshot({ path: "artifacts/inventory.png", fullPage: true });
+  expect(
+    (
+      await page.request.post("/api/receive", { data: { orderId: auto.id } })
+    ).status(),
+  ).toBe(200);
+  const closed = await (await page.request.get("/api/state")).json();
+  expect(
+    closed.inventory.find(
+      (i: any) => i.productId === auto.quote.lines[0].productId,
+    ).quantity,
+  ).toBe(20);
+  expect(
+    closed.inventory.find(
+      (i: any) => i.productId === auto.quote.lines[0].productId,
+    ).inTransit,
+  ).toBe(0);
 });
 test("onboarding variants, session access control, invalid payload and responsive layout", async ({
   page,

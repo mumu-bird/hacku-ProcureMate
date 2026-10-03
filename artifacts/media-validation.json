@@ -1,0 +1,28 @@
+{
+  "verifiedAt": "2026-10-03T02:47:54.199072+00:00",
+  "videoSeconds": 180,
+  "videoSize": [
+    1440,
+    1080
+  ],
+  "frameRate": 25,
+  "audio": false,
+  "editing": "Continuous actual UI recording, uniformly accelerated by 1.088x to 180 seconds. No purchase outcomes altered.",
+  "coreTests": 34,
+  "browserTests": 3,
+  "pdfSlides": 7,
+  "files": {
+    "ProcureMate-demo.webm": {
+      "bytes": 31800480,
+      "sha256": "0536528e89a11456415b14b06bd38dd84949bb40b4ca2dbc5849a97983b6e5bd"
+    },
+    "ProcureMate-pitch.pdf": {
+      "bytes": 1168904,
+      "sha256": "7c8b814129d1bf762196fef86e4d1aeb7a32a075d4a9509a070c4eb0b60e8335"
+    },
+    "demo-evidence.json": {
+      "bytes": 96448,
+      "sha256": "05880ddb91c9bd90548eb799ad6f82464da080a86a8d256e9960bd69644231f9"
+    }
+  }
+}

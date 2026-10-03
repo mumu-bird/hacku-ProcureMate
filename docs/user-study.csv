@@ -1,0 +1,11 @@
+participant,method,sequence,seconds,steps,cost_hkd,errors,completed,note
+P01,manual,1,,,,,,
+P01,agent,2,,,,,,
+P02,agent,1,,,,,,
+P02,manual,2,,,,,,
+P03,manual,1,,,,,,
+P03,agent,2,,,,,,
+P04,agent,1,,,,,,
+P04,manual,2,,,,,,
+P05,manual,1,,,,,,
+P05,agent,2,,,,,,

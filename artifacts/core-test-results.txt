@@ -2,32 +2,45 @@
 > procuremate@1.0.0 test
 > tsx --test tests/*.test.ts
 
-✔ 16 live-source catalog snapshots contain integer amounts and provenance (0.831459ms)
-✔ planner ignores prompt injection, preserves fixed quantities, and creates three catalog-only options (1.175125ms)
-✔ single purchase reserves and spends budget; duplicate request does not capture twice (2.895625ms)
-✔ shipping over cap is blocked before any provider authorization (1.457833ms)
-✔ expired, revoked, wrong-category, wrong-merchant and changed address mandates are blocked (4.415166ms)
-✔ one-time mandate cannot authorize a different request (1.491875ms)
-✔ concurrent transactions cannot overspend cumulative budget (3.130583ms)
-✔ payment rejection releases reservation and does not affect stock (2.010041ms)
-✔ timeout holds budget; explicit reconciliation completes without reauthorizing (2.580959ms)
-✔ revocation during provider authorization prevents capture and releases hold (2.062458ms)
-✔ a changed quote during authorization cannot be captured under old amount (2.054417ms)
-✔ receipt is idempotent; refund affects funds; confirmed return affects stock once (6.926ms)
-✔ inventory cannot go negative and consumption is recorded (1.738584ms)
-✔ replenishment subtracts in-transit stock and concurrent monitors do not duplicate payments (5.942625ms)
-✔ onboarding requires device details and filters by connectors (0.651458ms)
-✔ substitution policy binds explicit product IDs (0.808584ms)
-✔ frequency policy blocks immediate re-purchase even when budget remains (2.63225ms)
-✔ buyer cannot revoke or refund; server sessions cannot be switched via a role cookie (127.028458ms)
-✔ live Stripe keys are rejected before any call (0.252458ms)
-✔ verified webhook replay is deduplicated and received inventory is not re-applied (3.9175ms)
-✔ audit chain internal checks pass after all operations (2.748208ms)
-ℹ tests 21
+✔ cash-only orders above the observed HK$400 threshold receive zero standard shipping (2.259625ms)
+✔ delivery threshold is inclusive and old unverified shipping quotes cannot execute (2.396875ms)
+✔ payment response currency mismatch cannot execute a capture (2.276667ms)
+✔ concurrent reconciliation leases capture once and cannot overwrite the final state (25.71225ms)
+✔ payment response amount mismatch stops capture and retains reservation (2.363334ms)
+✔ a signed success event arriving before an unknown authorization response stays paid (1.904416ms)
+✔ a confirmed capture callback is not rolled back by the network response failing (2.226958ms)
+✔ a completed refund callback is not overwritten by a refund response timeout (3.640292ms)
+✔ capturable callback recovers a payment ID lost during authorization timeout (3.79025ms)
+✔ changing adapters cannot route an existing pending order through another provider (2.363292ms)
+✔ model output cannot change quantities or budgets; unknown catalog IDs cause disclosed fallback (24.900792ms)
+✔ two SQLite writers preserve one internally consistent audit chain (131.528458ms)
+✔ evidence export includes the full chain beyond the 200-row interface limit (7.70225ms)
+✔ 16 live-source catalog snapshots contain integer amounts and provenance (1.023834ms)
+✔ planner ignores prompt injection, preserves fixed quantities, and creates three catalog-only options (1.391084ms)
+✔ single purchase reserves and spends budget; duplicate request does not capture twice (4.384875ms)
+✔ shipping over cap is blocked before any provider authorization (1.938542ms)
+✔ expired, revoked, wrong-category, wrong-merchant and changed address mandates are blocked (6.00225ms)
+✔ one-time mandate cannot authorize a different request (2.19275ms)
+✔ concurrent transactions cannot overspend cumulative budget (3.197125ms)
+✔ payment rejection releases reservation and does not affect stock (1.9255ms)
+✔ timeout holds budget; explicit reconciliation completes without reauthorizing (3.328542ms)
+✔ revocation during provider authorization prevents capture and releases hold (2.629334ms)
+✔ a changed quote during authorization cannot be captured under old amount (2.748375ms)
+✔ receipt is idempotent; refund affects funds; confirmed return affects stock once (6.162167ms)
+✔ inventory cannot go negative and consumption is recorded (0.702208ms)
+✔ replenishment subtracts in-transit stock and concurrent monitors do not duplicate payments (9.022417ms)
+✔ onboarding requires device details and filters by connectors (0.7225ms)
+✔ substitution policy binds explicit product IDs (0.903916ms)
+✔ frequency policy blocks immediate re-purchase even when budget remains (3.7545ms)
+✔ buyer cannot revoke or refund; server sessions cannot be switched via a role cookie (152.084125ms)
+✔ live Stripe keys are rejected before any call (0.209084ms)
+✔ verified webhook replay is deduplicated and received inventory is not re-applied (4.5935ms)
+✔ audit chain internal checks pass after all operations (2.689917ms)
+ℹ tests 34
 ℹ suites 0
-ℹ pass 21
+ℹ pass 34
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 457.942917
+ℹ duration_ms 506.531834

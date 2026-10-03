@@ -4,7 +4,9 @@
 
 **比赛版已经可以本地运行。当前默认使用透明规则规划器和模拟支付，未接入真实商户下单。** 商品价格是带采集时间的 The Club 页面快照；公司、库存、订单与用户角色为演示数据。没有编造用户验证结果、企业客户或节省比例。
 
-[三分钟演示视频](https://github.com/mumu-bird/ProcureMate-HacKU2026/releases/download/v0.1.2/ProcureMate-demo.webm) · [七页路演 PDF](https://github.com/mumu-bird/ProcureMate-HacKU2026/releases/download/v0.1.2/ProcureMate-pitch.pdf) · [按评分准备的证据](docs/award-evidence.md)
+[三分钟演示视频](https://github.com/mumu-bird/hacku-ProcureMate/releases/download/v0.1.2/ProcureMate-demo.webm) · [七页路演 PDF](https://github.com/mumu-bird/hacku-ProcureMate/releases/download/v0.1.2/ProcureMate-pitch.pdf) · [按评分准备的证据](docs/award-evidence.md)
+
+指定仓库当前为私有，仓库和发布附件需要访问权限。比赛提交要求公开可访问；上传不等于完成公开性检查。
 
 ## 运行
 

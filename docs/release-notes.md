@@ -1,16 +1,11 @@
-# ProcureMate v0.1.2 · HacKU 2026 prototype
+# ProcureMate v0.2.0 · HacKU 2026 evidence update
 
-Local Next.js / TypeScript / SQLite procurement prototype covering event gifts, inventory replenishment and employee equipment.
+The public prototype supports event gifts, replenishment and employee equipment. It now considers all eligible combinations before selecting affordable options, enforces observed capacity/insulation requirements, shows selection evidence, and provides facilitated paired human-study capture with frozen task/source snapshots, server timing, observer steps, sealed results and retained failures.
 
-This version fixes the observed HK$400 free-standard-delivery threshold, isolates the small-order shipping stop, protects confirmed payment/refund states against stale network replies, validates payment amounts/currencies, recovers lost payment IDs from verified events, prevents adapter mixing, leases concurrent captures, and serializes cross-process audit writes. Evidence exports now include the full audit chain. The browser replenishment test completes a second authorized purchase and receipt after consumption. External font loading was removed for local demo reliability.
+The new 180-second continuous UI recording shows three budget-compatible options, a 500 ml/insulation filter, an actual simulated transaction and receipt, a separate HK$248 shipping-budget stop without any payment call, a second replenishment transaction, onboarding, audit records and the empty study tool. No transaction outcomes were modified. The seven-page PDF matches the current prototype and explicitly discloses missing human evidence and external integrations.
 
-v0.1.1's fixed-HK$80 calculation and video are superseded; use v0.1.2 materials.
-The three-minute captioned recording shows an actual prototype transaction, a server-side shipping-cost budget stop, replenishment and onboarding. Current demonstration uses a transparent rule planner and simulated payments. It does not represent a real HKT merchant order or verified Stripe/model network integration.
+Validation: 45 core tests, 5 browser workflows, TypeScript and production build passed. The video decoded all 4,500 frames at 1440×1080 / 25 fps; the PDF has 7 pages with no layout-boundary failures. The 37-row demo audit chain was independently checked for internal consistency. Video size is about 10.5 MB. Checksums and precise evidence scope are in media-validation.json.
 
-Validation: 34 core tests and 3 browser workflows passed; TypeScript and production build passed. The 7-slide PDF includes source boundaries, competitors and unverified assumptions.
+This remains rule-based planning and simulated payments. No actual HKT merchant order, company wallet, verified model/Stripe network integration or measured human efficiency improvement is claimed. Human task data is still missing. Payment-rail feasibility is described as a proposed integration path; Stripe is not a mandatory competition integration.
 
-The official manual-route evidence is still missing. The team should complete its five-participant task comparison, verify real model/Stripe network integrations when credentials are available, and submit its official form. The payment score assesses proposed-rail feasibility, not mandatory Stripe integration. See `docs/award-evidence.md` and `docs/submission-checklist.md`.
-
-Release attachments (the selected repository is now public; anonymous code and PDF access verified; full video download needs a stable-network recheck): `ProcureMate-demo.webm` (180 seconds, captions, no narration) and `ProcureMate-pitch.pdf`.
-
-The competition repository and v0.1.2 attachments are now publicly accessible. Current main adds verified requirement filtering and facilitated paired-study tooling (45 core tests / 5 browser flows). This release’s recording and deck still describe the earlier 34 / 3 baseline; no human results or real external integrations have been added.
+Use these current attachments rather than v0.1.2 for judging. The team must still collect real manual/agent comparison evidence, complete its official submission and attend the exhibition.

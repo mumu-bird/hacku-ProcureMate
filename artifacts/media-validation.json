@@ -1,28 +1,50 @@
 {
-  "verifiedAt": "2026-10-03T02:47:54.199072+00:00",
+  "verifiedAt": "2026-10-03T15:15:32.730387+00:00",
+  "release": "v0.2.0",
   "videoSeconds": 180,
   "videoSize": [
     1440,
     1080
   ],
   "frameRate": 25,
+  "decodedFrames": 4500,
   "audio": false,
-  "editing": "Continuous actual UI recording, uniformly accelerated by 1.088x to 180 seconds. No purchase outcomes altered.",
-  "coreTests": 34,
-  "browserTests": 3,
+  "normalization": {
+    "sourceSeconds": 180.12,
+    "timestampScale": 0.9993337774816788,
+    "speed": 1.0006666666666666,
+    "targetSeconds": 180,
+    "bitrateTarget": "350k; qmax32 preserves text legibility",
+    "source": "continuous real prototype UI recording",
+    "editing": "uniform timestamp scaling only; no transaction outcomes modified"
+  },
+  "coreTests": 45,
+  "browserTests": 5,
   "pdfSlides": 7,
+  "recordedClosure": {
+    "eventReceived": true,
+    "minCapacityMl": 500,
+    "shippingStopWithoutPayment": true,
+    "secondReplenishmentPaid": true,
+    "demoHumanParticipants": 0
+  },
+  "disclosure": "Rules and simulated payments. Study tooling is demonstrated empty; no human study or real model/Stripe integration is claimed.",
   "files": {
     "ProcureMate-demo.webm": {
-      "bytes": 31800480,
-      "sha256": "0536528e89a11456415b14b06bd38dd84949bb40b4ca2dbc5849a97983b6e5bd"
+      "bytes": 10465638,
+      "sha256": "079d0c45b4eeae08c78cfb613db3ce24c3dd93cd5e753874f84ac11da8c8a64b"
     },
     "ProcureMate-pitch.pdf": {
-      "bytes": 1168904,
-      "sha256": "7c8b814129d1bf762196fef86e4d1aeb7a32a075d4a9509a070c4eb0b60e8335"
+      "bytes": 1187929,
+      "sha256": "9d1223bfa9c9d1c5462b723e22e4b8661ba470b28729c2711d2aff30113ca221"
     },
     "demo-evidence.json": {
-      "bytes": 96448,
-      "sha256": "05880ddb91c9bd90548eb799ad6f82464da080a86a8d256e9960bd69644231f9"
+      "bytes": 178795,
+      "sha256": "1ebb6fad197fde1fc6099e2b47cd208e36a09e9cf0cfe31c9f504cb4ec9cbc73"
+    },
+    "demo-study-state.json": {
+      "bytes": 550,
+      "sha256": "523d1f17dbec21ac6b4e94adf51176aa84c953c6a15237a7b8a8eae2f2e48a2d"
     }
   }
 }

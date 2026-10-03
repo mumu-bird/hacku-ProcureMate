@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-10-03T02:43:07.692Z",
+  "exportedAt": "2026-10-03T11:20:09.310Z",
   "disclosure": "测试公司、库存与商户订单；商品为真实来源快照。哈希链仅检查导出内部一致性，不证明运营者无法重写。",
   "products": [
     {
@@ -338,8 +338,8 @@
   ],
   "quotes": [
     {
-      "id": "quote_1526889b-9cf",
-      "requestId": "request_38ab350a-d2d",
+      "id": "quote_033d0a12-b5d",
+      "requestId": "request_9683657d-00e",
       "scenario": "onboarding",
       "optionIndex": 2,
       "title": "另一种选择",
@@ -375,9 +375,109 @@
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 5,
+        "affordableCount": 5,
+        "lowestTotalCents": 64800,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "keyboard-k580",
+              "mouse-m650"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Logitech - SIGNATURE M650 Silent Wireless mouse (Graphite / Rose / Off White)"
+            ],
+            "totalCents": 64800,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "keyboard-k580",
+              "webcam-brio"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Logitech Brio 300 Full HD webcam"
+            ],
+            "totalCents": 69800,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "keyboard-k580",
+              "headset-zone"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Logitech - ZONE VIBE 100 WIRELESS HEADSET (GRAPHITE/OFF WHITE/ROSE)"
+            ],
+            "totalCents": 94800,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "keyboard-k580",
+              "charger-belkin"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Belkin BoostCharge Pro 108W 4-Ports PD GaN Off-The-Wall Charger (WCH010MYWH) [Expected delivery date: 7-10 working days]"
+            ],
+            "totalCents": 95800,
+            "withinBudget": true,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "keyboard-k580",
+              "dock-belkin"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Belkin Connect USB-C 6-in-1 Core GaN Dock 130W (INC018VFBK) [Expected delivery date: 7-10 working days]"
+            ],
+            "totalCents": 127800,
+            "withinBudget": true,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
       "reason": "按 developer 岗位与 USB-A / USB-C / Bluetooth 接口筛选。",
-      "createdAt": "2026-10-03T02:42:52.327Z",
-      "expiresAt": "2026-10-04T02:42:52.327Z",
+      "createdAt": "2026-10-03T11:19:54.286Z",
+      "expiresAt": "2026-10-04T11:19:54.286Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
@@ -402,12 +502,15 @@
         ],
         "address": "香港薄扶林道 · 公司办公室",
         "sku": "coffee-mocha",
-        "quantity": 16
+        "quantity": 16,
+        "strategy": "balanced",
+        "minCapacityMl": 500,
+        "requiresInsulated": true
       }
     },
     {
-      "id": "quote_2ae712d9-2bd",
-      "requestId": "request_38ab350a-d2d",
+      "id": "quote_e7339b1d-613",
+      "requestId": "request_9683657d-00e",
       "scenario": "onboarding",
       "optionIndex": 1,
       "title": "备选方案",
@@ -443,9 +546,109 @@
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 5,
+        "affordableCount": 5,
+        "lowestTotalCents": 64800,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "keyboard-k580",
+              "mouse-m650"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Logitech - SIGNATURE M650 Silent Wireless mouse (Graphite / Rose / Off White)"
+            ],
+            "totalCents": 64800,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "keyboard-k580",
+              "webcam-brio"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Logitech Brio 300 Full HD webcam"
+            ],
+            "totalCents": 69800,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "keyboard-k580",
+              "headset-zone"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Logitech - ZONE VIBE 100 WIRELESS HEADSET (GRAPHITE/OFF WHITE/ROSE)"
+            ],
+            "totalCents": 94800,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "keyboard-k580",
+              "charger-belkin"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Belkin BoostCharge Pro 108W 4-Ports PD GaN Off-The-Wall Charger (WCH010MYWH) [Expected delivery date: 7-10 working days]"
+            ],
+            "totalCents": 95800,
+            "withinBudget": true,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "keyboard-k580",
+              "dock-belkin"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Belkin Connect USB-C 6-in-1 Core GaN Dock 130W (INC018VFBK) [Expected delivery date: 7-10 working days]"
+            ],
+            "totalCents": 127800,
+            "withinBudget": true,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
       "reason": "按 developer 岗位与 USB-A / USB-C / Bluetooth 接口筛选。",
-      "createdAt": "2026-10-03T02:42:52.327Z",
-      "expiresAt": "2026-10-04T02:42:52.327Z",
+      "createdAt": "2026-10-03T11:19:54.286Z",
+      "expiresAt": "2026-10-04T11:19:54.286Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
@@ -470,12 +673,15 @@
         ],
         "address": "香港薄扶林道 · 公司办公室",
         "sku": "coffee-mocha",
-        "quantity": 16
+        "quantity": 16,
+        "strategy": "balanced",
+        "minCapacityMl": 500,
+        "requiresInsulated": true
       }
     },
     {
-      "id": "quote_9a024393-c8b",
-      "requestId": "request_38ab350a-d2d",
+      "id": "quote_c93bbbea-48e",
+      "requestId": "request_9683657d-00e",
       "scenario": "onboarding",
       "optionIndex": 0,
       "title": "推荐方案",
@@ -511,9 +717,109 @@
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 5,
+        "affordableCount": 5,
+        "lowestTotalCents": 64800,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "keyboard-k580",
+              "mouse-m650"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Logitech - SIGNATURE M650 Silent Wireless mouse (Graphite / Rose / Off White)"
+            ],
+            "totalCents": 64800,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "keyboard-k580",
+              "webcam-brio"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Logitech Brio 300 Full HD webcam"
+            ],
+            "totalCents": 69800,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "keyboard-k580",
+              "headset-zone"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Logitech - ZONE VIBE 100 WIRELESS HEADSET (GRAPHITE/OFF WHITE/ROSE)"
+            ],
+            "totalCents": 94800,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "keyboard-k580",
+              "charger-belkin"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Belkin BoostCharge Pro 108W 4-Ports PD GaN Off-The-Wall Charger (WCH010MYWH) [Expected delivery date: 7-10 working days]"
+            ],
+            "totalCents": 95800,
+            "withinBudget": true,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "keyboard-k580",
+              "dock-belkin"
+            ],
+            "names": [
+              "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+              "Belkin Connect USB-C 6-in-1 Core GaN Dock 130W (INC018VFBK) [Expected delivery date: 7-10 working days]"
+            ],
+            "totalCents": 127800,
+            "withinBudget": true,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
       "reason": "按 developer 岗位与 USB-A / USB-C / Bluetooth 接口筛选。",
-      "createdAt": "2026-10-03T02:42:52.327Z",
-      "expiresAt": "2026-10-04T02:42:52.327Z",
+      "createdAt": "2026-10-03T11:19:54.286Z",
+      "expiresAt": "2026-10-04T11:19:54.286Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
@@ -538,12 +844,15 @@
         ],
         "address": "香港薄扶林道 · 公司办公室",
         "sku": "coffee-mocha",
-        "quantity": 16
+        "quantity": 16,
+        "strategy": "balanced",
+        "minCapacityMl": 500,
+        "requiresInsulated": true
       }
     },
     {
-      "id": "quote_2fa7c942-f00",
-      "requestId": "request_bb7d6324-271",
+      "id": "quote_27f441f4-a63",
+      "requestId": "request_9dae20ea-28d",
       "scenario": "replenishment",
       "optionIndex": 0,
       "title": "推荐方案",
@@ -570,9 +879,39 @@
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 1,
+        "affordableCount": 1,
+        "lowestTotalCents": 118400,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "coffee-mocha"
+            ],
+            "names": [
+              "NESCAFÉ - 意式莫加咖啡"
+            ],
+            "totalCents": 118400,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
       "reason": "补至目标库存，本次 16 盒；已有在途量已扣除。",
-      "createdAt": "2026-10-03T02:42:40.137Z",
-      "expiresAt": "2026-10-04T02:42:40.137Z",
+      "createdAt": "2026-10-03T11:19:42.423Z",
+      "expiresAt": "2026-10-04T11:19:42.423Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
@@ -596,8 +935,8 @@
       }
     },
     {
-      "id": "quote_910d7d4e-d12",
-      "requestId": "request_f1bf2595-cb9",
+      "id": "quote_5da3917b-c61",
+      "requestId": "request_309abf4d-4e8",
       "scenario": "replenishment",
       "optionIndex": 0,
       "title": "推荐方案",
@@ -624,9 +963,39 @@
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 1,
+        "affordableCount": 1,
+        "lowestTotalCents": 118400,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "coffee-mocha"
+            ],
+            "names": [
+              "NESCAFÉ - 意式莫加咖啡"
+            ],
+            "totalCents": 118400,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
       "reason": "补至目标库存，本次 16 盒；已有在途量已扣除。",
-      "createdAt": "2026-10-03T02:42:23.309Z",
-      "expiresAt": "2026-10-04T02:42:23.309Z",
+      "createdAt": "2026-10-03T11:19:26.320Z",
+      "expiresAt": "2026-10-04T11:19:26.320Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
@@ -650,124 +1019,15 @@
         ],
         "address": "香港薄扶林道 · 公司办公室",
         "sku": "coffee-mocha",
-        "quantity": 16
+        "quantity": 16,
+        "strategy": "balanced",
+        "minCapacityMl": 500,
+        "requiresInsulated": true
       }
     },
     {
-      "id": "quote_0b6fd5c4-736",
-      "requestId": "request_9361eb1f-d1c",
-      "scenario": "event",
-      "optionIndex": 2,
-      "title": "另一种选择",
-      "lines": [
-        {
-          "productId": "gift-flask",
-          "name": "Thermos-350毫升真空保溫杯",
-          "category": "gift",
-          "quantity": 1,
-          "unitCents": 26000,
-          "sourceUrl": "https://shop.theclub.com.hk/thermos-350ml-vacuum-insulated-mug",
-          "observedAt": "2026-10-02T17:01:04.523146+00:00"
-        }
-      ],
-      "subtotalCents": 26000,
-      "shippingCents": 8000,
-      "shippingEvidence": {
-        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-        "observedAt": "2026-10-02T18:18:40.140139+00:00",
-        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
-        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
-      },
-      "totalCents": 34000,
-      "merchant": "The Club · 测试商户",
-      "address": "香港薄扶林道 · 公司办公室",
-      "currency": "HKD",
-      "reason": "1 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-      "createdAt": "2026-10-03T02:41:56.795Z",
-      "expiresAt": "2026-10-04T02:41:56.795Z",
-      "revision": 1,
-      "planner": "rules",
-      "warnings": [
-        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
-        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
-        "当前使用透明规则规划器；未连接语言模型。"
-      ],
-      "need": {
-        "scenario": "event",
-        "title": "独立小额运费拦截测试",
-        "brief": "单件现金商品，授权只覆盖商品金额。原采购需求保持不变。",
-        "people": 1,
-        "budgetCents": 250000,
-        "style": "简约",
-        "job": "developer",
-        "connectors": [
-          "USB-A",
-          "USB-C",
-          "Bluetooth"
-        ],
-        "address": "香港薄扶林道 · 公司办公室"
-      }
-    },
-    {
-      "id": "quote_f6e3d40e-047",
-      "requestId": "request_9361eb1f-d1c",
-      "scenario": "event",
-      "optionIndex": 1,
-      "title": "备选方案",
-      "lines": [
-        {
-          "productId": "gift-purple",
-          "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
-          "category": "gift",
-          "quantity": 1,
-          "unitCents": 16800,
-          "sourceUrl": "https://shop.theclub.com.hk/thermos-480ml-vacuum-insulated-bottle-jmz-481-pl",
-          "observedAt": "2026-10-02T17:01:04.523146+00:00"
-        }
-      ],
-      "subtotalCents": 16800,
-      "shippingCents": 8000,
-      "shippingEvidence": {
-        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-        "observedAt": "2026-10-02T18:18:40.140139+00:00",
-        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
-        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
-      },
-      "totalCents": 24800,
-      "merchant": "The Club · 测试商户",
-      "address": "香港薄扶林道 · 公司办公室",
-      "currency": "HKD",
-      "reason": "1 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-      "createdAt": "2026-10-03T02:41:56.795Z",
-      "expiresAt": "2026-10-04T02:41:56.795Z",
-      "revision": 1,
-      "planner": "rules",
-      "warnings": [
-        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
-        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
-        "当前使用透明规则规划器；未连接语言模型。"
-      ],
-      "need": {
-        "scenario": "event",
-        "title": "独立小额运费拦截测试",
-        "brief": "单件现金商品，授权只覆盖商品金额。原采购需求保持不变。",
-        "people": 1,
-        "budgetCents": 250000,
-        "style": "简约",
-        "job": "developer",
-        "connectors": [
-          "USB-A",
-          "USB-C",
-          "Bluetooth"
-        ],
-        "address": "香港薄扶林道 · 公司办公室"
-      }
-    },
-    {
-      "id": "quote_70b87d3d-aab",
-      "requestId": "request_9361eb1f-d1c",
+      "id": "quote_7ba438dc-880",
+      "requestId": "request_8e727b47-d10",
       "scenario": "event",
       "optionIndex": 0,
       "title": "推荐方案",
@@ -794,9 +1054,61 @@
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
-      "reason": "1 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-      "createdAt": "2026-10-03T02:41:56.795Z",
-      "expiresAt": "2026-10-04T02:41:56.795Z",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 1,
+        "affordableCount": 1,
+        "lowestTotalCents": 24800,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [
+          {
+            "productId": "gift-purple",
+            "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+            "reasons": [
+              "容量 480 ml 低于所需 500 ml"
+            ]
+          },
+          {
+            "productId": "gift-tritan",
+            "name": "Thermos - Tritan 710ml 搖搖杯 (6色可選)",
+            "reasons": [
+              "来源标题未确认保温能力；不猜测符合要求"
+            ]
+          },
+          {
+            "productId": "gift-flask",
+            "name": "Thermos-350毫升真空保溫杯",
+            "reasons": [
+              "容量 350 ml 低于所需 500 ml"
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "productIds": [
+              "gift-bottle"
+            ],
+            "names": [
+              "Thermos - 500毫升真空控溫瓶 (2色可選)"
+            ],
+            "totalCents": 24800,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
+      "reason": "1 位参与者每人 1 件；匹配「简约」风格。满足需求预算与已填写规格。",
+      "createdAt": "2026-10-03T11:19:00.253Z",
+      "expiresAt": "2026-10-04T11:19:00.253Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
@@ -819,124 +1131,15 @@
           "USB-C",
           "Bluetooth"
         ],
-        "address": "香港薄扶林道 · 公司办公室"
+        "address": "香港薄扶林道 · 公司办公室",
+        "strategy": "balanced",
+        "minCapacityMl": 500,
+        "requiresInsulated": true
       }
     },
     {
-      "id": "quote_4aeb3f11-cf5",
-      "requestId": "request_c97537a7-0e2",
-      "scenario": "event",
-      "optionIndex": 2,
-      "title": "超出需求预算",
-      "lines": [
-        {
-          "productId": "gift-flask",
-          "name": "Thermos-350毫升真空保溫杯",
-          "category": "gift",
-          "quantity": 10,
-          "unitCents": 26000,
-          "sourceUrl": "https://shop.theclub.com.hk/thermos-350ml-vacuum-insulated-mug",
-          "observedAt": "2026-10-02T17:01:04.523146+00:00"
-        }
-      ],
-      "subtotalCents": 260000,
-      "shippingCents": 0,
-      "shippingEvidence": {
-        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-        "observedAt": "2026-10-02T18:18:40.140139+00:00",
-        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
-        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
-      },
-      "totalCents": 260000,
-      "merchant": "The Club · 测试商户",
-      "address": "香港薄扶林道 · 公司办公室",
-      "currency": "HKD",
-      "reason": "10 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-      "createdAt": "2026-10-03T02:40:58.031Z",
-      "expiresAt": "2026-10-04T02:40:58.032Z",
-      "revision": 1,
-      "planner": "rules",
-      "warnings": [
-        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
-        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
-        "当前使用透明规则规划器；未连接语言模型。"
-      ],
-      "need": {
-        "scenario": "event",
-        "title": "秋日团队日 · 欢迎礼品",
-        "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
-        "people": 10,
-        "budgetCents": 250000,
-        "style": "简约",
-        "job": "developer",
-        "connectors": [
-          "USB-A",
-          "USB-C",
-          "Bluetooth"
-        ],
-        "address": "香港薄扶林道 · 公司办公室"
-      }
-    },
-    {
-      "id": "quote_330904ea-ac5",
-      "requestId": "request_c97537a7-0e2",
-      "scenario": "event",
-      "optionIndex": 1,
-      "title": "备选方案",
-      "lines": [
-        {
-          "productId": "gift-purple",
-          "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
-          "category": "gift",
-          "quantity": 10,
-          "unitCents": 16800,
-          "sourceUrl": "https://shop.theclub.com.hk/thermos-480ml-vacuum-insulated-bottle-jmz-481-pl",
-          "observedAt": "2026-10-02T17:01:04.523146+00:00"
-        }
-      ],
-      "subtotalCents": 168000,
-      "shippingCents": 0,
-      "shippingEvidence": {
-        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
-        "observedAt": "2026-10-02T18:18:40.140139+00:00",
-        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
-        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
-      },
-      "totalCents": 168000,
-      "merchant": "The Club · 测试商户",
-      "address": "香港薄扶林道 · 公司办公室",
-      "currency": "HKD",
-      "reason": "10 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-      "createdAt": "2026-10-03T02:40:58.031Z",
-      "expiresAt": "2026-10-04T02:40:58.031Z",
-      "revision": 1,
-      "planner": "rules",
-      "warnings": [
-        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
-        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
-        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
-        "当前使用透明规则规划器；未连接语言模型。"
-      ],
-      "need": {
-        "scenario": "event",
-        "title": "秋日团队日 · 欢迎礼品",
-        "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
-        "people": 10,
-        "budgetCents": 250000,
-        "style": "简约",
-        "job": "developer",
-        "connectors": [
-          "USB-A",
-          "USB-C",
-          "Bluetooth"
-        ],
-        "address": "香港薄扶林道 · 公司办公室"
-      }
-    },
-    {
-      "id": "quote_65a025a3-24a",
-      "requestId": "request_c97537a7-0e2",
+      "id": "quote_72940c55-734",
+      "requestId": "request_e5c1511b-567",
       "scenario": "event",
       "optionIndex": 0,
       "title": "推荐方案",
@@ -963,9 +1166,61 @@
       "merchant": "The Club · 测试商户",
       "address": "香港薄扶林道 · 公司办公室",
       "currency": "HKD",
-      "reason": "10 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-      "createdAt": "2026-10-03T02:40:58.031Z",
-      "expiresAt": "2026-10-04T02:40:58.031Z",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 1,
+        "affordableCount": 1,
+        "lowestTotalCents": 168000,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [
+          {
+            "productId": "gift-purple",
+            "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+            "reasons": [
+              "容量 480 ml 低于所需 500 ml"
+            ]
+          },
+          {
+            "productId": "gift-tritan",
+            "name": "Thermos - Tritan 710ml 搖搖杯 (6色可選)",
+            "reasons": [
+              "来源标题未确认保温能力；不猜测符合要求"
+            ]
+          },
+          {
+            "productId": "gift-flask",
+            "name": "Thermos-350毫升真空保溫杯",
+            "reasons": [
+              "容量 350 ml 低于所需 500 ml"
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "productIds": [
+              "gift-bottle"
+            ],
+            "names": [
+              "Thermos - 500毫升真空控溫瓶 (2色可選)"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
+      "reason": "10 位参与者每人 1 件；匹配「简约」风格。满足需求预算与已填写规格。",
+      "createdAt": "2026-10-03T11:18:10.274Z",
+      "expiresAt": "2026-10-04T11:18:10.274Z",
       "revision": 1,
       "planner": "rules",
       "warnings": [
@@ -987,14 +1242,1316 @@
           "USB-C",
           "Bluetooth"
         ],
-        "address": "香港薄扶林道 · 公司办公室"
+        "address": "香港薄扶林道 · 公司办公室",
+        "strategy": "balanced",
+        "minCapacityMl": 500,
+        "requiresInsulated": true
+      }
+    },
+    {
+      "id": "quote_afd10447-efa",
+      "requestId": "request_bc0facbd-8ad",
+      "scenario": "event",
+      "optionIndex": 2,
+      "title": "另一种选择",
+      "lines": [
+        {
+          "productId": "gift-tritan",
+          "name": "Thermos - Tritan 710ml 搖搖杯 (6色可選)",
+          "category": "gift",
+          "quantity": 10,
+          "unitCents": 13800,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-tritan-710ml-shaker-bottle-6-colors-option-tp4086-mo",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 138000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 138000,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 4,
+        "affordableCount": 3,
+        "lowestTotalCents": 138000,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "gift-bottle"
+            ],
+            "names": [
+              "Thermos - 500毫升真空控溫瓶 (2色可選)"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-purple"
+            ],
+            "names": [
+              "Thermos - 480毫升真空保溫瓶 – 粉霧紫"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-tritan"
+            ],
+            "names": [
+              "Thermos - Tritan 710ml 搖搖杯 (6色可選)"
+            ],
+            "totalCents": 138000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-flask"
+            ],
+            "names": [
+              "Thermos-350毫升真空保溫杯"
+            ],
+            "totalCents": 260000,
+            "withinBudget": false,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后超出需求预算，不能付款",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
+      "reason": "10 位参与者每人 1 件；作为预算内其他风格备选。满足需求预算与已填写规格。",
+      "createdAt": "2026-10-03T11:18:02.221Z",
+      "expiresAt": "2026-10-04T11:18:02.221Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "秋日团队日 · 欢迎礼品",
+        "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
+        "people": 10,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室",
+        "strategy": "balanced"
+      }
+    },
+    {
+      "id": "quote_8f4141a3-597",
+      "requestId": "request_bc0facbd-8ad",
+      "scenario": "event",
+      "optionIndex": 1,
+      "title": "备选方案",
+      "lines": [
+        {
+          "productId": "gift-purple",
+          "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+          "category": "gift",
+          "quantity": 10,
+          "unitCents": 16800,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-480ml-vacuum-insulated-bottle-jmz-481-pl",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 168000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 168000,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 4,
+        "affordableCount": 3,
+        "lowestTotalCents": 138000,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "gift-bottle"
+            ],
+            "names": [
+              "Thermos - 500毫升真空控溫瓶 (2色可選)"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-purple"
+            ],
+            "names": [
+              "Thermos - 480毫升真空保溫瓶 – 粉霧紫"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-tritan"
+            ],
+            "names": [
+              "Thermos - Tritan 710ml 搖搖杯 (6色可選)"
+            ],
+            "totalCents": 138000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-flask"
+            ],
+            "names": [
+              "Thermos-350毫升真空保溫杯"
+            ],
+            "totalCents": 260000,
+            "withinBudget": false,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后超出需求预算，不能付款",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
+      "reason": "10 位参与者每人 1 件；匹配「简约」风格。满足需求预算与已填写规格。",
+      "createdAt": "2026-10-03T11:18:02.221Z",
+      "expiresAt": "2026-10-04T11:18:02.221Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "秋日团队日 · 欢迎礼品",
+        "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
+        "people": 10,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室",
+        "strategy": "balanced"
+      }
+    },
+    {
+      "id": "quote_bc660410-618",
+      "requestId": "request_bc0facbd-8ad",
+      "scenario": "event",
+      "optionIndex": 0,
+      "title": "推荐方案",
+      "lines": [
+        {
+          "productId": "gift-bottle",
+          "name": "Thermos - 500毫升真空控溫瓶 (2色可選)",
+          "category": "gift",
+          "quantity": 10,
+          "unitCents": 16800,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-500ml-vacuum-insulated-bottle-2-colors-option-fei-501-mo",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 168000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 168000,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 4,
+        "affordableCount": 3,
+        "lowestTotalCents": 138000,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "gift-bottle"
+            ],
+            "names": [
+              "Thermos - 500毫升真空控溫瓶 (2色可選)"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-purple"
+            ],
+            "names": [
+              "Thermos - 480毫升真空保溫瓶 – 粉霧紫"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-tritan"
+            ],
+            "names": [
+              "Thermos - Tritan 710ml 搖搖杯 (6色可選)"
+            ],
+            "totalCents": 138000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-flask"
+            ],
+            "names": [
+              "Thermos-350毫升真空保溫杯"
+            ],
+            "totalCents": 260000,
+            "withinBudget": false,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后超出需求预算，不能付款",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
+      "reason": "10 位参与者每人 1 件；匹配「简约」风格。满足需求预算与已填写规格。",
+      "createdAt": "2026-10-03T11:18:02.221Z",
+      "expiresAt": "2026-10-04T11:18:02.221Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "秋日团队日 · 欢迎礼品",
+        "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
+        "people": 10,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室",
+        "strategy": "balanced"
+      }
+    },
+    {
+      "id": "quote_6850731d-3cf",
+      "requestId": "request_2b324bde-3bf",
+      "scenario": "event",
+      "optionIndex": 2,
+      "title": "另一种选择",
+      "lines": [
+        {
+          "productId": "gift-tritan",
+          "name": "Thermos - Tritan 710ml 搖搖杯 (6色可選)",
+          "category": "gift",
+          "quantity": 10,
+          "unitCents": 13800,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-tritan-710ml-shaker-bottle-6-colors-option-tp4086-mo",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 138000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 138000,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 4,
+        "affordableCount": 3,
+        "lowestTotalCents": 138000,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "gift-bottle"
+            ],
+            "names": [
+              "Thermos - 500毫升真空控溫瓶 (2色可選)"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-purple"
+            ],
+            "names": [
+              "Thermos - 480毫升真空保溫瓶 – 粉霧紫"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-tritan"
+            ],
+            "names": [
+              "Thermos - Tritan 710ml 搖搖杯 (6色可選)"
+            ],
+            "totalCents": 138000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-flask"
+            ],
+            "names": [
+              "Thermos-350毫升真空保溫杯"
+            ],
+            "totalCents": 260000,
+            "withinBudget": false,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后超出需求预算，不能付款",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
+      "reason": "10 位参与者每人 1 件；作为预算内其他风格备选。满足需求预算与已填写规格。",
+      "createdAt": "2026-10-03T11:12:41.226Z",
+      "expiresAt": "2026-10-04T11:12:41.226Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "秋日团队日 · 欢迎礼品",
+        "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
+        "people": 10,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室",
+        "strategy": "balanced"
+      }
+    },
+    {
+      "id": "quote_3a21bb5b-72a",
+      "requestId": "request_2b324bde-3bf",
+      "scenario": "event",
+      "optionIndex": 1,
+      "title": "备选方案",
+      "lines": [
+        {
+          "productId": "gift-purple",
+          "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+          "category": "gift",
+          "quantity": 10,
+          "unitCents": 16800,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-480ml-vacuum-insulated-bottle-jmz-481-pl",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 168000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 168000,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 4,
+        "affordableCount": 3,
+        "lowestTotalCents": 138000,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "gift-bottle"
+            ],
+            "names": [
+              "Thermos - 500毫升真空控溫瓶 (2色可選)"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-purple"
+            ],
+            "names": [
+              "Thermos - 480毫升真空保溫瓶 – 粉霧紫"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-tritan"
+            ],
+            "names": [
+              "Thermos - Tritan 710ml 搖搖杯 (6色可選)"
+            ],
+            "totalCents": 138000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-flask"
+            ],
+            "names": [
+              "Thermos-350毫升真空保溫杯"
+            ],
+            "totalCents": 260000,
+            "withinBudget": false,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后超出需求预算，不能付款",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
+      "reason": "10 位参与者每人 1 件；匹配「简约」风格。满足需求预算与已填写规格。",
+      "createdAt": "2026-10-03T11:12:41.226Z",
+      "expiresAt": "2026-10-04T11:12:41.226Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "秋日团队日 · 欢迎礼品",
+        "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
+        "people": 10,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室",
+        "strategy": "balanced"
+      }
+    },
+    {
+      "id": "quote_d38e964b-726",
+      "requestId": "request_2b324bde-3bf",
+      "scenario": "event",
+      "optionIndex": 0,
+      "title": "推荐方案",
+      "lines": [
+        {
+          "productId": "gift-bottle",
+          "name": "Thermos - 500毫升真空控溫瓶 (2色可選)",
+          "category": "gift",
+          "quantity": 10,
+          "unitCents": 16800,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-500ml-vacuum-insulated-bottle-2-colors-option-fei-501-mo",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 168000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 168000,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 4,
+        "affordableCount": 3,
+        "lowestTotalCents": 138000,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "gift-bottle"
+            ],
+            "names": [
+              "Thermos - 500毫升真空控溫瓶 (2色可選)"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-purple"
+            ],
+            "names": [
+              "Thermos - 480毫升真空保溫瓶 – 粉霧紫"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-tritan"
+            ],
+            "names": [
+              "Thermos - Tritan 710ml 搖搖杯 (6色可選)"
+            ],
+            "totalCents": 138000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-flask"
+            ],
+            "names": [
+              "Thermos-350毫升真空保溫杯"
+            ],
+            "totalCents": 260000,
+            "withinBudget": false,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后超出需求预算，不能付款",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
+      "reason": "10 位参与者每人 1 件；匹配「简约」风格。满足需求预算与已填写规格。",
+      "createdAt": "2026-10-03T11:12:41.226Z",
+      "expiresAt": "2026-10-04T11:12:41.226Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "秋日团队日 · 欢迎礼品",
+        "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
+        "people": 10,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室",
+        "strategy": "balanced"
+      }
+    },
+    {
+      "id": "quote_3848e122-b0e",
+      "requestId": "request_01dc5a7e-f95",
+      "scenario": "event",
+      "optionIndex": 0,
+      "title": "推荐方案",
+      "lines": [
+        {
+          "productId": "gift-bottle",
+          "name": "Thermos - 500毫升真空控溫瓶 (2色可選)",
+          "category": "gift",
+          "quantity": 10,
+          "unitCents": 16800,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-500ml-vacuum-insulated-bottle-2-colors-option-fei-501-mo",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 168000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 168000,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 1,
+        "affordableCount": 1,
+        "lowestTotalCents": 168000,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [
+          {
+            "productId": "gift-purple",
+            "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+            "reasons": [
+              "容量 480 ml 低于所需 500 ml"
+            ]
+          },
+          {
+            "productId": "gift-tritan",
+            "name": "Thermos - Tritan 710ml 搖搖杯 (6色可選)",
+            "reasons": [
+              "来源标题未确认保温能力；不猜测符合要求"
+            ]
+          },
+          {
+            "productId": "gift-flask",
+            "name": "Thermos-350毫升真空保溫杯",
+            "reasons": [
+              "容量 350 ml 低于所需 500 ml"
+            ]
+          }
+        ],
+        "candidates": [
+          {
+            "productIds": [
+              "gift-bottle"
+            ],
+            "names": [
+              "Thermos - 500毫升真空控溫瓶 (2色可選)"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
+      "reason": "10 位参与者每人 1 件；匹配「简约」风格。满足需求预算与已填写规格。",
+      "createdAt": "2026-10-03T11:06:14.189Z",
+      "expiresAt": "2026-10-04T11:06:14.189Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "秋日团队日 · 欢迎礼品",
+        "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
+        "people": 10,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室",
+        "strategy": "balanced",
+        "minCapacityMl": 500,
+        "requiresInsulated": true
+      }
+    },
+    {
+      "id": "quote_37a52930-4d3",
+      "requestId": "request_78d57327-d34",
+      "scenario": "event",
+      "optionIndex": 2,
+      "title": "另一种选择",
+      "lines": [
+        {
+          "productId": "gift-tritan",
+          "name": "Thermos - Tritan 710ml 搖搖杯 (6色可選)",
+          "category": "gift",
+          "quantity": 10,
+          "unitCents": 13800,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-tritan-710ml-shaker-bottle-6-colors-option-tp4086-mo",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 138000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 138000,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 4,
+        "affordableCount": 3,
+        "lowestTotalCents": 138000,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "gift-bottle"
+            ],
+            "names": [
+              "Thermos - 500毫升真空控溫瓶 (2色可選)"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-purple"
+            ],
+            "names": [
+              "Thermos - 480毫升真空保溫瓶 – 粉霧紫"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-tritan"
+            ],
+            "names": [
+              "Thermos - Tritan 710ml 搖搖杯 (6色可選)"
+            ],
+            "totalCents": 138000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-flask"
+            ],
+            "names": [
+              "Thermos-350毫升真空保溫杯"
+            ],
+            "totalCents": 260000,
+            "withinBudget": false,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后超出需求预算，不能付款",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
+      "reason": "10 位参与者每人 1 件；作为预算内其他风格备选。满足需求预算与已填写规格。",
+      "createdAt": "2026-10-03T11:06:06.154Z",
+      "expiresAt": "2026-10-04T11:06:06.154Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "秋日团队日 · 欢迎礼品",
+        "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
+        "people": 10,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室",
+        "strategy": "balanced"
+      }
+    },
+    {
+      "id": "quote_bebccce9-790",
+      "requestId": "request_78d57327-d34",
+      "scenario": "event",
+      "optionIndex": 1,
+      "title": "备选方案",
+      "lines": [
+        {
+          "productId": "gift-purple",
+          "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+          "category": "gift",
+          "quantity": 10,
+          "unitCents": 16800,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-480ml-vacuum-insulated-bottle-jmz-481-pl",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 168000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 168000,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 4,
+        "affordableCount": 3,
+        "lowestTotalCents": 138000,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "gift-bottle"
+            ],
+            "names": [
+              "Thermos - 500毫升真空控溫瓶 (2色可選)"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-purple"
+            ],
+            "names": [
+              "Thermos - 480毫升真空保溫瓶 – 粉霧紫"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-tritan"
+            ],
+            "names": [
+              "Thermos - Tritan 710ml 搖搖杯 (6色可選)"
+            ],
+            "totalCents": 138000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-flask"
+            ],
+            "names": [
+              "Thermos-350毫升真空保溫杯"
+            ],
+            "totalCents": 260000,
+            "withinBudget": false,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后超出需求预算，不能付款",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
+      "reason": "10 位参与者每人 1 件；匹配「简约」风格。满足需求预算与已填写规格。",
+      "createdAt": "2026-10-03T11:06:06.154Z",
+      "expiresAt": "2026-10-04T11:06:06.154Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "秋日团队日 · 欢迎礼品",
+        "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
+        "people": 10,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室",
+        "strategy": "balanced"
+      }
+    },
+    {
+      "id": "quote_622cf005-6e4",
+      "requestId": "request_78d57327-d34",
+      "scenario": "event",
+      "optionIndex": 0,
+      "title": "推荐方案",
+      "lines": [
+        {
+          "productId": "gift-bottle",
+          "name": "Thermos - 500毫升真空控溫瓶 (2色可選)",
+          "category": "gift",
+          "quantity": 10,
+          "unitCents": 16800,
+          "sourceUrl": "https://shop.theclub.com.hk/thermos-500ml-vacuum-insulated-bottle-2-colors-option-fei-501-mo",
+          "observedAt": "2026-10-02T17:01:04.523146+00:00"
+        }
+      ],
+      "subtotalCents": 168000,
+      "shippingCents": 0,
+      "shippingEvidence": {
+        "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
+        "observedAt": "2026-10-02T18:18:40.140139+00:00",
+        "sourceDigest": "0db76e69120145da607b0c2642b0b4c87b61b5b8384306c51bb1d1b41dac8f95",
+        "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
+      },
+      "totalCents": 168000,
+      "merchant": "The Club · 测试商户",
+      "address": "香港薄扶林道 · 公司办公室",
+      "currency": "HKD",
+      "decision": {
+        "strategy": "balanced",
+        "eligibleCount": 4,
+        "affordableCount": 3,
+        "lowestTotalCents": 138000,
+        "model": {
+          "status": "not_configured",
+          "model": null,
+          "latencyMs": null,
+          "warning": "当前使用透明规则规划器；未连接语言模型。"
+        },
+        "rejected": [],
+        "candidates": [
+          {
+            "productIds": [
+              "gift-bottle"
+            ],
+            "names": [
+              "Thermos - 500毫升真空控溫瓶 (2色可選)"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-purple"
+            ],
+            "names": [
+              "Thermos - 480毫升真空保溫瓶 – 粉霧紫"
+            ],
+            "totalCents": 168000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-tritan"
+            ],
+            "names": [
+              "Thermos - Tritan 710ml 搖搖杯 (6色可選)"
+            ],
+            "totalCents": 138000,
+            "withinBudget": true,
+            "selected": true,
+            "reasons": [
+              "含标准派送费后满足需求预算",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          },
+          {
+            "productIds": [
+              "gift-flask"
+            ],
+            "names": [
+              "Thermos-350毫升真空保溫杯"
+            ],
+            "totalCents": 260000,
+            "withinBudget": false,
+            "selected": false,
+            "reasons": [
+              "含标准派送费后超出需求预算，不能付款",
+              "先满足预算，再按已验证的模型排序或风格规则排序"
+            ]
+          }
+        ]
+      },
+      "reason": "10 位参与者每人 1 件；匹配「简约」风格。满足需求预算与已填写规格。",
+      "createdAt": "2026-10-03T11:06:06.154Z",
+      "expiresAt": "2026-10-04T11:06:06.154Z",
+      "revision": 1,
+      "planner": "rules",
+      "warnings": [
+        "价格来自商品页面快照；测试商户库存和订单为模拟，真实可售数量待商户确认。",
+        "派送规则：标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。 特殊派送和交期未验证；不是实时商户结账。",
+        "积分抵扣来源存在冲突，且未绑定经批准的公司奖励账户；不计入节省。",
+        "当前使用透明规则规划器；未连接语言模型。"
+      ],
+      "need": {
+        "scenario": "event",
+        "title": "秋日团队日 · 欢迎礼品",
+        "brief": "为 10 位年轻同事准备团队活动礼品。希望实用、简约，每人一件，可以带回家继续使用。",
+        "people": 10,
+        "budgetCents": 250000,
+        "style": "简约",
+        "job": "developer",
+        "connectors": [
+          "USB-A",
+          "USB-C",
+          "Bluetooth"
+        ],
+        "address": "香港薄扶林道 · 公司办公室",
+        "strategy": "balanced"
       }
     }
   ],
   "mandates": [
     {
       "name": "日常补货 · 办公室补货 · NESCAFÉ - 意式莫加咖啡",
-      "quoteId": "quote_910d7d4e-d12",
+      "quoteId": "quote_5da3917b-c61",
       "scenario": "replenishment",
       "capCents": 200000,
       "totalCapCents": 500000,
@@ -1012,11 +2569,11 @@
       "productIds": [
         "coffee-mocha"
       ],
-      "expiresAt": "2026-10-04T02:42:23.623Z",
+      "expiresAt": "2026-10-04T11:19:26.471Z",
       "minIntervalSeconds": 0,
-      "id": "mandate_a8f456e6-fa6",
+      "id": "mandate_ac77d662-83d",
       "requestId": null,
-      "createdAt": "2026-10-03T02:42:23.630Z",
+      "createdAt": "2026-10-03T11:19:26.475Z",
       "revokedAt": null,
       "version": 1,
       "rewardOwner": "company",
@@ -1026,7 +2583,7 @@
     },
     {
       "name": "活动与礼品 · 独立小额运费拦截测试",
-      "quoteId": "quote_70b87d3d-aab",
+      "quoteId": "quote_7ba438dc-880",
       "scenario": "event",
       "capCents": 16800,
       "totalCapCents": 16800,
@@ -1044,11 +2601,11 @@
       "productIds": [
         "gift-bottle"
       ],
-      "expiresAt": "2026-10-04T02:42:08.927Z",
+      "expiresAt": "2026-10-04T11:19:12.216Z",
       "minIntervalSeconds": 0,
-      "id": "mandate_3c40884f-2bc",
-      "requestId": "request_9361eb1f-d1c",
-      "createdAt": "2026-10-03T02:42:08.943Z",
+      "id": "mandate_8e00e42d-8a3",
+      "requestId": "request_8e727b47-d10",
+      "createdAt": "2026-10-03T11:19:12.221Z",
       "revokedAt": null,
       "version": 1,
       "rewardOwner": "company",
@@ -1058,7 +2615,7 @@
     },
     {
       "name": "活动与礼品 · 秋日团队日 · 欢迎礼品",
-      "quoteId": "quote_65a025a3-24a",
+      "quoteId": "quote_72940c55-734",
       "scenario": "event",
       "capCents": 250000,
       "totalCapCents": 250000,
@@ -1074,15 +2631,13 @@
       "address": "香港薄扶林道 · 公司办公室",
       "allowSubstitution": true,
       "productIds": [
-        "gift-bottle",
-        "gift-purple",
-        "gift-flask"
+        "gift-bottle"
       ],
-      "expiresAt": "2026-10-04T02:41:28.315Z",
+      "expiresAt": "2026-10-04T11:18:32.221Z",
       "minIntervalSeconds": 0,
-      "id": "mandate_10fe758b-109",
-      "requestId": "request_c97537a7-0e2",
-      "createdAt": "2026-10-03T02:41:28.357Z",
+      "id": "mandate_22421eb0-b2b",
+      "requestId": "request_e5c1511b-567",
+      "createdAt": "2026-10-03T11:18:32.231Z",
       "revokedAt": null,
       "version": 1,
       "rewardOwner": "company",
@@ -1093,13 +2648,13 @@
   ],
   "orders": [
     {
-      "id": "order_5a3dec1e-450",
-      "quoteId": "quote_2fa7c942-f00",
+      "id": "order_ab309618-dab",
+      "quoteId": "quote_27f441f4-a63",
       "quoteRevision": 1,
-      "mandateId": "mandate_a8f456e6-fa6",
+      "mandateId": "mandate_ac77d662-83d",
       "quote": {
-        "id": "quote_2fa7c942-f00",
-        "requestId": "request_bb7d6324-271",
+        "id": "quote_27f441f4-a63",
+        "requestId": "request_9dae20ea-28d",
         "scenario": "replenishment",
         "optionIndex": 0,
         "title": "推荐方案",
@@ -1126,9 +2681,39 @@
         "merchant": "The Club · 测试商户",
         "address": "香港薄扶林道 · 公司办公室",
         "currency": "HKD",
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 1,
+          "affordableCount": 1,
+          "lowestTotalCents": 118400,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [],
+          "candidates": [
+            {
+              "productIds": [
+                "coffee-mocha"
+              ],
+              "names": [
+                "NESCAFÉ - 意式莫加咖啡"
+              ],
+              "totalCents": 118400,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        },
         "reason": "补至目标库存，本次 16 盒；已有在途量已扣除。",
-        "createdAt": "2026-10-03T02:42:40.137Z",
-        "expiresAt": "2026-10-04T02:42:40.137Z",
+        "createdAt": "2026-10-03T11:19:42.423Z",
+        "expiresAt": "2026-10-04T11:19:42.423Z",
         "revision": 1,
         "planner": "rules",
         "warnings": [
@@ -1152,23 +2737,23 @@
         }
       },
       "status": "paid",
-      "paymentId": "sim_order_5a3dec1e-450",
+      "paymentId": "sim_order_ab309618-dab",
       "provider": "simulated",
       "behavior": "success",
-      "createdAt": "2026-10-03T02:42:40.138Z",
-      "updatedAt": "2026-10-03T02:42:40.139Z",
+      "createdAt": "2026-10-03T11:19:42.424Z",
+      "updatedAt": "2026-10-03T11:19:42.425Z",
       "receivedAt": null,
       "error": null,
       "paymentStage": "capture"
     },
     {
-      "id": "order_7a2d9c65-f25",
-      "quoteId": "quote_910d7d4e-d12",
+      "id": "order_62d7431c-dbe",
+      "quoteId": "quote_5da3917b-c61",
       "quoteRevision": 1,
-      "mandateId": "mandate_a8f456e6-fa6",
+      "mandateId": "mandate_ac77d662-83d",
       "quote": {
-        "id": "quote_910d7d4e-d12",
-        "requestId": "request_f1bf2595-cb9",
+        "id": "quote_5da3917b-c61",
+        "requestId": "request_309abf4d-4e8",
         "scenario": "replenishment",
         "optionIndex": 0,
         "title": "推荐方案",
@@ -1195,9 +2780,39 @@
         "merchant": "The Club · 测试商户",
         "address": "香港薄扶林道 · 公司办公室",
         "currency": "HKD",
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 1,
+          "affordableCount": 1,
+          "lowestTotalCents": 118400,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [],
+          "candidates": [
+            {
+              "productIds": [
+                "coffee-mocha"
+              ],
+              "names": [
+                "NESCAFÉ - 意式莫加咖啡"
+              ],
+              "totalCents": 118400,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        },
         "reason": "补至目标库存，本次 16 盒；已有在途量已扣除。",
-        "createdAt": "2026-10-03T02:42:23.309Z",
-        "expiresAt": "2026-10-04T02:42:23.309Z",
+        "createdAt": "2026-10-03T11:19:26.320Z",
+        "expiresAt": "2026-10-04T11:19:26.320Z",
         "revision": 1,
         "planner": "rules",
         "warnings": [
@@ -1221,27 +2836,30 @@
           ],
           "address": "香港薄扶林道 · 公司办公室",
           "sku": "coffee-mocha",
-          "quantity": 16
+          "quantity": 16,
+          "strategy": "balanced",
+          "minCapacityMl": 500,
+          "requiresInsulated": true
         }
       },
       "status": "received",
-      "paymentId": "sim_order_7a2d9c65-f25",
+      "paymentId": "sim_order_62d7431c-dbe",
       "provider": "simulated",
       "behavior": "success",
-      "createdAt": "2026-10-03T02:42:23.669Z",
-      "updatedAt": "2026-10-03T02:42:39.777Z",
-      "receivedAt": "2026-10-03T02:42:39.777Z",
+      "createdAt": "2026-10-03T11:19:26.508Z",
+      "updatedAt": "2026-10-03T11:19:42.221Z",
+      "receivedAt": "2026-10-03T11:19:42.221Z",
       "error": null,
       "paymentStage": "capture"
     },
     {
-      "id": "order_92174c88-e8a",
-      "quoteId": "quote_70b87d3d-aab",
+      "id": "order_3918090c-bd5",
+      "quoteId": "quote_7ba438dc-880",
       "quoteRevision": 1,
-      "mandateId": "mandate_3c40884f-2bc",
+      "mandateId": "mandate_8e00e42d-8a3",
       "quote": {
-        "id": "quote_70b87d3d-aab",
-        "requestId": "request_9361eb1f-d1c",
+        "id": "quote_7ba438dc-880",
+        "requestId": "request_8e727b47-d10",
         "scenario": "event",
         "optionIndex": 0,
         "title": "推荐方案",
@@ -1268,9 +2886,61 @@
         "merchant": "The Club · 测试商户",
         "address": "香港薄扶林道 · 公司办公室",
         "currency": "HKD",
-        "reason": "1 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-        "createdAt": "2026-10-03T02:41:56.795Z",
-        "expiresAt": "2026-10-04T02:41:56.795Z",
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 1,
+          "affordableCount": 1,
+          "lowestTotalCents": 24800,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [
+            {
+              "productId": "gift-purple",
+              "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+              "reasons": [
+                "容量 480 ml 低于所需 500 ml"
+              ]
+            },
+            {
+              "productId": "gift-tritan",
+              "name": "Thermos - Tritan 710ml 搖搖杯 (6色可選)",
+              "reasons": [
+                "来源标题未确认保温能力；不猜测符合要求"
+              ]
+            },
+            {
+              "productId": "gift-flask",
+              "name": "Thermos-350毫升真空保溫杯",
+              "reasons": [
+                "容量 350 ml 低于所需 500 ml"
+              ]
+            }
+          ],
+          "candidates": [
+            {
+              "productIds": [
+                "gift-bottle"
+              ],
+              "names": [
+                "Thermos - 500毫升真空控溫瓶 (2色可選)"
+              ],
+              "totalCents": 24800,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        },
+        "reason": "1 位参与者每人 1 件；匹配「简约」风格。满足需求预算与已填写规格。",
+        "createdAt": "2026-10-03T11:19:00.253Z",
+        "expiresAt": "2026-10-04T11:19:00.253Z",
         "revision": 1,
         "planner": "rules",
         "warnings": [
@@ -1293,27 +2963,30 @@
             "USB-C",
             "Bluetooth"
           ],
-          "address": "香港薄扶林道 · 公司办公室"
+          "address": "香港薄扶林道 · 公司办公室",
+          "strategy": "balanced",
+          "minCapacityMl": 500,
+          "requiresInsulated": true
         }
       },
       "status": "blocked",
       "paymentId": null,
       "provider": "simulated",
       "behavior": "success",
-      "createdAt": "2026-10-03T02:42:09.008Z",
-      "updatedAt": "2026-10-03T02:42:09.008Z",
+      "createdAt": "2026-10-03T11:19:12.237Z",
+      "updatedAt": "2026-10-03T11:19:12.237Z",
       "receivedAt": null,
       "error": "含运费总额必须不超过 HK$168.00；已花费、预留与本次采购之和必须在累计预算内",
       "paymentStage": "authorize"
     },
     {
-      "id": "order_672bc8f3-a65",
-      "quoteId": "quote_65a025a3-24a",
+      "id": "order_2fd1bdc2-1e6",
+      "quoteId": "quote_72940c55-734",
       "quoteRevision": 1,
-      "mandateId": "mandate_10fe758b-109",
+      "mandateId": "mandate_22421eb0-b2b",
       "quote": {
-        "id": "quote_65a025a3-24a",
-        "requestId": "request_c97537a7-0e2",
+        "id": "quote_72940c55-734",
+        "requestId": "request_e5c1511b-567",
         "scenario": "event",
         "optionIndex": 0,
         "title": "推荐方案",
@@ -1340,9 +3013,61 @@
         "merchant": "The Club · 测试商户",
         "address": "香港薄扶林道 · 公司办公室",
         "currency": "HKD",
-        "reason": "10 位参与者每人 1 件，优先匹配「简约」风格；按有效授权执行。",
-        "createdAt": "2026-10-03T02:40:58.031Z",
-        "expiresAt": "2026-10-04T02:40:58.031Z",
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 1,
+          "affordableCount": 1,
+          "lowestTotalCents": 168000,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [
+            {
+              "productId": "gift-purple",
+              "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+              "reasons": [
+                "容量 480 ml 低于所需 500 ml"
+              ]
+            },
+            {
+              "productId": "gift-tritan",
+              "name": "Thermos - Tritan 710ml 搖搖杯 (6色可選)",
+              "reasons": [
+                "来源标题未确认保温能力；不猜测符合要求"
+              ]
+            },
+            {
+              "productId": "gift-flask",
+              "name": "Thermos-350毫升真空保溫杯",
+              "reasons": [
+                "容量 350 ml 低于所需 500 ml"
+              ]
+            }
+          ],
+          "candidates": [
+            {
+              "productIds": [
+                "gift-bottle"
+              ],
+              "names": [
+                "Thermos - 500毫升真空控溫瓶 (2色可選)"
+              ],
+              "totalCents": 168000,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        },
+        "reason": "10 位参与者每人 1 件；匹配「简约」风格。满足需求预算与已填写规格。",
+        "createdAt": "2026-10-03T11:18:10.274Z",
+        "expiresAt": "2026-10-04T11:18:10.274Z",
         "revision": 1,
         "planner": "rules",
         "warnings": [
@@ -1364,16 +3089,19 @@
             "USB-C",
             "Bluetooth"
           ],
-          "address": "香港薄扶林道 · 公司办公室"
+          "address": "香港薄扶林道 · 公司办公室",
+          "strategy": "balanced",
+          "minCapacityMl": 500,
+          "requiresInsulated": true
         }
       },
       "status": "received",
-      "paymentId": "sim_order_672bc8f3-a65",
+      "paymentId": "sim_order_2fd1bdc2-1e6",
       "provider": "simulated",
       "behavior": "success",
-      "createdAt": "2026-10-03T02:41:28.405Z",
-      "updatedAt": "2026-10-03T02:41:44.576Z",
-      "receivedAt": "2026-10-03T02:41:44.576Z",
+      "createdAt": "2026-10-03T11:18:32.242Z",
+      "updatedAt": "2026-10-03T11:18:48.224Z",
+      "receivedAt": "2026-10-03T11:18:48.224Z",
       "error": null,
       "paymentStage": "capture"
     }
@@ -1426,29 +3154,129 @@
   ],
   "audit": [
     {
-      "seq": 31,
-      "id": "log_e3438497-1c4",
-      "at": "2026-10-03T02:42:52.328Z",
+      "seq": 37,
+      "id": "log_b86e0329-c6f",
+      "at": "2026-10-03T11:19:54.287Z",
       "actor": "manager",
       "action": "PLAN_CREATED",
-      "target": "request_38ab350a-d2d",
+      "target": "request_9683657d-00e",
       "detail": {
         "scenario": "onboarding",
         "planner": "rules",
         "quoteIds": [
-          "quote_9a024393-c8b",
-          "quote_2ae712d9-2bd",
-          "quote_1526889b-9cf"
+          "quote_c93bbbea-48e",
+          "quote_e7339b1d-613",
+          "quote_033d0a12-b5d"
         ],
-        "budgetCents": 200000
+        "budgetCents": 200000,
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 5,
+          "affordableCount": 5,
+          "lowestTotalCents": 64800,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [],
+          "candidates": [
+            {
+              "productIds": [
+                "keyboard-k580",
+                "mouse-m650"
+              ],
+              "names": [
+                "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+                "Logitech - SIGNATURE M650 Silent Wireless mouse (Graphite / Rose / Off White)"
+              ],
+              "totalCents": 64800,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "keyboard-k580",
+                "webcam-brio"
+              ],
+              "names": [
+                "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+                "Logitech Brio 300 Full HD webcam"
+              ],
+              "totalCents": 69800,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "keyboard-k580",
+                "headset-zone"
+              ],
+              "names": [
+                "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+                "Logitech - ZONE VIBE 100 WIRELESS HEADSET (GRAPHITE/OFF WHITE/ROSE)"
+              ],
+              "totalCents": 94800,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "keyboard-k580",
+                "charger-belkin"
+              ],
+              "names": [
+                "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+                "Belkin BoostCharge Pro 108W 4-Ports PD GaN Off-The-Wall Charger (WCH010MYWH) [Expected delivery date: 7-10 working days]"
+              ],
+              "totalCents": 95800,
+              "withinBudget": true,
+              "selected": false,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "keyboard-k580",
+                "dock-belkin"
+              ],
+              "names": [
+                "Logitech - K580 Slim Multi-Device Keyboard (English Version) (Graphite / White/ Rose)",
+                "Belkin Connect USB-C 6-in-1 Core GaN Dock 130W (INC018VFBK) [Expected delivery date: 7-10 working days]"
+              ],
+              "totalCents": 127800,
+              "withinBudget": true,
+              "selected": false,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        }
       },
-      "previous_hash": "c326ff9e98948bdf6f2a89eb4a7fa54c623fd074eb9c88904b4607488d359939",
-      "hash": "1484052af52dc0f2b4686af4632ff116d4bdfd499be11463342aa1d6153b684b"
+      "previous_hash": "b5207eec3f77c2079e96ed76633266a2784b660035e70360e1c19429d150f5aa",
+      "hash": "e99f16e90a63a1bc315ea9b901c929a49a183895113172d9a5cab5873051dde3"
     },
     {
-      "seq": 30,
-      "id": "log_f64e5eec-6c6",
-      "at": "2026-10-03T02:42:40.139Z",
+      "seq": 36,
+      "id": "log_dba18fd9-ba1",
+      "at": "2026-10-03T11:19:42.426Z",
       "actor": "monitor",
       "action": "MONITOR_RUN",
       "target": "inventory",
@@ -1457,49 +3285,54 @@
           {
             "sku": "coffee-mocha",
             "state": "paid",
-            "orderId": "order_5a3dec1e-450"
+            "orderId": "order_ab309618-dab"
           }
         ]
       },
-      "previous_hash": "484fe38de23a047259adadf60556ef6d83b5b30710afd5d725dbe65555aa1a12",
-      "hash": "c326ff9e98948bdf6f2a89eb4a7fa54c623fd074eb9c88904b4607488d359939"
+      "previous_hash": "ab8cd45e9ff7db19d5e223f953e3eb669208f3dff93958b2b03440b8753dae9c",
+      "hash": "b5207eec3f77c2079e96ed76633266a2784b660035e70360e1c19429d150f5aa"
     },
     {
-      "seq": 29,
-      "id": "log_d41a50a5-f76",
-      "at": "2026-10-03T02:42:40.139Z",
+      "seq": 35,
+      "id": "log_b28c8f00-df0",
+      "at": "2026-10-03T11:19:42.425Z",
       "actor": "payment",
       "action": "PAYMENT_CONFIRMED",
-      "target": "order_5a3dec1e-450",
+      "target": "order_ab309618-dab",
       "detail": {
         "state": "succeeded",
-        "paymentId": "sim_order_5a3dec1e-450"
+        "paymentId": "sim_order_ab309618-dab"
       },
-      "previous_hash": "e75f812ef2c26f4f3f32e87033de9de0215acada8082f873104418d18e53c670",
-      "hash": "484fe38de23a047259adadf60556ef6d83b5b30710afd5d725dbe65555aa1a12"
+      "previous_hash": "bf3cf54c17a726a390c3ee165d8f637e44d146925e172dfd99a97f564a01f5d4",
+      "hash": "ab8cd45e9ff7db19d5e223f953e3eb669208f3dff93958b2b03440b8753dae9c"
     },
     {
-      "seq": 28,
-      "id": "log_755727c7-ca9",
-      "at": "2026-10-03T02:42:40.139Z",
+      "seq": 34,
+      "id": "log_fc5ad44f-715",
+      "at": "2026-10-03T11:19:42.425Z",
       "actor": "payment",
       "action": "PAYMENT_CAPTURE",
-      "target": "order_5a3dec1e-450",
+      "target": "order_ab309618-dab",
       "detail": {
-        "paymentId": "sim_order_5a3dec1e-450"
+        "paymentId": "sim_order_ab309618-dab"
       },
-      "previous_hash": "694c83f87d8098e34386c90687003e32114b4502de8b9b91eb140e47efad111d",
-      "hash": "e75f812ef2c26f4f3f32e87033de9de0215acada8082f873104418d18e53c670"
+      "previous_hash": "9a1ef81ca18f0e3fdc20ed5592171f81512c0ec2e704bae4151cfcc62b1d2d42",
+      "hash": "bf3cf54c17a726a390c3ee165d8f637e44d146925e172dfd99a97f564a01f5d4"
     },
     {
-      "seq": 27,
-      "id": "log_6b5391d1-c19",
-      "at": "2026-10-03T02:42:40.139Z",
+      "seq": 33,
+      "id": "log_f7d3fbbf-bc5",
+      "at": "2026-10-03T11:19:42.425Z",
       "actor": "policy",
       "action": "CAPTURE_ALLOWED",
-      "target": "order_5a3dec1e-450",
+      "target": "order_ab309618-dab",
       "detail": {
         "checks": [
+          {
+            "code": "REQUIREMENTS",
+            "pass": true,
+            "message": "数量、需求预算与必要规格必须满足；修改需求须重新生成方案"
+          },
           {
             "code": "ACTIVE",
             "pass": true,
@@ -1573,32 +3406,37 @@
         ],
         "mandateVersion": 1
       },
-      "previous_hash": "e40159f8f97fcbbdf3c4b1d2a2d482c713d70e5a2be2a02b517dcd2b364fda6b",
-      "hash": "694c83f87d8098e34386c90687003e32114b4502de8b9b91eb140e47efad111d"
+      "previous_hash": "0cc5258478dea20660ad0a909471a70409440f6c7c44f2d89abcbbd897dce9c5",
+      "hash": "9a1ef81ca18f0e3fdc20ed5592171f81512c0ec2e704bae4151cfcc62b1d2d42"
     },
     {
-      "seq": 26,
-      "id": "log_33bf1eec-164",
-      "at": "2026-10-03T02:42:40.138Z",
+      "seq": 32,
+      "id": "log_b148ce76-99d",
+      "at": "2026-10-03T11:19:42.424Z",
       "actor": "payment",
       "action": "PAYMENT_AUTHORIZE",
-      "target": "order_5a3dec1e-450",
+      "target": "order_ab309618-dab",
       "detail": {
         "provider": "simulated",
         "amount": 118400
       },
-      "previous_hash": "d05d68287612f2a42294de1fb56e8cb8d2ad6efd58b4057ae1499b33d1b32fb3",
-      "hash": "e40159f8f97fcbbdf3c4b1d2a2d482c713d70e5a2be2a02b517dcd2b364fda6b"
+      "previous_hash": "105e76afce576d366f2511020965b3b8d3de0024f63597f14f2726cd827e14f9",
+      "hash": "0cc5258478dea20660ad0a909471a70409440f6c7c44f2d89abcbbd897dce9c5"
     },
     {
-      "seq": 25,
-      "id": "log_b2907938-600",
-      "at": "2026-10-03T02:42:40.138Z",
+      "seq": 31,
+      "id": "log_fbe4baac-85c",
+      "at": "2026-10-03T11:19:42.424Z",
       "actor": "monitor",
       "action": "BUDGET_RESERVED",
-      "target": "order_5a3dec1e-450",
+      "target": "order_ab309618-dab",
       "detail": {
         "checks": [
+          {
+            "code": "REQUIREMENTS",
+            "pass": true,
+            "message": "数量、需求预算与必要规格必须满足；修改需求须重新生成方案"
+          },
           {
             "code": "ACTIVE",
             "pass": true,
@@ -1680,31 +3518,61 @@
         "mandateVersion": 1,
         "paymentCalled": false
       },
-      "previous_hash": "2a9332b1897366ad338ccd95a2e76b01f1c1df8eeb4e94445cbf5a7a77077ffb",
-      "hash": "d05d68287612f2a42294de1fb56e8cb8d2ad6efd58b4057ae1499b33d1b32fb3"
+      "previous_hash": "1568de2105d2f94bf1181dd6f967c528043584ef80445654ed4e59bee5188b9b",
+      "hash": "105e76afce576d366f2511020965b3b8d3de0024f63597f14f2726cd827e14f9"
     },
     {
-      "seq": 24,
-      "id": "log_09195411-eb2",
-      "at": "2026-10-03T02:42:40.137Z",
+      "seq": 30,
+      "id": "log_57f857dd-ba6",
+      "at": "2026-10-03T11:19:42.423Z",
       "actor": "monitor",
       "action": "PLAN_CREATED",
-      "target": "request_bb7d6324-271",
+      "target": "request_9dae20ea-28d",
       "detail": {
         "scenario": "replenishment",
         "planner": "rules",
         "quoteIds": [
-          "quote_2fa7c942-f00"
+          "quote_27f441f4-a63"
         ],
-        "budgetCents": 200000
+        "budgetCents": 200000,
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 1,
+          "affordableCount": 1,
+          "lowestTotalCents": 118400,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [],
+          "candidates": [
+            {
+              "productIds": [
+                "coffee-mocha"
+              ],
+              "names": [
+                "NESCAFÉ - 意式莫加咖啡"
+              ],
+              "totalCents": 118400,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        }
       },
-      "previous_hash": "9a24f9a0b599a36b9ab11321733cd410ce8ad527198f59ffb371bd1503faa8c6",
-      "hash": "2a9332b1897366ad338ccd95a2e76b01f1c1df8eeb4e94445cbf5a7a77077ffb"
+      "previous_hash": "3025a6742d1526212adc34ce18488c9016a3a95cc1c894d3118384dd755dea12",
+      "hash": "1568de2105d2f94bf1181dd6f967c528043584ef80445654ed4e59bee5188b9b"
     },
     {
-      "seq": 23,
-      "id": "log_f89d5c92-6bf",
-      "at": "2026-10-03T02:42:40.137Z",
+      "seq": 29,
+      "id": "log_8ca8be62-15d",
+      "at": "2026-10-03T11:19:42.422Z",
       "actor": "manager",
       "action": "INVENTORY_CONSUMED",
       "target": "coffee-mocha",
@@ -1712,16 +3580,16 @@
         "quantity": 16,
         "reason": "团队日常领用"
       },
-      "previous_hash": "744f1ef6bc71effcf5f6ec30f08c2f3b9659be7583118e0fba1786f1e0b0c207",
-      "hash": "9a24f9a0b599a36b9ab11321733cd410ce8ad527198f59ffb371bd1503faa8c6"
+      "previous_hash": "e5fe189b05007c069a115a60bc53b09e73ffbeebe54f4f2ff0b22648f54256c3",
+      "hash": "3025a6742d1526212adc34ce18488c9016a3a95cc1c894d3118384dd755dea12"
     },
     {
-      "seq": 22,
-      "id": "log_77687a49-d7e",
-      "at": "2026-10-03T02:42:39.778Z",
+      "seq": 28,
+      "id": "log_24d25f49-7a4",
+      "at": "2026-10-03T11:19:42.221Z",
       "actor": "manager",
       "action": "GOODS_RECEIVED",
-      "target": "order_7a2d9c65-f25",
+      "target": "order_62d7431c-dbe",
       "detail": {
         "lines": [
           {
@@ -1735,45 +3603,50 @@
           }
         ]
       },
-      "previous_hash": "34675319bb80ee5e652b08d117e5a107d834dff27757e53dcfbeb77d59b99c7c",
-      "hash": "744f1ef6bc71effcf5f6ec30f08c2f3b9659be7583118e0fba1786f1e0b0c207"
+      "previous_hash": "bf2600f13188ea3f80c4927b9887be204053de47cd5d8d263327ce305170ae1f",
+      "hash": "e5fe189b05007c069a115a60bc53b09e73ffbeebe54f4f2ff0b22648f54256c3"
     },
     {
-      "seq": 21,
-      "id": "log_1e06161a-569",
-      "at": "2026-10-03T02:42:23.671Z",
+      "seq": 27,
+      "id": "log_5998c76c-093",
+      "at": "2026-10-03T11:19:26.509Z",
       "actor": "payment",
       "action": "PAYMENT_CONFIRMED",
-      "target": "order_7a2d9c65-f25",
+      "target": "order_62d7431c-dbe",
       "detail": {
         "state": "succeeded",
-        "paymentId": "sim_order_7a2d9c65-f25"
+        "paymentId": "sim_order_62d7431c-dbe"
       },
-      "previous_hash": "4fe3987d8728978926db4b1cc7aef2e6a18ed211c1f845a7b34dc9aa908f9843",
-      "hash": "34675319bb80ee5e652b08d117e5a107d834dff27757e53dcfbeb77d59b99c7c"
+      "previous_hash": "bd64ecc156fae656ae747c0ffd0707de1674bbe91e0ed8079e1cfc6a67d88d4c",
+      "hash": "bf2600f13188ea3f80c4927b9887be204053de47cd5d8d263327ce305170ae1f"
     },
     {
-      "seq": 20,
-      "id": "log_f6ae6e54-bad",
-      "at": "2026-10-03T02:42:23.670Z",
+      "seq": 26,
+      "id": "log_e4217b3e-852",
+      "at": "2026-10-03T11:19:26.509Z",
       "actor": "payment",
       "action": "PAYMENT_CAPTURE",
-      "target": "order_7a2d9c65-f25",
+      "target": "order_62d7431c-dbe",
       "detail": {
-        "paymentId": "sim_order_7a2d9c65-f25"
+        "paymentId": "sim_order_62d7431c-dbe"
       },
-      "previous_hash": "dc6c976d7607082f8a6a536041663e8b96bde888cc7994abdfd070c26bfbd2b0",
-      "hash": "4fe3987d8728978926db4b1cc7aef2e6a18ed211c1f845a7b34dc9aa908f9843"
+      "previous_hash": "7fcf5fd5576f0f1bd9a7bc77d694deec6d07655498969ba746b7daf302756711",
+      "hash": "bd64ecc156fae656ae747c0ffd0707de1674bbe91e0ed8079e1cfc6a67d88d4c"
     },
     {
-      "seq": 19,
-      "id": "log_04fc5193-462",
-      "at": "2026-10-03T02:42:23.670Z",
+      "seq": 25,
+      "id": "log_ac5c3967-665",
+      "at": "2026-10-03T11:19:26.509Z",
       "actor": "policy",
       "action": "CAPTURE_ALLOWED",
-      "target": "order_7a2d9c65-f25",
+      "target": "order_62d7431c-dbe",
       "detail": {
         "checks": [
+          {
+            "code": "REQUIREMENTS",
+            "pass": true,
+            "message": "数量、需求预算与必要规格必须满足；修改需求须重新生成方案"
+          },
           {
             "code": "ACTIVE",
             "pass": true,
@@ -1847,32 +3720,37 @@
         ],
         "mandateVersion": 1
       },
-      "previous_hash": "5ccd1b377c6177624247bf13fb30f459bf39ce8f0b04ab34026283725e4217ca",
-      "hash": "dc6c976d7607082f8a6a536041663e8b96bde888cc7994abdfd070c26bfbd2b0"
+      "previous_hash": "c96be38891566b3e75fc9f3fc02a5c2c29442f6992c8113e7eed9eb5ad6e74b2",
+      "hash": "7fcf5fd5576f0f1bd9a7bc77d694deec6d07655498969ba746b7daf302756711"
     },
     {
-      "seq": 18,
-      "id": "log_aba11351-f31",
-      "at": "2026-10-03T02:42:23.670Z",
+      "seq": 24,
+      "id": "log_21f1d913-a84",
+      "at": "2026-10-03T11:19:26.508Z",
       "actor": "payment",
       "action": "PAYMENT_AUTHORIZE",
-      "target": "order_7a2d9c65-f25",
+      "target": "order_62d7431c-dbe",
       "detail": {
         "provider": "simulated",
         "amount": 118400
       },
-      "previous_hash": "091020d562925b6e0e59e214612559d5ebd55c11d2377fc4cf78616d2f3db6c6",
-      "hash": "5ccd1b377c6177624247bf13fb30f459bf39ce8f0b04ab34026283725e4217ca"
+      "previous_hash": "8c271f159ee756b32011cdacda0185a2a451ce415af6fa1f7876213de2327d10",
+      "hash": "c96be38891566b3e75fc9f3fc02a5c2c29442f6992c8113e7eed9eb5ad6e74b2"
     },
     {
-      "seq": 17,
-      "id": "log_6d2a5209-0fc",
-      "at": "2026-10-03T02:42:23.669Z",
+      "seq": 23,
+      "id": "log_f775a71f-bec",
+      "at": "2026-10-03T11:19:26.508Z",
       "actor": "manager",
       "action": "BUDGET_RESERVED",
-      "target": "order_7a2d9c65-f25",
+      "target": "order_62d7431c-dbe",
       "detail": {
         "checks": [
+          {
+            "code": "REQUIREMENTS",
+            "pass": true,
+            "message": "数量、需求预算与必要规格必须满足；修改需求须重新生成方案"
+          },
           {
             "code": "ACTIVE",
             "pass": true,
@@ -1954,19 +3832,19 @@
         "mandateVersion": 1,
         "paymentCalled": false
       },
-      "previous_hash": "e8f3f5b38f2229ef8782598975259be33434e47f5f75a537f4673e03ee18c936",
-      "hash": "091020d562925b6e0e59e214612559d5ebd55c11d2377fc4cf78616d2f3db6c6"
+      "previous_hash": "1b2038593ce86023c76a077524c8c847c331de8461f0d98febe9bc0bbae81d7d",
+      "hash": "8c271f159ee756b32011cdacda0185a2a451ce415af6fa1f7876213de2327d10"
     },
     {
-      "seq": 16,
-      "id": "log_d24b6119-e3b",
-      "at": "2026-10-03T02:42:23.630Z",
+      "seq": 22,
+      "id": "log_2fb1ecc7-32e",
+      "at": "2026-10-03T11:19:26.475Z",
       "actor": "manager",
       "action": "MANDATE_GRANTED",
-      "target": "mandate_a8f456e6-fa6",
+      "target": "mandate_ac77d662-83d",
       "detail": {
         "name": "日常补货 · 办公室补货 · NESCAFÉ - 意式莫加咖啡",
-        "quoteId": "quote_910d7d4e-d12",
+        "quoteId": "quote_5da3917b-c61",
         "scenario": "replenishment",
         "capCents": 200000,
         "totalCapCents": 500000,
@@ -1984,46 +3862,81 @@
         "productIds": [
           "coffee-mocha"
         ],
-        "expiresAt": "2026-10-04T02:42:23.623Z",
+        "expiresAt": "2026-10-04T11:19:26.471Z",
         "minIntervalSeconds": 0,
-        "id": "mandate_a8f456e6-fa6",
+        "id": "mandate_ac77d662-83d",
         "requestId": null,
-        "createdAt": "2026-10-03T02:42:23.630Z",
+        "createdAt": "2026-10-03T11:19:26.475Z",
         "revokedAt": null,
         "version": 1,
         "rewardOwner": "company",
         "actor": "manager"
       },
-      "previous_hash": "c1bbbcc30dcf31bd940725f4ff9e32dab4109e1a87d6434802c1e230fecd2dd2",
-      "hash": "e8f3f5b38f2229ef8782598975259be33434e47f5f75a537f4673e03ee18c936"
+      "previous_hash": "ae113325428119dec1627b44859d02c0f87af9f80e2956d619e378baf9d07527",
+      "hash": "1b2038593ce86023c76a077524c8c847c331de8461f0d98febe9bc0bbae81d7d"
     },
     {
-      "seq": 15,
-      "id": "log_323f2f76-b93",
-      "at": "2026-10-03T02:42:23.310Z",
+      "seq": 21,
+      "id": "log_1b74e90b-dc1",
+      "at": "2026-10-03T11:19:26.320Z",
       "actor": "manager",
       "action": "PLAN_CREATED",
-      "target": "request_f1bf2595-cb9",
+      "target": "request_309abf4d-4e8",
       "detail": {
         "scenario": "replenishment",
         "planner": "rules",
         "quoteIds": [
-          "quote_910d7d4e-d12"
+          "quote_5da3917b-c61"
         ],
-        "budgetCents": 200000
+        "budgetCents": 200000,
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 1,
+          "affordableCount": 1,
+          "lowestTotalCents": 118400,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [],
+          "candidates": [
+            {
+              "productIds": [
+                "coffee-mocha"
+              ],
+              "names": [
+                "NESCAFÉ - 意式莫加咖啡"
+              ],
+              "totalCents": 118400,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        }
       },
-      "previous_hash": "25f2c394371559fc5b2de2c60b54027b14dcf0afd5474c6cfbb78b0256d013c4",
-      "hash": "c1bbbcc30dcf31bd940725f4ff9e32dab4109e1a87d6434802c1e230fecd2dd2"
+      "previous_hash": "0c8408ff1a30828b41bfcc7038130c1aea2345c66ba9deaef0cdd6ff81a97fd9",
+      "hash": "ae113325428119dec1627b44859d02c0f87af9f80e2956d619e378baf9d07527"
     },
     {
-      "seq": 14,
-      "id": "log_d666fb5f-cb9",
-      "at": "2026-10-03T02:42:09.008Z",
+      "seq": 20,
+      "id": "log_0e7466a1-4d9",
+      "at": "2026-10-03T11:19:12.237Z",
       "actor": "manager",
       "action": "PURCHASE_BLOCKED",
-      "target": "order_92174c88-e8a",
+      "target": "order_3918090c-bd5",
       "detail": {
         "checks": [
+          {
+            "code": "REQUIREMENTS",
+            "pass": true,
+            "message": "数量、需求预算与必要规格必须满足；修改需求须重新生成方案"
+          },
           {
             "code": "ACTIVE",
             "pass": true,
@@ -2100,19 +4013,19 @@
         "mandateVersion": 1,
         "paymentCalled": false
       },
-      "previous_hash": "71d995305813c5c9ad9089a4ad2c3c8a32001e9f664da61895f5ece809b10534",
-      "hash": "25f2c394371559fc5b2de2c60b54027b14dcf0afd5474c6cfbb78b0256d013c4"
+      "previous_hash": "2f1d742d00964d4ebcd350b91680e080f58f5da4c044d2171307742f8ba20a0f",
+      "hash": "0c8408ff1a30828b41bfcc7038130c1aea2345c66ba9deaef0cdd6ff81a97fd9"
     },
     {
-      "seq": 13,
-      "id": "log_fd519398-d10",
-      "at": "2026-10-03T02:42:08.943Z",
+      "seq": 19,
+      "id": "log_0fa02540-aca",
+      "at": "2026-10-03T11:19:12.222Z",
       "actor": "manager",
       "action": "MANDATE_GRANTED",
-      "target": "mandate_3c40884f-2bc",
+      "target": "mandate_8e00e42d-8a3",
       "detail": {
         "name": "活动与礼品 · 独立小额运费拦截测试",
-        "quoteId": "quote_70b87d3d-aab",
+        "quoteId": "quote_7ba438dc-880",
         "scenario": "event",
         "capCents": 16800,
         "totalCapCents": 16800,
@@ -2130,28 +4043,28 @@
         "productIds": [
           "gift-bottle"
         ],
-        "expiresAt": "2026-10-04T02:42:08.927Z",
+        "expiresAt": "2026-10-04T11:19:12.216Z",
         "minIntervalSeconds": 0,
-        "id": "mandate_3c40884f-2bc",
-        "requestId": "request_9361eb1f-d1c",
-        "createdAt": "2026-10-03T02:42:08.943Z",
+        "id": "mandate_8e00e42d-8a3",
+        "requestId": "request_8e727b47-d10",
+        "createdAt": "2026-10-03T11:19:12.221Z",
         "revokedAt": null,
         "version": 1,
         "rewardOwner": "company",
         "actor": "manager"
       },
-      "previous_hash": "6ee045b515919c8770bf821fe17748566d966371381076fa4ae7ada50e20d002",
-      "hash": "71d995305813c5c9ad9089a4ad2c3c8a32001e9f664da61895f5ece809b10534"
+      "previous_hash": "eeb5e1492de48c631d96ff2bb4425c73274e331bee9051b9d820e3f5cfe8e53f",
+      "hash": "2f1d742d00964d4ebcd350b91680e080f58f5da4c044d2171307742f8ba20a0f"
     },
     {
-      "seq": 12,
-      "id": "log_b9a9f1fe-597",
-      "at": "2026-10-03T02:41:56.796Z",
+      "seq": 18,
+      "id": "log_49451738-1f0",
+      "at": "2026-10-03T11:19:00.253Z",
       "actor": "manager",
       "action": "DEMO_QUOTE_CHECK",
-      "target": "quote_70b87d3d-aab",
+      "target": "quote_7ba438dc-880",
       "detail": {
-        "originalQuoteId": "quote_330904ea-ac5",
+        "originalQuoteId": "quote_72940c55-734",
         "independentTest": true,
         "shippingEvidence": {
           "sourceUrl": "https://shop.theclub.com.hk/shipping-policy?___store=en_US",
@@ -2160,36 +4073,86 @@
           "rule": "标准派送 HK$80；符合页面条件的订单净额满 HK$400 免运费。"
         }
       },
-      "previous_hash": "6848bad9c4e0afb1b636f9c78a612d1d343c8eb858e159c7b54b01830b255bf1",
-      "hash": "6ee045b515919c8770bf821fe17748566d966371381076fa4ae7ada50e20d002"
+      "previous_hash": "ed15d632616523fa52f274c5c97106461fbdc52d0f789efcfd300190d6e89236",
+      "hash": "eeb5e1492de48c631d96ff2bb4425c73274e331bee9051b9d820e3f5cfe8e53f"
     },
     {
-      "seq": 11,
-      "id": "log_4cab6d64-53c",
-      "at": "2026-10-03T02:41:56.796Z",
+      "seq": 17,
+      "id": "log_95690e08-9bf",
+      "at": "2026-10-03T11:19:00.253Z",
       "actor": "manager",
       "action": "PLAN_CREATED",
-      "target": "request_9361eb1f-d1c",
+      "target": "request_8e727b47-d10",
       "detail": {
         "scenario": "event",
         "planner": "rules",
         "quoteIds": [
-          "quote_70b87d3d-aab",
-          "quote_f6e3d40e-047",
-          "quote_0b6fd5c4-736"
+          "quote_7ba438dc-880"
         ],
-        "budgetCents": 250000
+        "budgetCents": 250000,
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 1,
+          "affordableCount": 1,
+          "lowestTotalCents": 24800,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [
+            {
+              "productId": "gift-purple",
+              "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+              "reasons": [
+                "容量 480 ml 低于所需 500 ml"
+              ]
+            },
+            {
+              "productId": "gift-tritan",
+              "name": "Thermos - Tritan 710ml 搖搖杯 (6色可選)",
+              "reasons": [
+                "来源标题未确认保温能力；不猜测符合要求"
+              ]
+            },
+            {
+              "productId": "gift-flask",
+              "name": "Thermos-350毫升真空保溫杯",
+              "reasons": [
+                "容量 350 ml 低于所需 500 ml"
+              ]
+            }
+          ],
+          "candidates": [
+            {
+              "productIds": [
+                "gift-bottle"
+              ],
+              "names": [
+                "Thermos - 500毫升真空控溫瓶 (2色可選)"
+              ],
+              "totalCents": 24800,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        }
       },
-      "previous_hash": "3a8c159ca06ea500db08164e4d6faaec8fff99cbef4150b156e9127963399588",
-      "hash": "6848bad9c4e0afb1b636f9c78a612d1d343c8eb858e159c7b54b01830b255bf1"
+      "previous_hash": "795bb039ad22db0a2b3bf65b44690f6c3fdbad1b2ebbafc68611402e4745067b",
+      "hash": "ed15d632616523fa52f274c5c97106461fbdc52d0f789efcfd300190d6e89236"
     },
     {
-      "seq": 10,
-      "id": "log_ea1b5c8e-24c",
-      "at": "2026-10-03T02:41:44.576Z",
+      "seq": 16,
+      "id": "log_a66d409c-b88",
+      "at": "2026-10-03T11:18:48.224Z",
       "actor": "manager",
       "action": "GOODS_RECEIVED",
-      "target": "order_672bc8f3-a65",
+      "target": "order_2fd1bdc2-1e6",
       "detail": {
         "lines": [
           {
@@ -2203,45 +4166,50 @@
           }
         ]
       },
-      "previous_hash": "ba08e0886adf75cdf042931dd493471960fe52f822019acad0269bc963745136",
-      "hash": "3a8c159ca06ea500db08164e4d6faaec8fff99cbef4150b156e9127963399588"
+      "previous_hash": "553a9ba2a41866756bcb1aa22442816653cafe0495db3f1dd2e082ea09113a0c",
+      "hash": "795bb039ad22db0a2b3bf65b44690f6c3fdbad1b2ebbafc68611402e4745067b"
     },
     {
-      "seq": 9,
-      "id": "log_e1902b36-bf1",
-      "at": "2026-10-03T02:41:28.411Z",
+      "seq": 15,
+      "id": "log_73dc5cfc-e0a",
+      "at": "2026-10-03T11:18:32.245Z",
       "actor": "payment",
       "action": "PAYMENT_CONFIRMED",
-      "target": "order_672bc8f3-a65",
+      "target": "order_2fd1bdc2-1e6",
       "detail": {
         "state": "succeeded",
-        "paymentId": "sim_order_672bc8f3-a65"
+        "paymentId": "sim_order_2fd1bdc2-1e6"
       },
-      "previous_hash": "f5dc73ac9db7cae5d640baeee8a1babd534d3d23ede2cb139530c75b1f19f2b4",
-      "hash": "ba08e0886adf75cdf042931dd493471960fe52f822019acad0269bc963745136"
+      "previous_hash": "be0ac620df68ba4fac4de89bcc274e6091d5c9507fd1fb68b8d6df8156cbc165",
+      "hash": "553a9ba2a41866756bcb1aa22442816653cafe0495db3f1dd2e082ea09113a0c"
     },
     {
-      "seq": 8,
-      "id": "log_92b926a4-560",
-      "at": "2026-10-03T02:41:28.410Z",
+      "seq": 14,
+      "id": "log_97b029b8-795",
+      "at": "2026-10-03T11:18:32.244Z",
       "actor": "payment",
       "action": "PAYMENT_CAPTURE",
-      "target": "order_672bc8f3-a65",
+      "target": "order_2fd1bdc2-1e6",
       "detail": {
-        "paymentId": "sim_order_672bc8f3-a65"
+        "paymentId": "sim_order_2fd1bdc2-1e6"
       },
-      "previous_hash": "98448a330d0a2dff4a615b3d4e6e9b4241086a09e13079d10d06ddb9048decd3",
-      "hash": "f5dc73ac9db7cae5d640baeee8a1babd534d3d23ede2cb139530c75b1f19f2b4"
+      "previous_hash": "7def0ae2279faf4161c49212e2993ff372921d8c1f7baa187afebd858d387286",
+      "hash": "be0ac620df68ba4fac4de89bcc274e6091d5c9507fd1fb68b8d6df8156cbc165"
     },
     {
-      "seq": 7,
-      "id": "log_0b652cef-780",
-      "at": "2026-10-03T02:41:28.410Z",
+      "seq": 13,
+      "id": "log_1c012b7c-3c3",
+      "at": "2026-10-03T11:18:32.244Z",
       "actor": "policy",
       "action": "CAPTURE_ALLOWED",
-      "target": "order_672bc8f3-a65",
+      "target": "order_2fd1bdc2-1e6",
       "detail": {
         "checks": [
+          {
+            "code": "REQUIREMENTS",
+            "pass": true,
+            "message": "数量、需求预算与必要规格必须满足；修改需求须重新生成方案"
+          },
           {
             "code": "ACTIVE",
             "pass": true,
@@ -2315,32 +4283,37 @@
         ],
         "mandateVersion": 1
       },
-      "previous_hash": "3a573828d4d71c1d18018c47cf9837501daacd5adff44630f6eabc42e93293ab",
-      "hash": "98448a330d0a2dff4a615b3d4e6e9b4241086a09e13079d10d06ddb9048decd3"
+      "previous_hash": "57d24461dc3732f5071d1f92f34990bd4ab09aa67a755d765d42542ffdea70cd",
+      "hash": "7def0ae2279faf4161c49212e2993ff372921d8c1f7baa187afebd858d387286"
     },
     {
-      "seq": 6,
-      "id": "log_7b5601a8-149",
-      "at": "2026-10-03T02:41:28.407Z",
+      "seq": 12,
+      "id": "log_e8283a25-a81",
+      "at": "2026-10-03T11:18:32.243Z",
       "actor": "payment",
       "action": "PAYMENT_AUTHORIZE",
-      "target": "order_672bc8f3-a65",
+      "target": "order_2fd1bdc2-1e6",
       "detail": {
         "provider": "simulated",
         "amount": 168000
       },
-      "previous_hash": "c97b2e34e95a544aa9e97caffc69f819603af695af57e72ee8db2ecf423074d8",
-      "hash": "3a573828d4d71c1d18018c47cf9837501daacd5adff44630f6eabc42e93293ab"
+      "previous_hash": "1e3e0a9b4fd28839f2ecf375d6f3096403648f4f67b2249ebe4e2fc5e3f0264e",
+      "hash": "57d24461dc3732f5071d1f92f34990bd4ab09aa67a755d765d42542ffdea70cd"
     },
     {
-      "seq": 5,
-      "id": "log_6531bea9-d8a",
-      "at": "2026-10-03T02:41:28.405Z",
+      "seq": 11,
+      "id": "log_5729557e-c91",
+      "at": "2026-10-03T11:18:32.242Z",
       "actor": "manager",
       "action": "BUDGET_RESERVED",
-      "target": "order_672bc8f3-a65",
+      "target": "order_2fd1bdc2-1e6",
       "detail": {
         "checks": [
+          {
+            "code": "REQUIREMENTS",
+            "pass": true,
+            "message": "数量、需求预算与必要规格必须满足；修改需求须重新生成方案"
+          },
           {
             "code": "ACTIVE",
             "pass": true,
@@ -2417,19 +4390,19 @@
         "mandateVersion": 1,
         "paymentCalled": false
       },
-      "previous_hash": "6927c81b2d073959231d88f9b23c6533450c7359beba18b9e41e8f1790645d18",
-      "hash": "c97b2e34e95a544aa9e97caffc69f819603af695af57e72ee8db2ecf423074d8"
+      "previous_hash": "a73a91199b09621443f7bee4c4efbb078a873790fbf15b7afaeb7a29d337bfa1",
+      "hash": "1e3e0a9b4fd28839f2ecf375d6f3096403648f4f67b2249ebe4e2fc5e3f0264e"
     },
     {
-      "seq": 4,
-      "id": "log_ab45ae8a-e4a",
-      "at": "2026-10-03T02:41:28.357Z",
+      "seq": 10,
+      "id": "log_c145f491-6b8",
+      "at": "2026-10-03T11:18:32.231Z",
       "actor": "manager",
       "action": "MANDATE_GRANTED",
-      "target": "mandate_10fe758b-109",
+      "target": "mandate_22421eb0-b2b",
       "detail": {
         "name": "活动与礼品 · 秋日团队日 · 欢迎礼品",
-        "quoteId": "quote_65a025a3-24a",
+        "quoteId": "quote_72940c55-734",
         "scenario": "event",
         "capCents": 250000,
         "totalCapCents": 250000,
@@ -2445,60 +4418,489 @@
         "address": "香港薄扶林道 · 公司办公室",
         "allowSubstitution": true,
         "productIds": [
-          "gift-bottle",
-          "gift-purple",
-          "gift-flask"
+          "gift-bottle"
         ],
-        "expiresAt": "2026-10-04T02:41:28.315Z",
+        "expiresAt": "2026-10-04T11:18:32.221Z",
         "minIntervalSeconds": 0,
-        "id": "mandate_10fe758b-109",
-        "requestId": "request_c97537a7-0e2",
-        "createdAt": "2026-10-03T02:41:28.357Z",
+        "id": "mandate_22421eb0-b2b",
+        "requestId": "request_e5c1511b-567",
+        "createdAt": "2026-10-03T11:18:32.231Z",
         "revokedAt": null,
         "version": 1,
         "rewardOwner": "company",
         "actor": "manager"
       },
-      "previous_hash": "07d5eec6d45a1b23bb3e148d7c64d6bb742221f734a5b8f538aaee926e10c7da",
-      "hash": "6927c81b2d073959231d88f9b23c6533450c7359beba18b9e41e8f1790645d18"
+      "previous_hash": "7a0d1e0c8c6beaf5d4f790445827d1fce177f4f8a7d5163c2366379d1687e0bd",
+      "hash": "a73a91199b09621443f7bee4c4efbb078a873790fbf15b7afaeb7a29d337bfa1"
     },
     {
-      "seq": 3,
-      "id": "log_98f3d400-2bc",
-      "at": "2026-10-03T02:40:58.033Z",
+      "seq": 9,
+      "id": "log_3f7ae21d-508",
+      "at": "2026-10-03T11:18:10.274Z",
       "actor": "manager",
       "action": "PLAN_CREATED",
-      "target": "request_c97537a7-0e2",
+      "target": "request_e5c1511b-567",
       "detail": {
         "scenario": "event",
         "planner": "rules",
         "quoteIds": [
-          "quote_65a025a3-24a",
-          "quote_330904ea-ac5",
-          "quote_4aeb3f11-cf5"
+          "quote_72940c55-734"
         ],
-        "budgetCents": 250000
+        "budgetCents": 250000,
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 1,
+          "affordableCount": 1,
+          "lowestTotalCents": 168000,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [
+            {
+              "productId": "gift-purple",
+              "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+              "reasons": [
+                "容量 480 ml 低于所需 500 ml"
+              ]
+            },
+            {
+              "productId": "gift-tritan",
+              "name": "Thermos - Tritan 710ml 搖搖杯 (6色可選)",
+              "reasons": [
+                "来源标题未确认保温能力；不猜测符合要求"
+              ]
+            },
+            {
+              "productId": "gift-flask",
+              "name": "Thermos-350毫升真空保溫杯",
+              "reasons": [
+                "容量 350 ml 低于所需 500 ml"
+              ]
+            }
+          ],
+          "candidates": [
+            {
+              "productIds": [
+                "gift-bottle"
+              ],
+              "names": [
+                "Thermos - 500毫升真空控溫瓶 (2色可選)"
+              ],
+              "totalCents": 168000,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        }
       },
-      "previous_hash": "d8a9c0c6e284ab1cb705e43d3b4d4aeffd5f8d7d573ac4e72f555db0aaf49392",
-      "hash": "07d5eec6d45a1b23bb3e148d7c64d6bb742221f734a5b8f538aaee926e10c7da"
+      "previous_hash": "3f67a7a2df8bbec8fa2c73b01a22c56a927354d0f66dedc89e12398304539b89",
+      "hash": "7a0d1e0c8c6beaf5d4f790445827d1fce177f4f8a7d5163c2366379d1687e0bd"
     },
     {
-      "seq": 2,
-      "id": "log_db4a4540-aea",
-      "at": "2026-10-03T02:40:38.975Z",
+      "seq": 8,
+      "id": "log_f305d9f2-6c2",
+      "at": "2026-10-03T11:18:02.222Z",
+      "actor": "manager",
+      "action": "PLAN_CREATED",
+      "target": "request_bc0facbd-8ad",
+      "detail": {
+        "scenario": "event",
+        "planner": "rules",
+        "quoteIds": [
+          "quote_bc660410-618",
+          "quote_8f4141a3-597",
+          "quote_afd10447-efa"
+        ],
+        "budgetCents": 250000,
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 4,
+          "affordableCount": 3,
+          "lowestTotalCents": 138000,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [],
+          "candidates": [
+            {
+              "productIds": [
+                "gift-bottle"
+              ],
+              "names": [
+                "Thermos - 500毫升真空控溫瓶 (2色可選)"
+              ],
+              "totalCents": 168000,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "gift-purple"
+              ],
+              "names": [
+                "Thermos - 480毫升真空保溫瓶 – 粉霧紫"
+              ],
+              "totalCents": 168000,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "gift-tritan"
+              ],
+              "names": [
+                "Thermos - Tritan 710ml 搖搖杯 (6色可選)"
+              ],
+              "totalCents": 138000,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "gift-flask"
+              ],
+              "names": [
+                "Thermos-350毫升真空保溫杯"
+              ],
+              "totalCents": 260000,
+              "withinBudget": false,
+              "selected": false,
+              "reasons": [
+                "含标准派送费后超出需求预算，不能付款",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        }
+      },
+      "previous_hash": "cd36d31b3ddd721e013e959c951cac9566a3784e60b844c76e336d37be64a1b3",
+      "hash": "3f67a7a2df8bbec8fa2c73b01a22c56a927354d0f66dedc89e12398304539b89"
+    },
+    {
+      "seq": 7,
+      "id": "log_2cd6c3bf-380",
+      "at": "2026-10-03T11:17:43.361Z",
       "actor": "manager",
       "action": "LOGIN",
       "target": "manager",
       "detail": {
-        "at": "2026-10-03T02:40:38.974Z"
+        "at": "2026-10-03T11:17:43.361Z"
       },
-      "previous_hash": "9790d302085c204570a39d78a2a5096a3508afa3da55d83d0ca3b1d30dcdc8c5",
-      "hash": "d8a9c0c6e284ab1cb705e43d3b4d4aeffd5f8d7d573ac4e72f555db0aaf49392"
+      "previous_hash": "fa22b778a084106a3af61a608962e280c19779eaecf0db3457d234ab31f65d44",
+      "hash": "cd36d31b3ddd721e013e959c951cac9566a3784e60b844c76e336d37be64a1b3"
+    },
+    {
+      "seq": 6,
+      "id": "log_0eafb1a7-d98",
+      "at": "2026-10-03T11:12:41.228Z",
+      "actor": "manager",
+      "action": "PLAN_CREATED",
+      "target": "request_2b324bde-3bf",
+      "detail": {
+        "scenario": "event",
+        "planner": "rules",
+        "quoteIds": [
+          "quote_d38e964b-726",
+          "quote_3a21bb5b-72a",
+          "quote_6850731d-3cf"
+        ],
+        "budgetCents": 250000,
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 4,
+          "affordableCount": 3,
+          "lowestTotalCents": 138000,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [],
+          "candidates": [
+            {
+              "productIds": [
+                "gift-bottle"
+              ],
+              "names": [
+                "Thermos - 500毫升真空控溫瓶 (2色可選)"
+              ],
+              "totalCents": 168000,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "gift-purple"
+              ],
+              "names": [
+                "Thermos - 480毫升真空保溫瓶 – 粉霧紫"
+              ],
+              "totalCents": 168000,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "gift-tritan"
+              ],
+              "names": [
+                "Thermos - Tritan 710ml 搖搖杯 (6色可選)"
+              ],
+              "totalCents": 138000,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "gift-flask"
+              ],
+              "names": [
+                "Thermos-350毫升真空保溫杯"
+              ],
+              "totalCents": 260000,
+              "withinBudget": false,
+              "selected": false,
+              "reasons": [
+                "含标准派送费后超出需求预算，不能付款",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        }
+      },
+      "previous_hash": "cfeb98733394c07ef7b7babcfd80e9ab97b089776559bbc96f8eac32900160df",
+      "hash": "fa22b778a084106a3af61a608962e280c19779eaecf0db3457d234ab31f65d44"
+    },
+    {
+      "seq": 5,
+      "id": "log_7170cdd4-80b",
+      "at": "2026-10-03T11:12:22.353Z",
+      "actor": "manager",
+      "action": "LOGIN",
+      "target": "manager",
+      "detail": {
+        "at": "2026-10-03T11:12:22.353Z"
+      },
+      "previous_hash": "bfb2424c232bb1b8a484651ce9d544576494e2767181e23f73932fb45cf6583d",
+      "hash": "cfeb98733394c07ef7b7babcfd80e9ab97b089776559bbc96f8eac32900160df"
+    },
+    {
+      "seq": 4,
+      "id": "log_9d173ce0-bdc",
+      "at": "2026-10-03T11:06:14.190Z",
+      "actor": "manager",
+      "action": "PLAN_CREATED",
+      "target": "request_01dc5a7e-f95",
+      "detail": {
+        "scenario": "event",
+        "planner": "rules",
+        "quoteIds": [
+          "quote_3848e122-b0e"
+        ],
+        "budgetCents": 250000,
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 1,
+          "affordableCount": 1,
+          "lowestTotalCents": 168000,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [
+            {
+              "productId": "gift-purple",
+              "name": "Thermos - 480毫升真空保溫瓶 – 粉霧紫",
+              "reasons": [
+                "容量 480 ml 低于所需 500 ml"
+              ]
+            },
+            {
+              "productId": "gift-tritan",
+              "name": "Thermos - Tritan 710ml 搖搖杯 (6色可選)",
+              "reasons": [
+                "来源标题未确认保温能力；不猜测符合要求"
+              ]
+            },
+            {
+              "productId": "gift-flask",
+              "name": "Thermos-350毫升真空保溫杯",
+              "reasons": [
+                "容量 350 ml 低于所需 500 ml"
+              ]
+            }
+          ],
+          "candidates": [
+            {
+              "productIds": [
+                "gift-bottle"
+              ],
+              "names": [
+                "Thermos - 500毫升真空控溫瓶 (2色可選)"
+              ],
+              "totalCents": 168000,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        }
+      },
+      "previous_hash": "a6666f8a226c66fdd9d8867894b3c53e7112a59f6ef8b25c7fc2eaff7aca8f62",
+      "hash": "bfb2424c232bb1b8a484651ce9d544576494e2767181e23f73932fb45cf6583d"
+    },
+    {
+      "seq": 3,
+      "id": "log_361c5eaf-7ca",
+      "at": "2026-10-03T11:06:06.155Z",
+      "actor": "manager",
+      "action": "PLAN_CREATED",
+      "target": "request_78d57327-d34",
+      "detail": {
+        "scenario": "event",
+        "planner": "rules",
+        "quoteIds": [
+          "quote_622cf005-6e4",
+          "quote_bebccce9-790",
+          "quote_37a52930-4d3"
+        ],
+        "budgetCents": 250000,
+        "decision": {
+          "strategy": "balanced",
+          "eligibleCount": 4,
+          "affordableCount": 3,
+          "lowestTotalCents": 138000,
+          "model": {
+            "status": "not_configured",
+            "model": null,
+            "latencyMs": null,
+            "warning": "当前使用透明规则规划器；未连接语言模型。"
+          },
+          "rejected": [],
+          "candidates": [
+            {
+              "productIds": [
+                "gift-bottle"
+              ],
+              "names": [
+                "Thermos - 500毫升真空控溫瓶 (2色可選)"
+              ],
+              "totalCents": 168000,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "gift-purple"
+              ],
+              "names": [
+                "Thermos - 480毫升真空保溫瓶 – 粉霧紫"
+              ],
+              "totalCents": 168000,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "gift-tritan"
+              ],
+              "names": [
+                "Thermos - Tritan 710ml 搖搖杯 (6色可選)"
+              ],
+              "totalCents": 138000,
+              "withinBudget": true,
+              "selected": true,
+              "reasons": [
+                "含标准派送费后满足需求预算",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            },
+            {
+              "productIds": [
+                "gift-flask"
+              ],
+              "names": [
+                "Thermos-350毫升真空保溫杯"
+              ],
+              "totalCents": 260000,
+              "withinBudget": false,
+              "selected": false,
+              "reasons": [
+                "含标准派送费后超出需求预算，不能付款",
+                "先满足预算，再按已验证的模型排序或风格规则排序"
+              ]
+            }
+          ]
+        }
+      },
+      "previous_hash": "06e18f1619f8b4a3145618d2dd44e623f4937fa499ba19c69331a091152c5faf",
+      "hash": "a6666f8a226c66fdd9d8867894b3c53e7112a59f6ef8b25c7fc2eaff7aca8f62"
+    },
+    {
+      "seq": 2,
+      "id": "log_c8862d14-e8e",
+      "at": "2026-10-03T11:05:47.293Z",
+      "actor": "manager",
+      "action": "LOGIN",
+      "target": "manager",
+      "detail": {
+        "at": "2026-10-03T11:05:47.293Z"
+      },
+      "previous_hash": "fcfff2ed5aec465e7cfc5dea636bf7615cfd4e4e84b57e3e513a7bf3833fa085",
+      "hash": "06e18f1619f8b4a3145618d2dd44e623f4937fa499ba19c69331a091152c5faf"
     },
     {
       "seq": 1,
-      "id": "log_c9055df7-7e3",
-      "at": "2026-10-03T02:40:33.489Z",
+      "id": "log_5e958758-6ed",
+      "at": "2026-10-03T11:05:40.180Z",
       "actor": "system",
       "action": "DEMO_INITIALIZED",
       "target": "workspace",
@@ -2507,7 +4909,7 @@
         "products": 16
       },
       "previous_hash": "GENESIS",
-      "hash": "9790d302085c204570a39d78a2a5096a3508afa3da55d83d0ca3b1d30dcdc8c5"
+      "hash": "fcfff2ed5aec465e7cfc5dea636bf7615cfd4e4e84b57e3e513a7bf3833fa085"
     }
   ],
   "auditValid": true,

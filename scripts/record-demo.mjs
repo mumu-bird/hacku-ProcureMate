@@ -1,5 +1,11 @@
 import { chromium } from "@playwright/test";
-import { existsSync, mkdirSync, renameSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  mkdirSync,
+  readFileSync,
+  renameSync,
+  writeFileSync,
+} from "node:fs";
 import { performance } from "node:perf_hooks";
 mkdirSync("artifacts/video-raw", { recursive: true });
 const cachedBrowser =
@@ -19,11 +25,26 @@ const context = await browser.newContext({
 const page = await context.newPage();
 await page.goto(process.env.DEMO_BASE_URL || "http://127.0.0.1:3200");
 const started = performance.now();
-let previousTarget = 0;
+const coreReport = readFileSync("artifacts/core-test-results.txt", "utf8");
+const coreCount = coreReport.match(/pass (\d+)/)?.[1];
+const browserReport = JSON.parse(
+  readFileSync("artifacts/browser-results.json", "utf8"),
+);
+if (
+  !coreCount ||
+  !/fail 0\b/.test(coreReport) ||
+  browserReport.stats.unexpected ||
+  browserReport.stats.flaky ||
+  browserReport.stats.skipped
+)
+  throw Error("Recording requires passing test evidence.");
 async function waitUntil(seconds) {
-  // Preserve each chapter's reading time even if compilation or the host pauses.
-  await page.waitForTimeout((seconds - previousTarget) * 1000);
-  previousTarget = seconds;
+  const elapsed = (performance.now() - started) / 1000;
+  if (elapsed > 240)
+    throw Error(
+      "Recording exceeded the demo window; inspect host delays before publishing.",
+    );
+  await page.waitForTimeout(Math.max(1000, (seconds - elapsed) * 1000));
 }
 async function caption(title, text) {
   console.log(`${Math.round((performance.now() - started) / 1000)}s ${title}`);
@@ -68,10 +89,40 @@ try {
   );
   await waitUntil(26);
   await page.getByRole("button", { name: "生成采购方案" }).click();
-  await page.locator(".quotes-section").scrollIntoViewIfNeeded();
+  await page.waitForFunction(
+    () => document.querySelectorAll(".quote-card").length === 3,
+  );
+  await page.locator(".quote-card").first().waitFor({ state: "visible" });
+  await page.evaluate(() =>
+    document
+      .querySelector(".quotes-section")
+      ?.scrollIntoView({ block: "start" }),
+  );
   await caption(
     "02 · 比较完整支出",
     "真实页面价格与派送规则分别记录采集时间。本次现金商品净额满 HK$400，按公开规则免标准运费；未确认积分不计入节省。",
+  );
+  await waitUntil(34);
+  await page.getByLabel("最低容量（ml，可不填）").fill("500");
+  await page.getByLabel("保温要求").selectOption("yes");
+  await page.getByRole("button", { name: "生成采购方案" }).click();
+  await page.waitForFunction(
+    () => document.querySelectorAll(".quote-card").length === 1,
+  );
+  await page.locator(".quote-card").first().waitFor({ state: "visible" });
+  await page.evaluate(() =>
+    document
+      .querySelector(".quotes-section")
+      ?.scrollIntoView({ block: "start" }),
+  );
+  await page
+    .locator(".quote-card")
+    .first()
+    .getByText("查看筛选依据", { exact: true })
+    .click();
+  await caption(
+    "必要规格是硬约束",
+    "增加至少 500 ml 与来源明确标注保温要求，只剩一套符合条件的方案。可查看容量不足、保温未知和预算超限的排除依据。",
   );
   await waitUntil(42);
   await page
@@ -105,7 +156,7 @@ try {
   await page.getByRole("button", { name: "关闭", exact: true }).click();
   await page
     .locator(".quote-card")
-    .nth(1)
+    .first()
     .getByRole("button", { name: "演示运费使预算超限" })
     .click();
   await caption(
@@ -136,7 +187,12 @@ try {
     .getByRole("button", { name: "生成方案", exact: true })
     .first()
     .click();
-  await page.locator(".quotes-section").scrollIntoViewIfNeeded();
+  await page.locator(".quote-card").first().waitFor({ state: "visible" });
+  await page.evaluate(() =>
+    document
+      .querySelector(".quotes-section")
+      ?.scrollIntoView({ block: "start" }),
+  );
   await page
     .locator(".quote-card")
     .first()
@@ -170,7 +226,12 @@ try {
   await page.getByRole("button", { name: "采购工作台", exact: true }).click();
   await page.getByRole("button", { name: /新员工配件.*按岗位需求/ }).click();
   await page.getByRole("button", { name: "生成采购方案" }).click();
-  await page.locator(".quotes-section").scrollIntoViewIfNeeded();
+  await page.locator(".quote-card").first().waitFor({ state: "visible" });
+  await page.evaluate(() =>
+    document
+      .querySelector(".quotes-section")
+      ?.scrollIntoView({ block: "start" }),
+  );
   await caption(
     "07 · 按岗位配置新员工配件",
     "开发、设计、行政使用不同模板。缺少设备接口时要求补充，不猜测兼容性。",
@@ -192,20 +253,38 @@ try {
     "artifacts/demo-evidence.json",
     JSON.stringify(await evidence.json(), null, 2),
   );
-  await waitUntil(169);
+  await waitUntil(164);
+  await page.goto(
+    new URL("/study", process.env.DEMO_BASE_URL || "http://127.0.0.1:3200")
+      .href,
+  );
+  await page.getByRole("heading", { name: "人工与代理采购对照" }).waitFor();
+  await caption(
+    "真人对照工具已准备，结果仍待采集",
+    "同一任务、固定商品与费用快照、服务端计时、完整步骤观察和错误记录。当前零名真人参与者；自动化测试不能代替人工路线证据。",
+  );
+  const study = await (await page.request.get("/api/study/report")).json();
+  if (study.participants !== 0)
+    throw Error("Fresh demo should not contain fabricated study participants.");
+  writeFileSync(
+    "artifacts/demo-study-state.json",
+    JSON.stringify(study, null, 2),
+  );
+  await waitUntil(173);
+  await page.goto(process.env.DEMO_BASE_URL || "http://127.0.0.1:3200");
   await page.getByRole("button", { name: "采购工作台", exact: true }).click();
   await page.evaluate(() => scrollTo(0, 0));
   await caption(
     "ProcureMate · 采购有条理，花钱有分寸",
-    "16 个商品来源快照 · 已验证规则与交易流程 · 模型、Stripe 测试接口已预留，当前演示使用规则规划与模拟支付。",
+    `${coreCount} 项核心测试、${browserReport.stats.expected} 条浏览器流程通过 · 16 个商品来源快照 · 当前演示为规则规划与模拟支付，真实 AI 与支付接入仍待验证。`,
   );
   await waitUntil(180);
   const video = page.video();
   await context.close();
   const path = await video.path();
-  renameSync(path, "artifacts/ProcureMate-demo.webm");
+  renameSync(path, "artifacts/video-raw/ProcureMate-source.webm");
   console.log(
-    "Saved artifacts/ProcureMate-demo.webm; recording target 180 seconds.",
+    "Saved artifacts/video-raw/ProcureMate-source.webm; normalize and inspect before publishing.",
   );
 } finally {
   await browser.close();

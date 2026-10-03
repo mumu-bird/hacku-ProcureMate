@@ -15,6 +15,16 @@ const coreResult = readFileSync("artifacts/core-test-results.txt", "utf8");
 const passedCoreTests = coreResult.match(/pass (\d+)/)?.[1];
 if (!passedCoreTests || !/fail 0\b/.test(coreResult))
   throw Error("Deck requires a passing core-test report.");
+const browserResults = JSON.parse(
+  readFileSync("artifacts/browser-results.json", "utf8"),
+);
+if (
+  browserResults.stats.unexpected ||
+  browserResults.stats.flaky ||
+  browserResults.stats.skipped
+)
+  throw Error("Deck requires all browser flows to pass.");
+const passedBrowserTests = browserResults.stats.expected;
 mkdirSync(root, { recursive: true });
 writeFileSync(
   resolve(root, "SKILL.md"),
@@ -78,7 +88,7 @@ writeFileSync(
 <template id="slide-demo"><section class="slide">${head}<h2>{{title}}</h2><div class="demo-stage"><div><p>{{body}}</p><div class="receipt" data-visual-event="visual-plate"><span>一笔交易 + 一次拦截</span><strong>付款没有发起</strong><div class="seal">具体规则可以在后端核对</div></div></div><div class="screen" data-visual-event="visual-plate">{{image:self-0}}</div></div>${foot}</section></template>
 <template id="slide-flow"><section class="slide">${head}<h2>{{title}}</h2><p>{{body}}</p><div class="flow-stage" data-visual-event="visual-plate"><div class="flow-row"><div class="flow-node">需求与商品<small>规格、数量、价格来源</small></div><div class="flow-arrow">→</div><div class="flow-node">负责人授权<small>预算、商户、品类、期限</small></div><div class="flow-arrow">→</div><div class="flow-node">预算预留<small>数据库原子执行</small></div></div><div class="flow-row"><div class="flow-node">付款授权<small>支付渠道状态</small></div><div class="flow-arrow">→</div><div class="flow-node">再次复核<small>报价变更、到期、撤销</small></div><div class="flow-arrow">→</div><div class="flow-node">扣款与订单<small>查询结果、收货、库存</small></div></div></div><div class="trust-band" data-visual-event="visual-plate">模型负责选品，规则负责花钱。支付超时不盲目重试；退款不等于退货。</div>${foot}</section></template>
 <template id="slide-comparison"><section class="slide">${head}<h2>{{title}}</h2><div class="comparison-stage">{{@table rows=rows cols=cols cells=cells}}</div><p class="source">现有产品已经具备采购控制能力。我们的轻量定位与使用价值，需要真实小公司试点验证。</p>${foot}</section></template>
-<template id="slide-proof"><section class="slide">${head}<h2>{{title}}</h2><p>{{body}}</p><div class="proof-stage"><div class="proof-item" data-visual-event="oversized-number"><strong>21</strong><span>{{a}}</span></div><div class="proof-item" data-visual-event="oversized-number"><strong>3</strong><span>{{b}}</span></div><div class="proof-item" data-visual-event="oversized-number"><strong>16</strong><span>{{c}}</span></div></div><div class="trust-band">真人任务测试尚未完成；未填写企业客户、节省比例或市场规模。模型与 Stripe 网络集成尚待凭证验证。</div>${foot}</section></template>
+<template id="slide-proof"><section class="slide">${head}<h2>{{title}}</h2><p>{{body}}</p><div class="proof-stage"><div class="proof-item" data-visual-event="oversized-number"><strong>21</strong><span>{{a}}</span></div><div class="proof-item" data-visual-event="oversized-number"><strong>3</strong><span>{{b}}</span></div><div class="proof-item" data-visual-event="oversized-number"><strong>16</strong><span>{{c}}</span></div></div><div class="trust-band">/study 已固定任务与来源，支持计时、错误及放弃记录。真人结果为零；模型与 Stripe 网络调用仍待凭证验证。</div>${foot}</section></template>
 <template id="slide-closing"><section class="slide" data-density="editorial">${head}<span class="kicker">从比赛原型，到真实采购</span><h2>{{title}}</h2><p>{{body}}</p><div class="closing-list"><div class="closing-item" data-visual-event="item-marker"><b>01 / 验证</b><small>{{a}}</small></div><div class="closing-item" data-visual-event="item-marker"><b>02 / 接入</b><small>{{b}}</small></div><div class="closing-item" data-visual-event="item-marker"><b>03 / 试点</b><small>{{c}}</small></div></div><div class="signature" data-visual-event="signature-mark">让代理能办成事，也能在该停的时候停下。</div>${foot}</section></template>
 `,
 );
@@ -137,12 +147,12 @@ const slides = [
     type: "proof",
     slots: {
       title: "用可复现证据说明原型已经做到什么",
-      body: "核心规则测试、浏览器任务流程与生产构建通过。只陈述已经执行的检查，不把模拟交易当成商业验证。",
+      body: "软件流程已验证；真人对照工具已准备，但参与者仍为零。时间、步骤、费用与错误须由同学实际任务产生。",
       a: "核心测试：预算、撤销、支付竞态、并发与记录",
-      b: "浏览器测试：活动采购、补货、配件与移动端",
+      b: "浏览器流程：交易、补货、配件、规格与配对工具",
       c: "真实来源商品：现金价格、独立链接、采集时间",
       source:
-        "来源：tests/core.test.ts、tests/closure.test.ts、tests/browser/workflows.spec.ts；见 artifacts。",
+        "来源：tests/*.test.ts、tests/browser/workflows.spec.ts；见 artifacts 测试报告。",
     },
   },
   {
@@ -150,7 +160,7 @@ const slides = [
     slots: {
       title: "下一步，让真实团队与真实渠道来验证",
       body: "先证明需求，再接通正式商品、结账报价、奖励资格和支付账户。",
-      a: "完成至少五名同学的人工/代理任务对照，再访谈公司行政负责人。",
+      a: "用已完成的计时配对工具开展五人对照，再访谈实际活动与行政负责人。",
       b: "配置模型与 Stripe 测试凭证；与 HKT 讨论正式商品、奖励和支付接入。",
       c: "在小公司试点，验证采购频率、授权习惯、责任边界与付费意愿。",
       source: "所有合作、企业价值与付费意愿均为后续验证方向；尚未建立合作。",
@@ -178,6 +188,7 @@ const htmlSlides = slides.map((node, index) =>
 const shell = renderDeckShell(skill);
 const html = (shell.head + htmlSlides.join("\n") + shell.foot)
   .replace("<strong>21</strong>", `<strong>${passedCoreTests}</strong>`)
+  .replace("<strong>3</strong>", `<strong>${passedBrowserTests}</strong>`)
   .replace('<html lang="en">', '<html lang="zh-CN">')
   .replace(
     "<title>procuremate deck</title>",

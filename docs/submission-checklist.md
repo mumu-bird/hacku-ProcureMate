@@ -6,7 +6,7 @@
 - [x] 三分钟录像已核对为 180 秒；明确测试支付与数据来源。
 - [ ] 视频已公开，但本次全文件匿名下载超时；须复核稳定下载或准备另一条公开视频链接。
 - [x] 七页 Pitch Deck 已完成，页面与截图检查通过。
-- [x] v0.1.2 PDF 匿名完整下载通过，摘要与本地一致。
+- [ ] v0.1.2 PDF 曾通过匿名下载；新版 v0.2.0 附件发布后重新核验。
 - [ ] 真人任务测试完成后，更新第六页效果证据并定稿。
 - [ ] 至少五名同学完成任务测试；不填写虚构商业效果。
 - [ ] 所有代码在截止前 commit；提交后的代码冻结。
@@ -24,4 +24,4 @@ ProcureMate addresses HacKU 2026 FinTech Problem Statement 1, “Give a Machine 
 
 真实用户测试、填写队伍信息与正式参赛表单需要参赛团队完成。本地实现无法代替用户参与、组委会资格确认或真实支付凭证。
 
-上传版本及附件：[v0.1.2](https://github.com/mumu-bird/hacku-ProcureMate/releases/tag/v0.1.2)。模型与 Stripe 测试接口仍需实际凭证验证；当前视频采用规则规划与模拟支付。
+上传版本及附件：[v0.2.0](https://github.com/mumu-bird/hacku-ProcureMate/releases/tag/v0.2.0)。模型与 Stripe 测试接口仍需实际凭证验证；当前视频采用规则规划与模拟支付。

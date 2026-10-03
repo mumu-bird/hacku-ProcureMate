@@ -4,9 +4,9 @@
 
 **比赛版已经可以本地运行。当前默认使用透明规则规划器和模拟支付，未接入真实商户下单。** 商品价格是带采集时间的 The Club 页面快照；公司、库存、订单与用户角色为演示数据。没有编造用户验证结果、企业客户或节省比例。
 
-[三分钟演示视频](https://github.com/mumu-bird/hacku-ProcureMate/releases/download/v0.1.2/ProcureMate-demo.webm) · [七页路演 PDF](https://github.com/mumu-bird/hacku-ProcureMate/releases/download/v0.1.2/ProcureMate-pitch.pdf) · [按评分准备的证据](docs/award-evidence.md)
+[三分钟演示视频](https://github.com/mumu-bird/hacku-ProcureMate/releases/download/v0.2.0/ProcureMate-demo.webm) · [七页路演 PDF](https://github.com/mumu-bird/hacku-ProcureMate/releases/download/v0.2.0/ProcureMate-pitch.pdf) · [按评分准备的证据](docs/award-evidence.md)
 
-指定仓库及 v0.1.2 发布附件现已公开。匿名访问核验结果见 `artifacts/public-access-validation.json`；真人对照与新增能力的录像更新仍待完成。
+指定仓库及 v0.2.0 发布附件现已公开。匿名访问核验结果见 `artifacts/public-access-validation.json`；真人对照结果仍待实际参与者采集。
 
 ## 运行
 
@@ -139,7 +139,7 @@ npm run build
 
 选择偏好支持需求匹配或最低完整现金支出。活动礼品可指定最低容量与明确保温要求；信息只取已观察商品标题。所有组合先核算数量、规格及运费，再筛预算内方案。不足三套时不填充超预算商品；完全无可行方案时显示最低支出并禁止付款。展开“查看筛选依据”可核对候选、排除原因和模型调用状态。
 
-当前代码验证为 45 项核心测试、5 条浏览器流程。v0.1.2 录像和 PDF 对应之前 34/3 的版本，仍可用于说明原型主闭环；新增能力以代码、测试和 `artifacts/specification-decision.png` 为证据。
+当前代码验证为 45 项核心测试、5 条浏览器流程。v0.2.0 录像与 PDF 已更新，覆盖规格筛选、筛选依据与真人对照空状态；不含虚构真人结果。
 
 配置模型与 Stripe 测试凭证后运行 `npm run verify:integrations`。核验执行两次实际模型规划，以及 Stripe 沙箱授权、扣款、查询、退款、取消；结果写入 `artifacts/integration-verification.json`。缺少配置或任何失败返回退出码 2，不将模拟支付和规则回退视为真实接口成功。当前两项均未配置。
 
